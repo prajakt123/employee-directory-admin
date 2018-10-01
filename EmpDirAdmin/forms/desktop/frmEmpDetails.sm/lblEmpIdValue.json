@@ -1,0 +1,119 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "301px"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        1,
+        0,
+        0,
+        0
+    ],
+    "_right_": {
+        "type": "string",
+        "value": "0px"
+    },
+    "_skin_": "s5d1c1874b77427794afba2525203a19",
+    "_text_": "Employee ID",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "number",
+        "value": ""
+    },
+    "_wrapping_": 2,
+    "android": {
+        "textStyle": {
+            "letterSpacing": "0",
+            "lineSpacing": 0,
+            "strikeThrough": false
+        }
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": "psd18dbed16e4011e8bfbd290fbe0bfa7d",
+    "id": "lblEmpIdValue",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "wrapping": 2
+        },
+        "textStyle": {
+            "baseline": 0,
+            "letterSpacing": "0",
+            "lineSpacing": 0,
+            "strikeThrough": false
+        }
+    },
+    "iphone": {
+        "psp": {
+            "wrapping": 2
+        },
+        "textStyle": {
+            "baseline": 0,
+            "letterSpacing": "0",
+            "lineSpacing": 0,
+            "strikeThrough": false
+        }
+    },
+    "isvisible": true,
+    "kuid": "i68b3c34e84d490abe6d3f9270909c8d",
+    "name": "kony.ui.Label",
+    "paddingLocked": false,
+    "paddinginpixel": false,
+    "parent": "flxEmpId",
+    "pf": "frmEmpDetails",
+    "responsiveData": {
+        "b5": {
+            "centerY": {
+                "type": "string",
+                "value": ""
+            },
+            "height": {
+                "type": "string",
+                "value": "40px"
+            },
+            "left": {
+                "type": "string",
+                "value": ""
+            },
+            "right": {
+                "type": "string",
+                "value": ""
+            },
+            "skin": "s5d1c1874b77427794afba2525203a19",
+            "top": {
+                "type": "number",
+                "value": "0"
+            },
+            "width": {
+                "type": "string",
+                "value": "450px"
+            },
+            "zIndex": 20
+        }
+    },
+    "tooltip": "",
+    "wType": "Label",
+    "zindex": 1
+}
