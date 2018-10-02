@@ -17,7 +17,7 @@
         0
     ],
     "_padding_": [
-        1,
+        2,
         0,
         0,
         0
@@ -77,7 +77,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "d3918c1f81734a80b4aad018382344da",
+    "kuid": "ea3c0ffd280e4da7b2dcdbff0ad5cc3a",
     "name": "kony.ui.Label",
     "paddinginpixel": false,
     "parent": "flxReporting",
@@ -90,19 +90,26 @@
             },
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "50px"
             },
             "left": {
                 "type": "string",
                 "value": "0px"
             },
+            "padding": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "skin": "s87faf2e150f48aaaa970200f2f23b7b",
             "top": {
-                "type": "number",
-                "value": "0"
+                "type": "string",
+                "value": "0px"
             },
             "width": {
                 "type": "string",
-                "value": "450px"
+                "value": "100%"
             }
         }
     },

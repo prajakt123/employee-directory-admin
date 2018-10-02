@@ -49,11 +49,11 @@
     "kiosk": {
         "render": false
     },
-    "kuid": "psd19b7a706e4011e8bfbd290fbe0bfa7d",
+    "kuid": "f6b73762a0a94e72843e94550d311be7",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "EditProfile",
-    "pf": "frmEmpDetails",
+    "parent": "FlexContainer0c639a51b701f41",
+    "pf": "Form1",
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",

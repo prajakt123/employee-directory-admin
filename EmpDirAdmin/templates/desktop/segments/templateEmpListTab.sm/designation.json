@@ -6,6 +6,10 @@
         "type": "string",
         "value": "90%"
     },
+    "_left_": {
+        "type": "string",
+        "value": "250px"
+    },
     "_margin_": [
         0,
         0,
@@ -18,10 +22,6 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "140px"
-    },
     "_skin_": "ps090bc401631111e881e67756e63af01b",
     "_text_": "IT Administrator",
     "_width_": {

@@ -36,7 +36,7 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "txtBoxNameCommon",
+        "txtBoxNameCommon0",
         "lblIdSampleTop0",
         "flxSaveTop0",
         "flxDelete"

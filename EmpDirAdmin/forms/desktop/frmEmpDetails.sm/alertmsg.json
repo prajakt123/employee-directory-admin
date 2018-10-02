@@ -35,6 +35,7 @@
         "type": "string",
         "value": "100%"
     },
+    "autogrowmode": 1,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",

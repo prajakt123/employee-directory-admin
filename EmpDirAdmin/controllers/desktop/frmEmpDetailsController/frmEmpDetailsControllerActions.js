@@ -3,6 +3,16 @@ define({
       This is an auto generated file and any modifications to it may result in corruption of the action sequence.
     */
     /** onClick defined for SettingsMenu **/
+    AS_FlexContainer_bc7c86f86f9e40c7aac552e1160a9816: function AS_FlexContainer_bc7c86f86f9e40c7aac552e1160a9816(eventobject) {
+        var self = this;
+        this.navigateToFormSetting();
+    },
+    /** onClick defined for flxGreyBg **/
+    AS_FlexContainer_fb0d86edfa714e6ca077509680ea4bb7: function AS_FlexContainer_fb0d86edfa714e6ca077509680ea4bb7(eventobject) {
+        var self = this;
+        this.animateLeftMenu();
+    },
+    /** onClick defined for SettingsMenu **/
     AS_FlexContainer_f34ed8b4c5f448859b3e5d1b5f16eb6a: function AS_FlexContainer_f34ed8b4c5f448859b3e5d1b5f16eb6a(eventobject) {
         var self = this;
         this.navigateToFormSetting();
@@ -33,6 +43,11 @@ define({
         var self = this;
         self.changeUIForEditMode.call(this);
         this.view.flxEditHeader.setVisibility(true);
+    },
+    /** onClick defined for flxHamburger **/
+    AS_FlexContainer_bb2ed5886f354b238a8ebb55b3bd91fc: function AS_FlexContainer_bb2ed5886f354b238a8ebb55b3bd91fc(eventobject) {
+        var self = this;
+        this.animateLeftMenu();
     },
     /** onClick defined for flxCloseEditMode **/
     AS_FlexContainer_j7c3a2b805d94a29bf5cdf039ce4aa88: function AS_FlexContainer_j7c3a2b805d94a29bf5cdf039ce4aa88(eventobject) {

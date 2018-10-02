@@ -41,7 +41,7 @@
     "children": [
         "empHeader1",
         "empheader",
-        "leftmenu",
+        "flxMenuContainer",
         "flxList",
         "flxFooter",
         "btnFilter"

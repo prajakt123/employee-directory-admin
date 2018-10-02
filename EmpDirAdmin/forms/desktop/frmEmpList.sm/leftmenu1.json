@@ -393,7 +393,9 @@
             }
         },
         "SettingsMenu": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_FlexContainer_a1885387a1b748269c2559b18069d595"
+            },
             "__info__": {
                 "kuid": "e5f875cb318544679e6fa52089351e67",
                 "srcKUID": "b2f6383c6aa144b1b1342c64642b900a",
@@ -417,9 +419,7 @@
             },
             "responsiveData": {
                 "b1": {},
-                "b4": {
-                    "isVisible": false
-                }
+                "b4": {}
             },
             "width": {
                 "Default": {

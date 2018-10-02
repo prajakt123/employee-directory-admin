@@ -17,7 +17,7 @@
         0
     ],
     "_padding_": [
-        1,
+        2,
         0,
         0,
         0
@@ -28,6 +28,10 @@
     },
     "_skin_": "sf7786d3c48747e7a9fae835bcd45255",
     "_text_": "Designation",
+    "_top_": {
+        "type": "number",
+        "value": ""
+    },
     "_width_": {
         "type": "string",
         "value": "70%"
@@ -73,12 +77,18 @@
         }
     },
     "isvisible": true,
-    "kuid": "h0a72bf9c9064ecbb99964f5de4b7ce4",
+    "kuid": "c1a8a9d89c964ad583c68f7150bb1ad6",
     "name": "kony.ui.Label",
     "paddinginpixel": false,
     "parent": "flxDesignation",
     "pf": "frmEmpDetails",
     "responsiveData": {
+        "b4": {
+            "width": {
+                "type": "string",
+                "value": ""
+            }
+        },
         "b5": {
             "centerY": {
                 "type": "string",
@@ -86,15 +96,30 @@
             },
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "50px"
             },
             "left": {
                 "type": "string",
+                "value": "0px"
+            },
+            "padding": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "right": {
+                "type": "string",
                 "value": ""
+            },
+            "skin": "s87faf2e150f48aaaa970200f2f23b7b",
+            "top": {
+                "type": "string",
+                "value": "0px"
             },
             "width": {
                 "type": "string",
-                "value": "450px"
+                "value": "100%"
             }
         }
     },

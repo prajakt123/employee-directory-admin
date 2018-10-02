@@ -38,10 +38,11 @@
     "children": [
         "empHeader1",
         "empheader",
-        "leftmenu",
+        "leftmenu1",
         "flxContentMaster",
         "flxGreyBG",
-        "flxBottomAction"
+        "flxBottomAction",
+        "flxMenuContainer"
     ],
     "clipbounds": true,
     "containerweight": 100,

@@ -272,6 +272,7 @@ getLocationMasterRowTemplate:function(id){
     "layoutType": kony.flex.FREE_FORM,
     //"onClick": controller.AS_FlexContainer_i809066d3a8f4ab2acb04ddb9cfd119b,
     "left": "95%",
+     "right": "55px",
     "skin": "sknFlxTransparentBGPointer",
     "width": "2%",
     "zIndex": 10
@@ -316,7 +317,8 @@ getLocationMasterRowTemplate:function(id){
     "isVisible": true,
     "layoutType": kony.flex.FREE_FORM,
     //"onClick": controller.AS_FlexContainer_bbda4be0d80c4dea8082428ca8955999,
-    "left": "97%",
+    //"left": "97%",
+    "right": "20px",
     "skin": "sknFlxTransparentBGPointer",
     "width": "2%",
     "zIndex": 10
@@ -347,7 +349,7 @@ getLocationMasterRowTemplate:function(id){
     "isVisible": false,
     "layoutType": kony.flex.FREE_FORM,
     //"onClick": controller.AS_FlexContainer_ca38196eba05474d98b92a94ac7b5fba,
-    "right": "27px",
+    "right": "55px",
     "skin": "sknFlxTransparentBGPointer",
     "width": "25px",
     "zIndex": 20

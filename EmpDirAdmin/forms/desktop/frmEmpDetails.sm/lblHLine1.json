@@ -56,10 +56,15 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a04e224172ff45e39e19cb8f2b2f927e",
+    "kuid": "fde30d7ead144f40a9607f9bdcc094d9",
     "name": "kony.ui.Label",
     "parent": "flxEmployeeDetails",
     "pf": "frmEmpDetails",
+    "responsiveData": {
+        "b5": {
+            "isVisible": false
+        }
+    },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",

@@ -43,7 +43,7 @@
         "value": ""
     },
     "children": [
-        "CopyimgSearch0eb054523d6a74d"
+        "imgCancelSearch"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -69,7 +69,7 @@
             },
             "height": {
                 "type": "string",
-                "value": "20dp"
+                "value": "100%"
             },
             "left": {
                 "type": "string",
@@ -77,15 +77,15 @@
             },
             "right": {
                 "type": "string",
-                "value": "50px"
+                "value": "0px"
             },
             "top": {
                 "type": "string",
-                "value": ""
+                "value": "10px"
             },
             "width": {
                 "type": "string",
-                "value": "30px"
+                "value": "50px"
             }
         }
     },

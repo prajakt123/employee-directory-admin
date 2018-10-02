@@ -5,11 +5,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "150dp"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
-        "value": "7dp"
+        "value": "0px"
     },
     "_margin_": [
         0,
@@ -24,55 +24,37 @@
         0
     ],
     "_skin_": "s9f3b59d7fee4fbfaa2d880d74d96d9a",
-    "_src_": "imagedrag.png",
+    "_src_": "hamburger_menu.png",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0px"
     },
     "_width_": {
         "type": "string",
-        "value": "150dp"
+        "value": "100%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
     "context": {
         "channel": "desktop",
-        "formID": "frmEmpList",
+        "formID": "frmEmpDetails",
         "platform": "desktopweb",
         "templateType": "forms",
         "topLevelBox": null
     },
-    "id": "CopyimgSearch0eb054523d6a74d",
+    "id": "imgHamburger",
     "imagescalemode": 1,
     "info": null,
-    "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ccba6e243ef44f02a9eca9d789e57c73",
+    "kuid": "g93ba1c4e38e40c3b9992c32bcd46511",
     "name": "kony.ui.Image2",
-    "parent": "flxCloseSearch",
-    "pf": "frmEmpList",
-    "responsiveData": {
-        "b4": {
-            "height": {
-                "type": "string",
-                "value": "100%"
-            },
-            "left": {
-                "type": "string",
-                "value": "5dp"
-            },
-            "src": "close_icon.png",
-            "width": {
-                "type": "string",
-                "value": "100%"
-            }
-        }
-    },
+    "parent": "flxHamburger",
+    "pf": "frmEmpDetails",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,
     "wType": "Image",
     "widgetalignment": 5,
-    "zindex": 1
+    "zindex": 3
 }

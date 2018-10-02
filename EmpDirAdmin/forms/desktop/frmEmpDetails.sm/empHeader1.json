@@ -5,7 +5,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "80px"
+        "value": "60px"
     },
     "_left_": {
         "type": "string",
@@ -36,6 +36,7 @@
         "value": "100%"
     },
     "areflexpropsreferenced": false,
+    "autogrowmode": 0,
     "canUpdateUI": true,
     "clipbounds": true,
     "containerweight": 0,
@@ -59,7 +60,13 @@
             "autogrowMode": {
                 "Default": 0
             },
-            "height": {},
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "60px"
+                }
+            },
+            "isVisible": true,
             "responsiveData": {
                 "b2": {
                     "height": {
@@ -74,10 +81,6 @@
                     }
                 },
                 "b5": {
-                    "height": {
-                        "type": "string",
-                        "value": "88px"
-                    },
                     "isVisible": false
                 }
             }
@@ -91,7 +94,10 @@
             },
             "isVisible": false,
             "responsiveData": {
-                "b2": {}
+                "b2": {},
+                "b4": {
+                    "isVisible": false
+                }
             }
         },
         "flxCancelAndSearch": {
@@ -119,15 +125,46 @@
                 "srcKUID": "f7c16add20da4bffa5386904c5951e69",
                 "wType": "FlexContainer"
             },
+            "autogrowMode": {
+                "Default": 0
+            },
+            "centerY": {},
+            "height": {},
             "isVisible": false,
+            "left": {},
             "responsiveData": {
+                "b2": {
+                    "height": {
+                        "type": "string",
+                        "value": "0px"
+                    },
+                    "isVisible": false,
+                    "left": {
+                        "type": "string",
+                        "value": "0px"
+                    },
+                    "top": {
+                        "type": "string",
+                        "value": "0px"
+                    },
+                    "width": {
+                        "type": "string",
+                        "value": "0px"
+                    }
+                },
                 "b4": {
                     "isVisible": true
                 },
                 "b5": {
+                    "centerY": {
+                        "type": "string",
+                        "value": "50%"
+                    },
                     "isVisible": true
                 }
-            }
+            },
+            "top": {},
+            "width": {}
         },
         "flxLogo": {
             "__events__": {},
@@ -135,7 +172,22 @@
                 "kuid": "d414531986b448b798868f502829bab5",
                 "srcKUID": "a154a783afdb446f95a1c4f35be43407",
                 "wType": "FlexContainer"
-            }
+            },
+            "responsiveData": {
+                "b2": {
+                    "width": {
+                        "type": "string",
+                        "value": "350px"
+                    }
+                },
+                "b5": {
+                    "width": {
+                        "type": "string",
+                        "value": "100px"
+                    }
+                }
+            },
+            "width": {}
         },
         "flxUserInfo": {
             "__events__": {
@@ -147,6 +199,12 @@
                 "wType": "FlexContainer"
             },
             "responsiveData": {
+                "b4": {
+                    "right": {
+                        "type": "string",
+                        "value": "32px"
+                    }
+                },
                 "b5": {
                     "isVisible": false,
                     "right": {
@@ -188,7 +246,15 @@
                 "srcKUID": "gf05bb5c2076472da314ed519519a42a",
                 "wType": "Image"
             },
+            "centerY": {},
             "responsiveData": {
+                "b4": {
+                    "centerY": {
+                        "type": "string",
+                        "value": "40%"
+                    },
+                    "isVisible": true
+                },
                 "b5": {
                     "isVisible": false
                 }

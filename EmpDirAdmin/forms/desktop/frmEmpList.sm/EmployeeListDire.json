@@ -77,7 +77,7 @@
         "b2": {
             "left": {
                 "type": "string",
-                "value": "4%"
+                "value": "4px"
             }
         },
         "b4": {

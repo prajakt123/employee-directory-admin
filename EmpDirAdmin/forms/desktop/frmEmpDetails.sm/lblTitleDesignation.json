@@ -77,31 +77,24 @@
         }
     },
     "isvisible": true,
-    "kuid": "psd19056e06e4011e8bfbd290fbe0bfa7d",
+    "kuid": "dc5ff5f88f3b4d6b8ed6bd912a41f4b7",
     "name": "kony.ui.Label",
     "parent": "flxEmpNameDept",
     "pf": "frmEmpDetails",
     "responsiveData": {
         "b5": {
-            "centerX": {
-                "type": "string",
-                "value": "50%"
-            },
             "centerY": {
                 "type": "string",
                 "value": ""
             },
+            "contentAlignment": 5,
             "height": {
                 "type": "string",
-                "value": "30px"
-            },
-            "left": {
-                "type": "string",
-                "value": "-0.24%"
+                "value": "25px"
             },
             "top": {
                 "type": "string",
-                "value": "30px"
+                "value": "0dp"
             }
         }
     },

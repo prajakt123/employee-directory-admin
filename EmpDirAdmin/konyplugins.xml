@@ -4,7 +4,7 @@
     <pluginInfo version-no="8.2.20.v201809041313" plugin-id="com.pat.tool.keditor" plugin-name="Kony Studio"/>
     <pluginInfo version-no="8.2.0.v201804042035" plugin-id="com.kony.thirdparty.jars" plugin-name="Third Party Jars Plug-in"/>
     <pluginInfo version-no="8.2.0.v201804042035" plugin-id="com.pat.soapui" plugin-name="Soap UI Plugin"/>
-    <pluginInfo version-no="8.2.19.v201808301544" plugin-id="com.kony.codegen" plugin-name="Kony Codegenerator"/>
+    <pluginInfo version-no="8.2.0.v201804040839" plugin-id="com.kony.codegen" plugin-name="Kony Codegenerator"/>
     <pluginInfo version-no="8.2.0.v201804042035" plugin-id="com.kony.license" plugin-name="Kony Studio Licensing"/>
     <pluginInfo version-no="8.2.1.GA_v201809040408_r4" plugin-id="com.kony.cloudmiddleware" plugin-name="CloudMiddlewarePlugin"/>
     <pluginInfo version-no="8.2.1.GA_v201809040408_r4" plugin-id="com.kony.cloudthirdparty" plugin-name="CloudThirdPartyPlugin"/>

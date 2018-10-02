@@ -6,8 +6,8 @@
         "value": "1450px"
     },
     "_left_": {
-        "type": "number",
-        "value": ""
+        "type": "string",
+        "value": "0px"
     },
     "_margin_": [
         0,
@@ -54,15 +54,21 @@
     "layouttype": 2,
     "minwidth": {
         "type": "string",
-        "value": "1374px"
+        "value": ""
     },
     "name": "kony.ui.FlexContainer",
     "parent": "frmEmpList",
     "pf": "frmEmpList",
     "responsiveData": {
-        "b4": {
+        "b1": {
             "isVisible": false,
             "left": {
+                "type": "string",
+                "value": "0px"
+            }
+        },
+        "b4": {
+            "centerX": {
                 "type": "string",
                 "value": ""
             }

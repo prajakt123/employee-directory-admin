@@ -41,6 +41,10 @@
         }
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "number",
+        "value": ""
+    },
     "centery": {
         "type": "string",
         "value": "45%"
@@ -73,10 +77,39 @@
         }
     },
     "isvisible": true,
-    "kuid": "psd18fbaa06e4011e8bfbd290fbe0bfa7d",
+    "kuid": "aaba169eeb444921825f666a85d585bc",
     "name": "kony.ui.Label",
     "parent": "flxEmpNameDept",
     "pf": "frmEmpDetails",
+    "responsiveData": {
+        "b5": {
+            "centerX": {
+                "type": "string",
+                "value": "50%"
+            },
+            "centerY": {
+                "type": "string",
+                "value": ""
+            },
+            "contentAlignment": 5,
+            "height": {
+                "type": "string",
+                "value": "30px"
+            },
+            "left": {
+                "type": "string",
+                "value": ""
+            },
+            "top": {
+                "type": "string",
+                "value": "0dp"
+            },
+            "width": {
+                "type": "string",
+                "value": "100%"
+            }
+        }
+    },
     "tooltip": "",
     "wType": "Label",
     "zindex": 0

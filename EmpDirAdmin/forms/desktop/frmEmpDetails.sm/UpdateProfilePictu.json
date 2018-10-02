@@ -69,23 +69,16 @@
         }
     },
     "isvisible": true,
-    "kuid": "psd196bf806e4011e8bfbd290fbe0bfa7d",
+    "kuid": "e68a4427306c48e584dc034413753620",
     "name": "kony.ui.Label",
     "parent": "flxProfilePickSelection",
     "pf": "frmEmpDetails",
     "responsiveData": {
         "b5": {
-            "centerX": {
+            "height": {
                 "type": "string",
-                "value": "47.87%"
-            },
-            "isVisible": true,
-            "text": "Update Profile Picture",
-            "top": {
-                "type": "string",
-                "value": "5px"
-            },
-            "zIndex": 10
+                "value": "20dp"
+            }
         }
     },
     "tooltip": "",

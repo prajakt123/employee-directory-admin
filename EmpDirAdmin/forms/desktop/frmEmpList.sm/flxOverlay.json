@@ -45,7 +45,7 @@
     "ide_onClick": "AS_FlexContainer_h80782c1af084f609cc0457d4f9ef348",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "c3231c930e8e47e99eeb1f60246e5498",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
@@ -53,9 +53,7 @@
     "pf": "frmEmpList",
     "responsiveData": {
         "b1": {},
-        "b2": {
-            "isVisible": false
-        },
+        "b2": {},
         "b4": {
             "height": {
                 "type": "string",

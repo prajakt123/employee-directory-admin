@@ -46,7 +46,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i7be62ef2bd94903b7de1e8acfe4266d",
+    "kuid": "d1a97003a5664ed49cb4c6c2736710bd",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxEmployeeDetails",
@@ -55,16 +55,12 @@
         "b5": {
             "height": {
                 "type": "string",
-                "value": "80px"
+                "value": "75px"
             },
             "layoutType": 4,
             "top": {
                 "type": "string",
-                "value": ""
-            },
-            "width": {
-                "type": "string",
-                "value": "450px"
+                "value": "18dp"
             }
         }
     },

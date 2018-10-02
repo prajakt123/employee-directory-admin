@@ -7,10 +7,10 @@
     "defaultlocalekey": "en_US",
     "apppackagekey": "",
     "nativeContainerProperties": {
-        "isEnableJSContainerAndroid": true,
         "isModified": true,
-        "isEnableJSContaineriOS": true,
-        "isEnableJSContainer": true
+        "isEnableJSContainer": true,
+        "isEnableJSContainerAndroid": true,
+        "isEnableJSContaineriOS": true
     },
     "wap_android400_fontsize": "14",
     "wap_spaandroidtabhdpi_fontsize": "18",

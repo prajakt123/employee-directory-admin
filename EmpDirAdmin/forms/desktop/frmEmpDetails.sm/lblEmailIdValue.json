@@ -17,7 +17,7 @@
         0
     ],
     "_padding_": [
-        1,
+        2,
         0,
         0,
         0
@@ -77,28 +77,39 @@
         }
     },
     "isvisible": true,
-    "kuid": "je6d15e68595470e91cca23593c8470e",
+    "kuid": "abfcc8f3c8de42a2b04f4c51bc9139d5",
     "name": "kony.ui.Label",
     "paddinginpixel": false,
     "parent": "flxEmail",
     "pf": "frmEmpDetails",
     "responsiveData": {
         "b5": {
+            "centerY": {
+                "type": "string",
+                "value": ""
+            },
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "50px"
             },
             "left": {
                 "type": "string",
                 "value": "0px"
             },
+            "padding": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "skin": "s87faf2e150f48aaaa970200f2f23b7b",
             "top": {
                 "type": "string",
-                "value": ""
+                "value": "0px"
             },
             "width": {
                 "type": "string",
-                "value": "350px"
+                "value": "100%"
             }
         }
     },

@@ -35,6 +35,10 @@
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "number",
+        "value": ""
+    },
     "children": [],
     "clipbounds": false,
     "containerweight": 100,
@@ -43,11 +47,34 @@
     "id": "lineDummy",
     "info": null,
     "isvisible": true,
-    "kuid": "psd1892af06e4011e8bfbd290fbe0bfa7d",
+    "kuid": "c3508d0370d14dde9b8615bcc00d89cd",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "EditProfile",
     "pf": "frmEmpDetails",
+    "responsiveData": {
+        "b4": {
+            "width": {
+                "type": "string",
+                "value": "100%"
+            }
+        },
+        "b5": {
+            "centerX": {
+                "type": "string",
+                "value": "50%"
+            },
+            "isVisible": true,
+            "top": {
+                "type": "string",
+                "value": "9px"
+            },
+            "width": {
+                "type": "string",
+                "value": "100%"
+            }
+        }
+    },
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",

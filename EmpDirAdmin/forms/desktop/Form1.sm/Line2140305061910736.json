@@ -3,11 +3,11 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "0.85%"
+        "value": "0.21%"
     },
     "_left_": {
         "type": "string",
-        "value": "89.24%"
+        "value": "4.61%"
     },
     "_margin_": [
         0,
@@ -24,14 +24,14 @@
     ],
     "_percent_": true,
     "_render_": true,
-    "_skin_": "psd19a69016e4011e8bfbd290fbe0bfa7d",
+    "_skin_": "psd1892af26e4011e8bfbd290fbe0bfa7d",
     "_top_": {
         "type": "string",
-        "value": "48.52%"
+        "value": "51.8%"
     },
     "_width_": {
         "type": "string",
-        "value": "1.54%"
+        "value": "88.61%"
     },
     "allboxes": [],
     "canUpdateUI": true,
@@ -42,21 +42,21 @@
         "render": false
     },
     "enablescrolling": true,
-    "focusskin": "psd19a69016e4011e8bfbd290fbe0bfa7d",
-    "id": "Path3140304942388160",
+    "focusskin": "psd1892af26e4011e8bfbd290fbe0bfa7d",
+    "id": "Line2140305061910736",
     "info": null,
     "isvisible": true,
     "kiosk": {
         "render": false
     },
-    "kuid": "psd19ab7206e4011e8bfbd290fbe0bfa7d",
+    "kuid": "adaf84034eeb497cae20ab5c7f09d538",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "EditProfile",
-    "pf": "frmEmpDetails",
+    "parent": "FlexContainer0c639a51b701f41",
+    "pf": "Form1",
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 33
+    "zindex": 27
 }

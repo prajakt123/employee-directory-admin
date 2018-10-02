@@ -7,10 +7,6 @@
         "type": "string",
         "value": "1128px"
     },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_margin_": [
         0,
         0,
@@ -29,13 +25,18 @@
     "_skin_": "s6cdb1fcc1dd48ebacbc0a686dc29bd9",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "200dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "300px"
     },
+    "autogrowmode": 1,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "clipbounds": true,
     "containerweight": 0,
     "data": {

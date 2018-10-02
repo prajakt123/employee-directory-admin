@@ -48,7 +48,7 @@
     "id": "flxEmpNameDept",
     "info": null,
     "isvisible": true,
-    "kuid": "psd18f93906e4011e8bfbd290fbe0bfa7d",
+    "kuid": "d672ab4aceb548c68800ad3307fbb13a",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxEmployeeInfo",
@@ -57,23 +57,24 @@
         "b5": {
             "centerX": {
                 "type": "string",
-                "value": "50.00%"
+                "value": "50%"
             },
             "height": {
                 "type": "string",
-                "value": "50dp"
+                "value": "55px"
             },
+            "layoutType": 4,
             "left": {
-                "type": "string",
-                "value": "92px"
-            },
-            "top": {
                 "type": "string",
                 "value": ""
             },
+            "top": {
+                "type": "string",
+                "value": "0dp"
+            },
             "width": {
                 "type": "string",
-                "value": "50%"
+                "value": "100%"
             }
         }
     },

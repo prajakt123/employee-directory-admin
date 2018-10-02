@@ -1,6 +1,6 @@
 {
-    "AS_FlexContainer_a184b1249fd74af1815de5f987260679": {
-        "id": "AS_FlexContainer_a184b1249fd74af1815de5f987260679",
+    "AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd": {
+        "id": "AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
@@ -14,7 +14,7 @@
         },
         "language": "js",
         "actions": [{
-            "id": "ADD_SNIPPET__cbbd55f70d2a4d6393ca1900ccf79aae",
+            "id": "ADD_SNIPPET__cdf5bbcc228241dbb277d0573ed57397",
             "type": "ADD_SNIPPET",
             "codeSnippet": "this.navigateToFormSetting();",
             "parentId": null,

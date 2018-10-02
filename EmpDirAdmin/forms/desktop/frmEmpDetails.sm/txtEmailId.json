@@ -17,7 +17,7 @@
         0
     ],
     "_padding_": [
-        1,
+        2,
         0,
         0,
         0
@@ -55,7 +55,7 @@
     "info": null,
     "isvisible": false,
     "keyboardtype": "A",
-    "kuid": "d9ffb42c80cd438a81a7d28d2815f853",
+    "kuid": "ab7b3710905f4a069b41d835907705be",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "paddinginpixel": false,
@@ -63,21 +63,33 @@
     "pf": "frmEmpDetails",
     "responsiveData": {
         "b5": {
+            "centerY": {
+                "type": "string",
+                "value": ""
+            },
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "50px"
             },
+            "isVisible": true,
             "left": {
                 "type": "string",
                 "value": "0px"
             },
+            "padding": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "skin": "s2960cf093264f778e40ac2d3eb0d2d0",
             "top": {
-                "type": "number",
-                "value": "0"
+                "type": "string",
+                "value": "0px"
             },
             "width": {
                 "type": "string",
-                "value": "350px"
+                "value": "100%"
             }
         }
     },

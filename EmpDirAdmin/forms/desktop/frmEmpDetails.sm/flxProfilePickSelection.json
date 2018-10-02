@@ -48,7 +48,7 @@
     "id": "flxProfilePickSelection",
     "info": null,
     "isvisible": true,
-    "kuid": "psd195ae106e4011e8bfbd290fbe0bfa7d",
+    "kuid": "e4ed87b9a8ce469193f92fe1fa2c1960",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxEmployeeInfo",
@@ -61,7 +61,7 @@
             },
             "height": {
                 "type": "string",
-                "value": "170dp"
+                "value": "125px"
             },
             "left": {
                 "type": "string",
@@ -69,11 +69,7 @@
             },
             "top": {
                 "type": "string",
-                "value": ""
-            },
-            "width": {
-                "type": "string",
-                "value": "150px"
+                "value": "0dp"
             }
         }
     },

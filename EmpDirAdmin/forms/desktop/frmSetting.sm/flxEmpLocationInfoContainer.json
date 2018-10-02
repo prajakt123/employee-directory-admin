@@ -59,23 +59,18 @@
     "parent": "frmSetting",
     "pf": "frmSetting",
     "responsiveData": {
-        "b1": {
-            "isVisible": true
-        },
+        "b1": {},
         "b2": {
             "height": {
                 "type": "string",
                 "value": "260px"
             },
-            "isVisible": false,
             "width": {
                 "type": "string",
                 "value": "400px"
             }
         },
-        "b4": {
-            "isVisible": true
-        }
+        "b4": {}
     },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

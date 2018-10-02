@@ -109,7 +109,7 @@
                 "b4": {
                     "centerX": {
                         "type": "string",
-                        "value": "35%"
+                        "value": ""
                     },
                     "height": {
                         "type": "string",
@@ -118,10 +118,15 @@
                     "isVisible": true,
                     "left": {
                         "type": "string",
+                        "value": "60px"
+                    },
+                    "top": {
+                        "type": "string",
                         "value": ""
                     }
                 }
-            }
+            },
+            "top": {}
         },
         "flxCancelAndSearch": {
             "__events__": {},
@@ -140,7 +145,7 @@
                 "b4": {
                     "right": {
                         "type": "string",
-                        "value": "100px"
+                        "value": "60px"
                     }
                 }
             },
@@ -168,7 +173,7 @@
                     },
                     "left": {
                         "type": "string",
-                        "value": "25px"
+                        "value": "15px"
                     }
                 }
             }
@@ -205,11 +210,17 @@
                 "wType": "FlexContainer"
             },
             "responsiveData": {
+                "b2": {
+                    "right": {
+                        "type": "string",
+                        "value": "32px"
+                    }
+                },
                 "b4": {
                     "isVisible": true,
                     "right": {
                         "type": "string",
-                        "value": "50px"
+                        "value": "20px"
                     },
                     "width": {
                         "type": "string",
@@ -217,7 +228,12 @@
                     }
                 }
             },
-            "right": {},
+            "right": {
+                "Default": {
+                    "type": "string",
+                    "value": "48px"
+                }
+            },
             "width": {}
         },
         "imgAdminUser": {
@@ -266,10 +282,22 @@
                 "srcKUID": "gf05bb5c2076472da314ed519519a42a",
                 "wType": "Image"
             },
+            "centerY": {},
             "left": {},
             "responsiveData": {
+                "b2": {
+                    "centerY": {
+                        "type": "string",
+                        "value": "40%"
+                    },
+                    "isVisible": true
+                },
                 "b4": {
-                    "isVisible": false
+                    "isVisible": false,
+                    "left": {
+                        "type": "string",
+                        "value": "30px"
+                    }
                 }
             }
         },

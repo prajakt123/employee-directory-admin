@@ -17,7 +17,7 @@
         0
     ],
     "_padding_": [
-        1,
+        2,
         0,
         0,
         0
@@ -55,7 +55,7 @@
     "info": null,
     "isvisible": false,
     "keyboardtype": "A",
-    "kuid": "psd1949ca06e4011e8bfbd290fbe0bfa7d",
+    "kuid": "e6a02a74912344ed82323c36297ff82a",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "paddinginpixel": false,
@@ -69,20 +69,27 @@
             },
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "50px"
             },
-            "isVisible": false,
+            "isVisible": true,
             "left": {
                 "type": "string",
                 "value": "0px"
             },
+            "padding": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "skin": "s2960cf093264f778e40ac2d3eb0d2d0",
             "top": {
-                "type": "number",
-                "value": "0"
+                "type": "string",
+                "value": "0px"
             },
             "width": {
                 "type": "string",
-                "value": "450px"
+                "value": "100%"
             }
         }
     },

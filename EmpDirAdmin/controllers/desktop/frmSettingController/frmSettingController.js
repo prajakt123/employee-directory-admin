@@ -2,6 +2,7 @@ define({
   selectedDataModel:null,
   operationMode:null,
   recordList:null,
+  status:"close",
 
   onFormInit:function(){
     debugger;
@@ -810,8 +811,8 @@ define({
     if(typeof eventObject==='object' && typeof eventObject!==null){
       this.operationMode="edit";
       //var id=eventObject.id;
-     // id=id.split("flxEdit")[1];
-     // var parent=eventObject.parent;
+      // id=id.split("flxEdit")[1];
+      // var parent=eventObject.parent;
       var locationObj={};
       locationObj["id"]=eventObject["lblId"];
       locationObj["address_one"]=eventObject["lblAddressValue"];
@@ -935,7 +936,7 @@ define({
   /**
 	 * @function editItem
 	 * @description - 
-     * @param {JSON - error} - error response from the back end
+     * @param {JSON - eventObject} 
 	 **/
   editItem:function(eventObject){
     debugger;
@@ -964,10 +965,10 @@ define({
     var dataObject={};
     if(this.selectedDataModel==="Department"){
       dataObject["Department_id"]=parent["lblId"+id].text;
-      dataObject["Name"]=parent["txtBoxName"+id].text;
+      dataObject["Name"]=parent["txtBoxNameCommon0"+id].text;
     }else if(this.selectedDataModel==="Designation"){
       dataObject["Designation_id"]=parent["lblId"+id].text;
-      dataObject["Name"]=parent["txtBoxName"+id].text;
+      dataObject["Name"]=parent["txtBoxNameCommon0"+id].text;
     }
     this.updateMasterItem(this.selectedDataModel,dataObject,parent,this.updateCommonItemSuccess,this.updateCommonItemFailure);
   },
@@ -1058,16 +1059,17 @@ define({
     var self=this;
     var userConfirmed=function(isConfirmed){
       if(isConfirmed){
+        var dataObject={};
+        if(self.selectedDataModel==="Location"){
+          dataObject["Location_id"]=parent["lblId"];
+        }
         var id=eventObject.id;
         id=id.split("flxRemove")[1];
         var parent=eventObject.parent;
-        var dataObject={};
         if(self.selectedDataModel==="Department"){
           dataObject["Department_id"]=parent["lblId"+id].text;
         }else if(self.selectedDataModel==="Designation"){
           dataObject["Designation_id"]=parent["lblId"+id].text;
-        }else if(self.selectedDataModel==="Location"){
-          dataObject["Location_id"]=parent["lblId"+id].text;
         }
         self.removeMasterItem(self.selectedDataModel,dataObject,parent,self.removeCommonItemSuccess,self.removeCommonItemFailure);
       }
@@ -1083,6 +1085,9 @@ define({
   removeCommonItemSuccess:function(rootFlex,result){
     this.view.flxSCCommon.remove(rootFlex);
     this.view.forceLayout();
+    if(self.selectedDataModel==="Location"){
+      
+    }
     dismissLoadingScreen();
   },
 
@@ -1137,8 +1142,6 @@ define({
       this.view.alertmsg.setMessage("Improper data received");
       this.view.flxAlertContainer2.setVisibility(true);
       this.view.forceLayout();
-
-
       return;
     }
   },
@@ -1162,6 +1165,52 @@ define({
 
   animateLeftMenu:function(){
 
+    var self=this;
+    var animDefinition;
+    if(this.status=="open"){
+      this.view.flexGreyBg.setVisibility(false);
+      animDefinition = {
+        100: {
+          "left":"-260dp"
+        }
+      };
+    }else{
+      self.view.flxMenuContainer.width="100%";
+      this.view.flexGreyBg.setVisibility(true);
+      //this.view.flxMenuContainer.setVisibility(true);
+      animDefinition = {
+        100: {
+          "left":"0dp",
+        }
+      };
+    }
+    animDef = kony.ui.createAnimation(animDefinition);
+    var config = {
+      "duration": 0.2,
+      "iterationCount": 1,
+      "delay": 0.1,
+      "fillMode": kony.anim.FILL_MODE_FORWARDS
+    };
+    this.view.leftmenu.animate(animDef, config, {
+      "animationEnd": function () {
+        kony.print("ENTERED ANIMATION CALLBACK");
+        if (self.status == "open"){
+          kony.print("status is now close");
+          self.status = "close";
+          self.view.empHeader1.imgHamburger.src="hamburger_menu.png";
+          self.view.flxMenuContainer.width="0%";
+        //  self.view.flxMenuContainer.setVisibility(false);
+        }
+        else {
+          self.status = "open";
+          kony.print("status is now open");
+          self.view.empHeader1.imgHamburger.src="hamburger_menu_on_tap.png";
+        }
+        self.view.forceLayout();
+      }
+    }); /*self.onAnimationComplete()*/
+  },
+  animateLeftMenu2:function(){
     if(this.view.empHeader1.flxHamburger.src=="hamburger_menu.png"){
       this.view.empHeader1.flxHamburger.src="hamburger menu_on_tap.png"
     }else{

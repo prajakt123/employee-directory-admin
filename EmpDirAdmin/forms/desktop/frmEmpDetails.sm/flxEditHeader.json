@@ -53,17 +53,42 @@
     "pf": "frmEmpDetails",
     "responsiveData": {
         "b2": {
-            "isVisible": false
+            "height": {
+                "type": "string",
+                "value": "0px"
+            },
+            "isVisible": true,
+            "left": {
+                "type": "string",
+                "value": "0dp"
+            },
+            "top": {
+                "type": "string",
+                "value": "0dp"
+            },
+            "zIndex": 1
         },
         "b4": {
-            "isVisible": false
+            "height": {
+                "type": "string",
+                "value": "0px"
+            },
+            "isVisible": true,
+            "left": {
+                "type": "string",
+                "value": "0dp"
+            },
+            "top": {
+                "type": "string",
+                "value": "0dp"
+            }
         },
         "b5": {
             "height": {
                 "type": "string",
                 "value": "70px"
             },
-            "isVisible": false,
+            "isVisible": true,
             "left": {
                 "type": "string",
                 "value": "0dp"

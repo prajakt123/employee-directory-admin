@@ -47,16 +47,12 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a32bcad5021f412daaf8c562cb3cb4d8",
+    "kuid": "b348f8739a2c40fa9dbe544202b78d74",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxEditProfileHeader",
     "pf": "frmEmpDetails",
-    "responsiveData": {
-        "b5": {
-            "isVisible": false
-        }
-    },
+    "responsiveData": {},
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "snapgridsize": 10,

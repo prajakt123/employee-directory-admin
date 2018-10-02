@@ -3,7 +3,7 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "220dp"
+        "value": "60px"
     },
     "_left_": {
         "type": "string",
@@ -33,11 +33,13 @@
         "value": "100%"
     },
     "allboxes": [],
+    "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
         "lblViewProfile",
         "flxCloseDetails",
-        "btnEdit"
+        "btnEdit",
+        "flxHamburger"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -59,10 +61,6 @@
             "isVisible": false
         },
         "b5": {
-            "height": {
-                "type": "string",
-                "value": "70px"
-            },
             "isVisible": true,
             "left": {
                 "type": "string",

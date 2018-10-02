@@ -34,6 +34,10 @@
     },
     "allboxes": [],
     "canUpdateUI": true,
+    "centerx": {
+        "type": "number",
+        "value": ""
+    },
     "centery": {
         "type": "number",
         "value": ""
@@ -55,25 +59,29 @@
     "pf": "frmEmpList",
     "responsiveData": {
         "b4": {
-            "centerY": {
-                "type": "string",
-                "value": "50%"
-            },
-            "height": {
-                "type": "string",
-                "value": "20dp"
-            },
-            "left": {
-                "type": "string",
-                "value": "10px"
-            },
-            "top": {
+            "centerX": {
                 "type": "string",
                 "value": ""
             },
+            "centerY": {
+                "type": "string",
+                "value": ""
+            },
+            "height": {
+                "type": "string",
+                "value": "100%"
+            },
+            "left": {
+                "type": "string",
+                "value": "0px"
+            },
+            "top": {
+                "type": "string",
+                "value": "0px"
+            },
             "width": {
                 "type": "string",
-                "value": "30px"
+                "value": "50px"
             }
         }
     },

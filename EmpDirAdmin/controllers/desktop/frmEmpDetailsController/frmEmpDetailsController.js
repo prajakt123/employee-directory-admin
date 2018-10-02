@@ -5,6 +5,7 @@ define({
   mobileContactId:null,
   emailContactId:null,
   param:"",
+  status:"close",
   curEmpDetailsFromInputFields : {
     empObj : {
       "Employee_id":"",
@@ -255,18 +256,18 @@ define({
     this.setMastersToListBox(param);
     this.changeUIForEditMode();
   },
-  
+
   onFormPostShow:function(){
-     if (globEmpOperatioMode == "add"){
-     this.resetForm(this.param);
-     this.view.flxViewProfileHeader.setVisibility(false);
-    this.view.flxEditHeader.setVisibility(true);
-       this.view.forceLayout();
+    if (globEmpOperatioMode == "add"){
+      this.resetForm(this.param);
+      this.view.flxViewProfileHeader.setVisibility(false);
+      this.view.flxEditHeader.setVisibility(true);
+      this.view.forceLayout();
       return;
     }else if(globEmpOperatioMode == "edit"){
       this.changeUIForEditMode();
-       this.view.flxViewProfileHeader.setVisibility(true);
-    this.view.flxEditHeader.setVisibility(false);
+      this.view.flxViewProfileHeader.setVisibility(true);
+      this.view.flxEditHeader.setVisibility(false);
     }else{
       this.changeUIForViewMode();
     }
@@ -453,7 +454,7 @@ define({
 	 * @description - Creates a employee object in backend using EmployeeModelSchema object service.
 	 **/
   createNewEmployee: function(){
-   
+
     try {
       var objSvc = getObjectInstance();
       var dataObject = new kony.sdk.dto.DataObject("Employee");
@@ -547,7 +548,7 @@ define({
 	 **/
   createContactObject: function(contactObjParam,currEmpContactInfo){
     try {
-      
+
       var objSvc = getObjectInstance();
       var dataObject = new kony.sdk.dto.DataObject("Contact");
       var thisController = this;
@@ -892,7 +893,7 @@ define({
     this.view.lblEmailIdValue.setVisibility(true);
     this.view.lblLocationValue.setVisibility(true);
   },
-   /**
+  /**
 	 * @function setCommonData
 	 * @description - Navigatesto form settings onclick of settings in left menu bar.
 	 **/
@@ -915,15 +916,62 @@ define({
 
     this.view.flxAlertContainer.setVisibility(false);
   },
-  
-   animateLeftMenu:function(){
+  animateLeftMenu:function(){
 
-     if(this.view.empHeader1.flxHamburger.src=="hamburger_menu.png"){
+    var self=this;
+    var animDefinition;
+    if(this.status=="open"){
+      this.view.flxGreyBg.setVisibility(false);
+      animDefinition = {
+        100: {
+          "left":"-260dp"
+        }
+      };
+    }else{
+      self.view.flxMenuContainer.width="100%";
+      this.view.flxGreyBg.setVisibility(true);
+      //this.view.flxMenuContainer.setVisibility(true);
+      animDefinition = {
+        100: {
+          "left":"0dp",
+        }
+      };
+    }
+    animDef = kony.ui.createAnimation(animDefinition);
+    var config = {
+      "duration": 0.2,
+      "iterationCount": 1,
+      "delay": 0.1,
+      "fillMode": kony.anim.FILL_MODE_FORWARDS
+    };
+    this.view.leftmenu.animate(animDef, config, {
+      "animationEnd": function () {
+        kony.print("ENTERED ANIMATION CALLBACK");
+        if (self.status == "open"){
+          kony.print("status is now close");
+          self.status = "close";
+          self.view.empHeader1.imgHamburger.src="hamburger_menu.png";
+          self.view.flxMenuContainer.width="0%";
+        //  self.view.flxMenuContainer.setVisibility(false);
+        }
+        else {
+          self.status = "open";
+          kony.print("status is now open");
+          self.view.empHeader1.imgHamburger.src="hamburger_menu_on_tap.png";
+        }
+        self.view.forceLayout();
+      }
+    }); /*self.onAnimationComplete()*/
+  },
+
+  animateLeftMenu2:function(){
+
+    if(this.view.empHeader1.flxHamburger.src=="hamburger_menu.png"){
       this.view.empHeader1.flxHamburger.src="hamburger menu_on_tap.png"
     }else{
       this.view.empHeader1.flxHamburger.src="hamburger_menu.png"
     }
-       var self=this;
+    var self=this;
     var animDefinition;
     if(status=="open"){
 
@@ -982,39 +1030,35 @@ define({
     //this.view.segEmployeeList.onRowClick = this.onRowClickMobileMode;
 
   },
-  
+
   onBreakpointChange2: function(eventobject,breakpoint){
     debugger;
-   
+
     var viewMode;
 
     //if(breakpoint===constants.BREAKPOINT_MAX_VALUE){
     if(breakpoint>780){
       viewMode="Desktop";
       debugger;
-       this.view.alertmsg.setUIForChannel("desktop");
-      this.view.forceLayout();
-//       this.view.segEmployeeList.removeAll();
-//       this.view.segEmployeeList.rowTemplate="flxTemplateEmpList";
-//       //this.populateDataToSegment(this.employeeList);
-//       this.view.forceLayout();
+      this.view.alertmsg.setUIForChannel("desktop");
+      //       this.view.segEmployeeList.removeAll();
+      //       this.view.segEmployeeList.rowTemplate="flxTemplateEmpList";
+      //       //this.populateDataToSegment(this.employeeList);
+      //       this.view.forceLayout();
 
     }else if( breakpoint>=640 && breakpoint<=780 ){
-
       viewMode="Tablet";
       this.setUIforTablet(viewMode);
-       this.view.alertmsg.setUIForChannel("tablet");
-      this.view.forceLayout();
+      this.view.alertmsg.setUIForChannel("tablet");
 
     }else if(breakpoint<640){
       viewMode="Mobile";
       debugger;
       this.setUIforMobile(viewMode);
-       this.view.alertmsg.setUIForChannel("mobile");
-      this.view.forceLayout();
+      this.view.alertmsg.setUIForChannel("mobile");
     }
-     this.onPostShow();
-
+    this.onPostShow();
+    this.view.forceLayout();
   },
 
 

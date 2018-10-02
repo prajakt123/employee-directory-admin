@@ -17,7 +17,7 @@
         0
     ],
     "_padding_": [
-        1,
+        2,
         0,
         0,
         0
@@ -28,6 +28,10 @@
     },
     "_skin_": "sf7786d3c48747e7a9fae835bcd45255",
     "_text_": "Department",
+    "_top_": {
+        "type": "number",
+        "value": ""
+    },
     "_width_": {
         "type": "number",
         "value": ""
@@ -73,7 +77,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "f5dcfbc618c345199c17480d56cbcfbc",
+    "kuid": "i1277808ee63452bb71ea412a7887f72",
     "name": "kony.ui.Label",
     "paddinginpixel": false,
     "parent": "flxDepartment",
@@ -86,15 +90,26 @@
             },
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "50px"
             },
             "left": {
                 "type": "string",
                 "value": "0px"
             },
+            "padding": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "skin": "s87faf2e150f48aaaa970200f2f23b7b",
+            "top": {
+                "type": "string",
+                "value": "0px"
+            },
             "width": {
                 "type": "string",
-                "value": "450px"
+                "value": "100%"
             }
         }
     },

@@ -128,5 +128,15 @@ define({
     AS_Form_f2e5af38e3714b5b884688797fdc35d2: function AS_Form_f2e5af38e3714b5b884688797fdc35d2(eventobject, breakpoint) {
         var self = this;
         return self.onBreakpointChange.call(this, eventobject, breakpoint);
+    },
+    /** onClick defined for SettingsMenu **/
+    AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd: function AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd(eventobject) {
+        var self = this;
+        this.navigateToFormSetting();
+    },
+    /** onClick defined for flexGreyBg **/
+    AS_FlexContainer_h58b08dc22604bd688d7075d47731bdc: function AS_FlexContainer_h58b08dc22604bd688d7075d47731bdc(eventobject) {
+        var self = this;
+        this.animateLeftMenu();
     }
 });

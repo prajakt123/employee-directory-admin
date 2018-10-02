@@ -23,6 +23,10 @@
         0
     ],
     "_percent_": true,
+    "_right_": {
+        "type": "number",
+        "value": ""
+    },
     "_skin_": "s6cdb1fcc1dd48ebacbc0a686dc29bd9",
     "_top_": {
         "type": "string",
@@ -63,18 +67,49 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e073b921558346ddaea12a41aee4bcd7",
+    "kuid": "gb1bf2d11b0c4165b199aab6b1494a1e",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "EditProfile",
     "pf": "frmEmpDetails",
     "responsiveData": {
+        "b2": {
+            "height": {
+                "type": "string",
+                "value": "515px"
+            },
+            "width": {
+                "type": "string",
+                "value": "98%"
+            }
+        },
+        "b4": {
+            "right": {
+                "type": "string",
+                "value": "12px"
+            },
+            "width": {
+                "type": "string",
+                "value": "98%"
+            }
+        },
         "b5": {
             "height": {
                 "type": "string",
-                "value": "700px"
+                "value": "912px"
             },
-            "isVisible": true
+            "left": {
+                "type": "string",
+                "value": "0dp"
+            },
+            "top": {
+                "type": "string",
+                "value": "20px"
+            },
+            "width": {
+                "type": "string",
+                "value": "97%"
+            }
         }
     },
     "retaincontentalignment": false,

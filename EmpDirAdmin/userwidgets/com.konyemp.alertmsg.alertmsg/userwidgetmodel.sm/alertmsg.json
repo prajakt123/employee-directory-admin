@@ -2,8 +2,8 @@
     "DNDConfig": null,
     "__parentReadjusting__": false,
     "_height_": {
-        "type": "string",
-        "value": "100%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -30,18 +30,11 @@
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "300dp"
     },
     "allboxes": [],
+    "autogrowmode": 1,
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "children": [
         "flxAlertMsg"
     ],

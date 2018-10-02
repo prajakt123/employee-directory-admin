@@ -59,7 +59,7 @@
             "isVisible": true,
             "right": {
                 "type": "string",
-                "value": "5px"
+                "value": "0px"
             },
             "width": {
                 "type": "string",

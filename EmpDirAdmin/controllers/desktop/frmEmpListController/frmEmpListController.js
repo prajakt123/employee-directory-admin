@@ -26,6 +26,8 @@ define({
 	 **/
   onNavigate: function(){ 
     debugger;
+    //this.status="close";
+    //this.animateLeftMenu();
     this.requireModule=require("parsingModule");
     if(this.parsedEmployeeList!==null){
       return;
@@ -930,44 +932,28 @@ define({
 	 **/
   animateLeftMenu:function(){
 
-
-    //     if(this.view.empHeader1.flxHamburger.src=="hamburger_menu.png"){
-    //       this.view.empHeader1.flxHamburger.src="hamburger_menu_on_tap.png";
-    //     }else{
-    //       this.view.empHeader1.flxHamburger.src="hamburger_menu.png";
-    //     }
     var self=this;
     var animDefinition;
-    if(status=="open"){
-
+    if(this.status=="open"){
+      this.view.flxGreyBg.setVisibility(false);
       animDefinition = {
-
         100: {
-
           "left":"-260dp"
         }
       };
-      //status="close";
-
     }else{
-
+      self.view.flxMenuContainer.width="100%";
+      this.view.flxGreyBg.setVisibility(true);
+      //this.view.flxMenuContainer.setVisibility(true);
       animDefinition = {
-
         100: {
-
           "left":"0dp",
-
         }
       };
-      //status="open";
     }
-
-
-
     animDef = kony.ui.createAnimation(animDefinition);
-
     var config = {
-      "duration": 1,
+      "duration": 0.2,
       "iterationCount": 1,
       "delay": 0.1,
       "fillMode": kony.anim.FILL_MODE_FORWARDS
@@ -975,18 +961,19 @@ define({
     this.view.leftmenu.animate(animDef, config, {
       "animationEnd": function () {
         kony.print("ENTERED ANIMATION CALLBACK");
-        if (status == "open"){
+        if (self.status == "open"){
           kony.print("status is now close");
-          status = "close";
-          self.view.empHeader1.flxHamburger.src="hamburger_menu.png";
-
+          self.status = "close";
+          self.view.empHeader1.imgHamburger.src="hamburger_menu.png";
+          self.view.flxMenuContainer.width="0%";
+        //  self.view.flxMenuContainer.setVisibility(false);
         }
         else {
-          status = "open";
+          self.status = "open";
           kony.print("status is now open");
-          self.view.empHeader1.flxHamburger.src="hamburger_menu_on_tap.png";
+          self.view.empHeader1.imgHamburger.src="hamburger_menu_on_tap.png";
         }
-
+        self.view.forceLayout();
       }
     }); /*self.onAnimationComplete()*/
   },
@@ -998,9 +985,6 @@ define({
     this.view.forceLayout();
     this.view.empHeader1.btnCancelsearch.setVisibility(true);
     this.view.forceLayout();
-
-
-
   },
 
 
@@ -1017,7 +1001,6 @@ define({
     debugger;
     this.view.empHeader1.flxHamburger.setVisibility(true);
     this.view.segEmployeeList.rowTemplate="flxTemplateEmpListTab";
-
     this.view.forceLayout();
     //this.view.segEmployeeList.
     //this.view.segEmployeeList.onRowClick = this.onRowClickTabMode;
@@ -1042,7 +1025,13 @@ define({
     }
   },
 
+  /**
+   * @function
+   *
+   */
   onPostShow:function(){
+    this.status="close";
+    //this.animateLeftMenu();
     if (this.employee == undefined || this.employee === null  || globRefreshData == true){
       debugger;
       this.view.segEmployeeList.removeAll();

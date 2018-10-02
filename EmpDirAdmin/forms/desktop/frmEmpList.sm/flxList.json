@@ -39,6 +39,10 @@
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "number",
+        "value": ""
+    },
     "children": [
         "flxListHeader",
         "lblLine",
@@ -46,7 +50,7 @@
         "lblLine2",
         "flxEmpListHeader",
         "lblLine3",
-        "segEmployeeList"
+        "flxSegMentContainer"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -72,9 +76,31 @@
             }
         },
         "b2": {
+            "centerX": {
+                "type": "string",
+                "value": ""
+            },
             "left": {
                 "type": "string",
-                "value": "10px"
+                "value": "32px"
+            },
+            "minWidth": {
+                "type": "string",
+                "value": ""
+            },
+            "right": {
+                "type": "string",
+                "value": "32px"
+            },
+            "width": {
+                "type": "string",
+                "value": ""
+            }
+        },
+        "b4": {
+            "left": {
+                "type": "string",
+                "value": "15px"
             },
             "minWidth": {
                 "type": "string",
@@ -87,20 +113,6 @@
             "width": {
                 "type": "string",
                 "value": ""
-            }
-        },
-        "b4": {
-            "left": {
-                "type": "string",
-                "value": "10px"
-            },
-            "minWidth": {
-                "type": "string",
-                "value": "1011px"
-            },
-            "width": {
-                "type": "string",
-                "value": "95%"
             }
         }
     },

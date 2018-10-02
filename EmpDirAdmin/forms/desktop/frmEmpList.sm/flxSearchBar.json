@@ -23,7 +23,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s6cdb1fcc1dd48ebacbc0a686dc29bd9",
+    "_skin_": "sd0bc18bdb254c41808a20a99c6e7f05",
     "_top_": {
         "type": "string",
         "value": "9dp"
@@ -63,7 +63,7 @@
                 "type": "string",
                 "value": "60px"
             },
-            "layoutType": 3,
+            "layoutType": 2,
             "left": {
                 "type": "string",
                 "value": "0dp"

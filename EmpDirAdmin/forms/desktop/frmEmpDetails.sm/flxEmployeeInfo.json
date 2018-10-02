@@ -49,33 +49,25 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b21e4ddc07b545e7be28961ce45e992c",
+    "kuid": "g193c343d1cf4c7893dcb4bb18f48599",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "EditProfile",
     "pf": "frmEmpDetails",
     "responsiveData": {
         "b5": {
-            "centerX": {
-                "type": "string",
-                "value": "50%"
-            },
             "height": {
-                "type": "ref",
-                "value": "preferred"
+                "type": "string",
+                "value": "180px"
             },
             "layoutType": 4,
             "left": {
                 "type": "string",
-                "value": ""
+                "value": "0dp"
             },
             "top": {
                 "type": "string",
-                "value": "0%"
-            },
-            "width": {
-                "type": "ref",
-                "value": "preferred"
+                "value": "22px"
             }
         }
     },

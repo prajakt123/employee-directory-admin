@@ -23,6 +23,10 @@
         0
     ],
     "_placeholder_": "Type Keyword",
+    "_right_": {
+        "type": "number",
+        "value": ""
+    },
     "_skin_": "sacb7557b31b43f0ac64c68005a6d606",
     "_text_": "",
     "_top_": {
@@ -50,7 +54,12 @@
     "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 4,
+    "desktopweb": {
+        "psp": {}
+    },
+    "disabledSkins": {},
     "focusskin": "sd07c7a333db41b1ab8e102f6c3751a0",
+    "hoverskin": "",
     "id": "txtBxSearch",
     "ide_onTextChange": "AS_TextField_ja9150d585e0480abb910b1324296030",
     "info": null,
@@ -73,11 +82,27 @@
                 "type": "string",
                 "value": "50%"
             },
+            "desktopweb": {
+                "psp": {
+                    "hoverSkin": "s219067d0f324420aa739b5998caf74d"
+                }
+            },
+            "disabledSkins": {},
             "focusSkin": "s2c15ba9b1594f9c9e430ab635cdd737",
+            "isVisible": true,
+            "left": {
+                "type": "string",
+                "value": "55dp"
+            },
+            "right": {
+                "type": "string",
+                "value": "55px"
+            },
             "skin": "sacb7557b31b43f0ac64c68005a6d606",
+            "text": "",
             "width": {
                 "type": "string",
-                "value": "320px"
+                "value": ""
             }
         }
     },

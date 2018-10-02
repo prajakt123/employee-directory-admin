@@ -65,7 +65,7 @@
             },
             "width": {
                 "type": "string",
-                "value": "95%"
+                "value": "100%"
             },
             "zIndex": 150
         },

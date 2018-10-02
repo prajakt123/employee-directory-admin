@@ -24,6 +24,10 @@
     ],
     "_skin_": "psd18dbed16e4011e8bfbd290fbe0bfa7d",
     "_text_": "Last Name",
+    "_top_": {
+        "type": "number",
+        "value": ""
+    },
     "_width_": {
         "type": "string",
         "value": "28.57%"
@@ -69,7 +73,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "psd18e82206e4011e8bfbd290fbe0bfa7d",
+    "kuid": "j3c603591f424ad0bc55cb0fc54c2da6",
     "name": "kony.ui.Label",
     "paddinginpixel": false,
     "parent": "flxLastName",
@@ -82,15 +86,16 @@
             },
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "25px"
             },
-            "left": {
-                "type": "number",
-                "value": "0"
+            "skin": "s43644ed7aec463c9416dbfb2c98cd2f",
+            "top": {
+                "type": "string",
+                "value": "0px"
             },
             "width": {
                 "type": "string",
-                "value": "100px"
+                "value": "100%"
             }
         }
     },

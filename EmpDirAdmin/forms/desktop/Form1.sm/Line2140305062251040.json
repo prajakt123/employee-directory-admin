@@ -27,7 +27,7 @@
     "_skin_": "psd1892af26e4011e8bfbd290fbe0bfa7d",
     "_top_": {
         "type": "string",
-        "value": "77.22%"
+        "value": "45.44%"
     },
     "_width_": {
         "type": "string",
@@ -43,20 +43,21 @@
     },
     "enablescrolling": true,
     "focusskin": "psd1892af26e4011e8bfbd290fbe0bfa7d",
-    "id": "Line2140305061842224",
+    "id": "Line2140305062251040",
     "info": null,
     "isvisible": true,
     "kiosk": {
         "render": false
     },
-    "kuid": "psd199f3d06e4011e8bfbd290fbe0bfa7d",
+    "kuid": "e2bc55263e744fcd8a438ff097922fd0",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "EditProfile",
-    "pf": "frmEmpDetails",
+    "parent": "FlexContainer0c639a51b701f41",
+    "pf": "Form1",
+    "responsiveData": {},
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 31
+    "zindex": 26
 }

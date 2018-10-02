@@ -30,10 +30,10 @@ define({
         var self = this;
         return self.toggleProfile.call(this, null);
     },
-    /** onClick defined for SettingsMenu **/
-    AS_FlexContainer_a184b1249fd74af1815de5f987260679: function AS_FlexContainer_a184b1249fd74af1815de5f987260679(eventobject) {
+    /** onClick defined for flxGreyBg **/
+    AS_FlexContainer_daae6224e5a747c2b38b0e8d1c2c0aa6: function AS_FlexContainer_daae6224e5a747c2b38b0e8d1c2c0aa6(eventobject) {
         var self = this;
-        this.navigateToFormSetting();
+        this.animateLeftMenu();
     },
     /** onClick defined for btnAddNewEmp **/
     AS_Button_d54b47820677405ea2faed36533ac5f1: function AS_Button_d54b47820677405ea2faed36533ac5f1(eventobject) {
@@ -125,6 +125,11 @@ define({
         var self = this;
         this.hideALertComponentCallBack();
     },
+    /** onClick defined for SettingsMenu **/
+    AS_FlexContainer_a1885387a1b748269c2559b18069d595: function AS_FlexContainer_a1885387a1b748269c2559b18069d595(eventobject) {
+        var self = this;
+        this.navigateToFormSetting();
+    },
     /** onClick defined for CopybtnClearAll0f386a0c1196b46 **/
     AS_Button_c602b9c7701944598172099a66e71de1: function AS_Button_c602b9c7701944598172099a66e71de1(eventobject) {
         var self = this;
@@ -159,5 +164,10 @@ define({
         var self = this;
         this.onBreakpointChange(eventobject, breakpoint);
         this.view.flxOverlay.setVisibility(false);
+    },
+    /** onClick defined for SettingsMenu **/
+    AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd: function AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd(eventobject) {
+        var self = this;
+        this.navigateToFormSetting();
     }
 });

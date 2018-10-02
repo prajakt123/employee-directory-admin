@@ -73,7 +73,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "psd1944e806e4011e8bfbd290fbe0bfa7d",
+    "kuid": "d4fb2bf9eda447a89a538e792109d4c3",
     "name": "kony.ui.Label",
     "parent": "flxWorkNumber",
     "pf": "frmEmpDetails",
@@ -85,19 +85,16 @@
             },
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "25px"
             },
-            "left": {
+            "skin": "s43644ed7aec463c9416dbfb2c98cd2f",
+            "top": {
                 "type": "string",
                 "value": "0px"
             },
-            "top": {
-                "type": "number",
-                "value": "0"
-            },
             "width": {
                 "type": "string",
-                "value": "150px"
+                "value": "100%"
             }
         }
     },

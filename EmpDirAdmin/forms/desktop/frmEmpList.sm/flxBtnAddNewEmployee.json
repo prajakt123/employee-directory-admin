@@ -60,7 +60,7 @@
         "b2": {
             "right": {
                 "type": "string",
-                "value": "3%"
+                "value": "0%"
             },
             "width": {
                 "type": "string",
@@ -74,7 +74,7 @@
             },
             "right": {
                 "type": "string",
-                "value": "30px"
+                "value": "0px"
             },
             "width": {
                 "type": "string",

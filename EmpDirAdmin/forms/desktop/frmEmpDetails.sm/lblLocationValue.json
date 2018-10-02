@@ -17,7 +17,7 @@
         0
     ],
     "_padding_": [
-        1,
+        2,
         0,
         0,
         0
@@ -28,6 +28,10 @@
     },
     "_skin_": "sf7786d3c48747e7a9fae835bcd45255",
     "_text_": "Location",
+    "_top_": {
+        "type": "number",
+        "value": ""
+    },
     "_width_": {
         "type": "number",
         "value": ""
@@ -73,24 +77,39 @@
         }
     },
     "isvisible": true,
-    "kuid": "ef69acb6d7db4cf2ae7802e55f37adc6",
+    "kuid": "c033b433987b41798c7c3348dfaf41af",
     "name": "kony.ui.Label",
     "paddinginpixel": false,
     "parent": "flxLocation",
     "pf": "frmEmpDetails",
     "responsiveData": {
         "b5": {
+            "centerY": {
+                "type": "string",
+                "value": ""
+            },
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "50px"
             },
             "left": {
                 "type": "string",
                 "value": "0px"
             },
+            "padding": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "skin": "s87faf2e150f48aaaa970200f2f23b7b",
+            "top": {
+                "type": "string",
+                "value": "0px"
+            },
             "width": {
                 "type": "string",
-                "value": "100px"
+                "value": "100%"
             }
         }
     },

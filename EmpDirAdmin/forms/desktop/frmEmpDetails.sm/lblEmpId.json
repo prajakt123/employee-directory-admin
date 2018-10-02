@@ -73,7 +73,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "cb448111ad3241ea8321fe795d24b0a9",
+    "kuid": "b17f59a8290346b1aa4ad7e23bf073bf",
     "name": "kony.ui.Label",
     "paddinginpixel": false,
     "parent": "flxEmpId",
@@ -86,15 +86,16 @@
             },
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "25px"
             },
+            "skin": "s43644ed7aec463c9416dbfb2c98cd2f",
             "top": {
                 "type": "string",
-                "value": ""
+                "value": "0dp"
             },
             "width": {
                 "type": "string",
-                "value": "100px"
+                "value": "100%"
             }
         }
     },

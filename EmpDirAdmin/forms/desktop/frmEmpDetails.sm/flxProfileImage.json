@@ -29,7 +29,6 @@
         "value": "148px"
     },
     "allboxes": [],
-    "autogrowmode": 0,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
@@ -45,11 +44,27 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "j912933a088942da8d083edeebeed373",
+    "kuid": "f4320732fbce475995eaa02ede5e57c8",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxProfilePickSelection",
     "pf": "frmEmpDetails",
+    "responsiveData": {
+        "b5": {
+            "height": {
+                "type": "string",
+                "value": "100px"
+            },
+            "top": {
+                "type": "string",
+                "value": "0px"
+            },
+            "width": {
+                "type": "string",
+                "value": "100px"
+            }
+        }
+    },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "snapgridsize": 10,

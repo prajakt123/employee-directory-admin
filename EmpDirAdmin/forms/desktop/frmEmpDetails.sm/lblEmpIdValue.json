@@ -17,7 +17,7 @@
         0
     ],
     "_padding_": [
-        1,
+        2,
         0,
         0,
         0
@@ -45,6 +45,10 @@
         }
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "number",
+        "value": ""
+    },
     "centery": {
         "type": "string",
         "value": "50%"
@@ -77,7 +81,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "i68b3c34e84d490abe6d3f9270909c8d",
+    "kuid": "d2f2e82e91a9447b974d86abf3850176",
     "name": "kony.ui.Label",
     "paddingLocked": false,
     "paddinginpixel": false,
@@ -85,32 +89,37 @@
     "pf": "frmEmpDetails",
     "responsiveData": {
         "b5": {
+            "centerX": {
+                "type": "string",
+                "value": ""
+            },
             "centerY": {
                 "type": "string",
                 "value": ""
             },
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "50px"
             },
             "left": {
                 "type": "string",
-                "value": ""
+                "value": "0px"
             },
-            "right": {
-                "type": "string",
-                "value": ""
-            },
-            "skin": "s5d1c1874b77427794afba2525203a19",
+            "padding": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "skin": "s87faf2e150f48aaaa970200f2f23b7b",
             "top": {
-                "type": "number",
-                "value": "0"
+                "type": "string",
+                "value": "0px"
             },
             "width": {
                 "type": "string",
-                "value": "450px"
-            },
-            "zIndex": 20
+                "value": "100%"
+            }
         }
     },
     "tooltip": "",

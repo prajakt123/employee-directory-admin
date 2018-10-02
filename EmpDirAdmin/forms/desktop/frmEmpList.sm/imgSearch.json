@@ -34,6 +34,14 @@
         "value": "150dp"
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "number",
+        "value": ""
+    },
+    "centery": {
+        "type": "number",
+        "value": ""
+    },
     "containerweight": 100,
     "context": {
         "channel": "desktop",
@@ -54,9 +62,17 @@
     "pf": "frmEmpList",
     "responsiveData": {
         "b4": {
+            "centerX": {
+                "type": "string",
+                "value": "50%"
+            },
+            "centerY": {
+                "type": "string",
+                "value": "50%"
+            },
             "height": {
                 "type": "string",
-                "value": "100%"
+                "value": "15px"
             },
             "left": {
                 "type": "string",
@@ -65,7 +81,7 @@
             "src": "search_1.png",
             "width": {
                 "type": "string",
-                "value": "100%"
+                "value": "15px"
             }
         }
     },

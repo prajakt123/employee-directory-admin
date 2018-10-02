@@ -47,15 +47,11 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d18ea8bbe6314983a6b29d3b8aeaaddc",
+    "kuid": "bf310a45c0e246df8ea31c61e8cfc265",
     "name": "kony.ui.Button",
     "parent": "flxEditSave",
     "pf": "frmEmpDetails",
-    "responsiveData": {
-        "b5": {
-            "isVisible": false
-        }
-    },
+    "responsiveData": {},
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "wType": "Button",

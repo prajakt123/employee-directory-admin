@@ -17,7 +17,7 @@
         0
     ],
     "_padding_": [
-        1,
+        2,
         0,
         0,
         0
@@ -28,6 +28,10 @@
         "value": "0px"
     },
     "_skin_": "sb8c3183fa304d64869bf5d9ebe78c8d",
+    "_top_": {
+        "type": "number",
+        "value": ""
+    },
     "_width_": {
         "type": "number",
         "value": ""
@@ -45,7 +49,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "b1e133ca0e9d4430a8861d8c2c855d1b",
+    "kuid": "d78b063aff664b26bab04eeac41bc8b6",
     "masterdata": [
         [
             "lb1",
@@ -65,23 +69,42 @@
     "parent": "flxDesignation",
     "pf": "frmEmpDetails",
     "responsiveData": {
+        "b4": {
+            "isVisible": true,
+            "top": {
+                "type": "string",
+                "value": ""
+            }
+        },
         "b5": {
             "centerY": {
                 "type": "string",
                 "value": ""
             },
+            "focusSkin": "s848bf8cca98421aa7f14985aecb3b38",
             "height": {
                 "type": "string",
-                "value": "40px"
+                "value": "50px"
             },
-            "isVisible": false,
+            "isVisible": true,
             "left": {
                 "type": "string",
-                "value": ""
+                "value": "0px"
+            },
+            "padding": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "skin": "s848bf8cca98421aa7f14985aecb3b38",
+            "top": {
+                "type": "string",
+                "value": "0px"
             },
             "width": {
                 "type": "string",
-                "value": "450px"
+                "value": "100%"
             }
         }
     },

@@ -22,7 +22,7 @@
     "_text_": "© Copyright 2018 Kony, Inc. All Rights Reserved.",
     "_top_": {
         "type": "string",
-        "value": "180px"
+        "value": "100px"
     },
     "_width_": {
         "type": "string",
@@ -56,18 +56,11 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ha5ebe065edf409ca5bfb8893dbee47b",
+    "kuid": "ae56985f039c470e8fbe314f3dc15c59",
     "name": "kony.ui.Label",
     "parent": "EditProfile",
     "pf": "frmEmpDetails",
-    "responsiveData": {
-        "b5": {
-            "top": {
-                "type": "string",
-                "value": "70px"
-            }
-        }
-    },
+    "responsiveData": {},
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",

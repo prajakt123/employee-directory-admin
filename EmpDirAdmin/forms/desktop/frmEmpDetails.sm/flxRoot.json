@@ -36,10 +36,11 @@
         "value": "50%"
     },
     "children": [
-        "leftmenu",
+        "flxMenuContainer",
+        "leftmenu2",
         "empheader",
-        "EditProfile",
         "empHeader1",
+        "flxProfileContainer",
         "flxViewProfileHeader",
         "flxEditHeader"
     ],
@@ -60,6 +61,9 @@
     "name": "kony.ui.FlexContainer",
     "parent": "frmEmpDetails",
     "pf": "frmEmpDetails",
+    "responsiveData": {
+        "b5": {}
+    },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "snapgridsize": 10,
