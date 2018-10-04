@@ -40,7 +40,7 @@
         "value": "50%"
     },
     "children": [
-        "alertmsg"
+        "flxAlertMasterContainer"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -53,8 +53,18 @@
     "kuid": "e3ff04c976894197b3e99d417cb356fc",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_c11c871d7c4a44ae929b042361d7b1b7",
     "parent": "frmSetting",
     "pf": "frmSetting",
+    "responsiveData": {
+        "b2": {
+            "isVisible": false,
+            "left": {
+                "type": "number",
+                "value": "0"
+            }
+        }
+    },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "snapgridsize": 10,

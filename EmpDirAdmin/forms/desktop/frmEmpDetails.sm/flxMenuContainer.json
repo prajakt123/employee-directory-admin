@@ -52,7 +52,12 @@
     "parent": "flxRoot",
     "pf": "frmEmpDetails",
     "responsiveData": {
-        "b2": {},
+        "b2": {
+            "width": {
+                "type": "string",
+                "value": "260px"
+            }
+        },
         "b4": {},
         "b5": {
             "isVisible": true,

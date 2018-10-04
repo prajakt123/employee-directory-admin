@@ -59,6 +59,7 @@
         ]
     ],
     "name": "kony.ui.ListBox",
+    "onselection": "AS_ListBox_d5d5fa572b0d432eadb553da25218390",
     "paddinginpixel": false,
     "parent": "flxDropDown",
     "pf": "frmSetting",

@@ -107,6 +107,8 @@
         },
         "menuItemHeaderTextSkin": "konympEDsknLblSubHeader",
         "menuItemTextSkin": "konympEDsknLblHeader",
+        "onApplyButtonClick": "AS_UWI_ee83fff12fa94617b8682b8270f54993",
+        "onItemClick": "AS_UWI_c9c23f0cc52d4f9ba71b76c4cb4402a9",
         "profileImageIsVisible": false,
         "slidingMenuSkin": "konympEDsknFlxED061525103052",
         "subHeadingLeft": {

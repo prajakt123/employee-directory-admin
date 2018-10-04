@@ -56,6 +56,7 @@
     },
     "mode": "A",
     "name": "kony.ui.TextBox2",
+    "ontextchange": "AS_TextField_f617ed9cace648b497e24440d8707fad",
     "paddinginpixel": false,
     "parent": "flxSearchHeader",
     "pf": "frmEmpList",

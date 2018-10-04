@@ -26,7 +26,7 @@
         "type": "string",
         "value": "0px"
     },
-    "_skin_": "sf7786d3c48747e7a9fae835bcd45255",
+    "_skin_": "s87faf2e150f48aaaa970200f2f23b7b",
     "_text_": "Location",
     "_top_": {
         "type": "number",
@@ -90,7 +90,7 @@
             },
             "height": {
                 "type": "string",
-                "value": "50px"
+                "value": "65px"
             },
             "left": {
                 "type": "string",

@@ -84,6 +84,10 @@
             }
         },
         "b4": {
+            "height": {
+                "type": "string",
+                "value": "540px"
+            },
             "right": {
                 "type": "string",
                 "value": "12px"
@@ -96,7 +100,7 @@
         "b5": {
             "height": {
                 "type": "string",
-                "value": "912px"
+                "value": "927px"
             },
             "left": {
                 "type": "string",

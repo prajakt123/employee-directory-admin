@@ -32,6 +32,11 @@ define({
         var self = this;
         return self.animateLeftMenu.call(this);
     },
+    /** onClick defined for flxEditSave **/
+    AS_FlexContainer_g95363b8bca440fba8c99a9559552407: function AS_FlexContainer_g95363b8bca440fba8c99a9559552407(eventobject) {
+        var self = this;
+        return self.processSaveOrEditButton.call(this);
+    },
     /** onClick defined for flxCloseDetails **/
     AS_FlexContainer_e6b995af4c0d464cb982413eefeadf49: function AS_FlexContainer_e6b995af4c0d464cb982413eefeadf49(eventobject) {
         var self = this;
@@ -95,5 +100,11 @@ define({
     /** onBreakpointChange defined for frmEmpDetails **/
     AS_Form_fad6611de20d4ba4830a9fb1f6d5ae26: function AS_Form_fad6611de20d4ba4830a9fb1f6d5ae26(eventobject, breakpoint) {
         var self = this;
+    },
+    /** onClick defined for DirectoryMenuItemMouseover **/
+    AS_FlexContainer_af9b92edea594f6ebd51d02273df024b: function AS_FlexContainer_af9b92edea594f6ebd51d02273df024b(eventobject) {
+        var self = this;
+        var ntf = new kony.mvc.Navigation("frmEmpList");
+        ntf.navigate();
     }
 });

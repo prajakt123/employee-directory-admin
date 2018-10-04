@@ -3,7 +3,7 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "180dp"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
@@ -30,11 +30,19 @@
     },
     "_width_": {
         "type": "string",
-        "value": "300px"
+        "value": "100%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
         "flxAlertTitle",
         "lblLine",

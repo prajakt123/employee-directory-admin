@@ -60,7 +60,8 @@
     "currentLocale": "default",
     "desktopweb": {
         "ide_onBreakpointChange": "AS_Form_j95cd5e623b14b06a4bf11558cbe6438",
-        "needAppMenu": false
+        "needAppMenu": false,
+        "onBreakpointChange": "AS_Form_j95cd5e623b14b06a4bf11558cbe6438"
     },
     "device": "desktopweb",
     "displayorientation": 1,
@@ -95,6 +96,7 @@
     "needappmenu": false,
     "paddinginpixel": false,
     "platform": "desktopweb",
+    "postshow": "AS_Form_j61627ee7e5e4e0f80c7aa8bb08b343c",
     "prevDevice": "desktopweb",
     "prevPlatform": "desktopweb",
     "retaincontentalignment": false,

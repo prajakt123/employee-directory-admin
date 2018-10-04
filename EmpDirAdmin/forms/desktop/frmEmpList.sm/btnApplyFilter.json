@@ -52,6 +52,7 @@
     "isvisible": true,
     "kuid": "a0c6ccb6eb394d40a62be32e8990c8ad",
     "name": "kony.ui.Button",
+    "onclick": "AS_Button_fdd8d95f53f6445c871c5e80705bd63b",
     "parent": "flxFilterMain",
     "pf": "frmEmpList",
     "responsiveData": {

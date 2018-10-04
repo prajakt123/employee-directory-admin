@@ -70,7 +70,7 @@
     "pf": "frmEmpDetails",
     "responsiveData": {
         "b4": {
-            "isVisible": true,
+            "isVisible": false,
             "top": {
                 "type": "string",
                 "value": ""

@@ -3,6 +3,7 @@ define({
   operationMode:null,
   recordList:null,
   status:"close",
+  selectedRowIndex:null,
 
   onFormInit:function(){
     debugger;
@@ -375,11 +376,11 @@ define({
 	 * @description - This function is the success callback of _createCommonMaster
      * @param {JSON - error} - error response from the back end
 	 **/
-  createCommonMasterSuccess:function(result){
+ createCommonMasterSuccess:function(result){
     dismissLoadingScreen();
     kony.print("Master created successfully: "+JSON.stringify(result));
     //this.view.txtBoxName0.text="";
-    this.view.txtBoxNameCommon.text="";
+    this.view.txtBoxNameCommon0.text="";
     this.view.flxAddCommonMasterItem0.setVisibility(false);
     this.onMasterDataSelected(null);
   },
@@ -396,12 +397,12 @@ define({
 
   /**
 	 * @function enableCommonMaster
-	 * @description - This function is the failure callback of login
+	 * @description - This function is to enable common master
      * this function will call enable error label in UI
      * @param {JSON} - Text box id.
 	 **/
   enableCommonMaster:function(id){
-    this.view["txtBoxName"+id].text="";
+    this.view["txtBoxNameCommon"+id].text="";
     this.view.flxAddCommonMasterItem0.setVisibility(true);
   },
 
@@ -414,7 +415,7 @@ define({
     try{
       var objectInstance=getObjectInstance();
       if(objectInstance!==null){
-        var masterName=this.view["txtBoxName"+id].text;
+        var masterName=this.view["txtBoxNameCommon"+id].text;
         masterName=validateText(masterName);
         if(masterName===""){
           this.view.alertmsg.setTitle("User Message");
@@ -965,10 +966,10 @@ define({
     var dataObject={};
     if(this.selectedDataModel==="Department"){
       dataObject["Department_id"]=parent["lblId"+id].text;
-      dataObject["Name"]=parent["txtBoxNameCommon0"+id].text;
+      dataObject["Name"]=parent["txtBoxName"+id].text;
     }else if(this.selectedDataModel==="Designation"){
       dataObject["Designation_id"]=parent["lblId"+id].text;
-      dataObject["Name"]=parent["txtBoxNameCommon0"+id].text;
+      dataObject["Name"]=parent["txtBoxName"+id].text;
     }
     this.updateMasterItem(this.selectedDataModel,dataObject,parent,this.updateCommonItemSuccess,this.updateCommonItemFailure);
   },
@@ -1076,6 +1077,36 @@ define({
     };
     getUserRemoveConfirmation(title,userConfirmed);
   },
+  
+  /**
+   * @function
+   *
+   * @param eventObject 
+   */
+  removeLocation:function(param){
+    var eventObject=param["rowItem"];
+    var rowIndex=param["rowIndex"];
+    var title="Do you want to remove this "+this.selectedDataModel+" ?";
+    var self=this;
+    this.selectedRowIndex=rowIndex;
+    var userConfirmed=function(isConfirmed){
+      if(isConfirmed){
+        // var id=eventObject.id;
+        //id=id.split("flxRemove")[1];
+        //var parent=eventObject.parent;
+        var dataObject={};
+        if(self.selectedDataModel==="Department"){
+          dataObject["Department_id"]=eventObject["lblId"];
+        }else if(self.selectedDataModel==="Designation"){
+          dataObject["Designation_id"]=eventObject["lblId"];
+        }else if(self.selectedDataModel==="Location"){
+          dataObject["Location_id"]=eventObject["lblId"];
+        }
+        self.removeMasterItem(self.selectedDataModel,dataObject,parent,self.removeCommonItemSuccess,self.removeCommonItemFailure);
+      }
+    };
+    getUserRemoveConfirmation(title,userConfirmed);
+  },
 
   /**
 	 * @function removeCommonItemSuccess
@@ -1085,8 +1116,10 @@ define({
   removeCommonItemSuccess:function(rootFlex,result){
     this.view.flxSCCommon.remove(rootFlex);
     this.view.forceLayout();
-    if(self.selectedDataModel==="Location"){
-      
+    if(this.selectedDataModel==="Location"){
+      if(this.selectedRowIndex!==null){
+        this.view.segLocationItems.removeAt(this.selectedRowIndex);
+      }
     }
     dismissLoadingScreen();
   },

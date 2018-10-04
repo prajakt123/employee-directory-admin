@@ -50,6 +50,7 @@
     "isvisible": true,
     "kuid": "b05f1a45a47a417da1c2501aeef68403",
     "name": "kony.ui.Image2",
+    "ontouchend": "AS_Image_a42d026dd0ce4b1d873182071a073c66",
     "parent": "flxAlertTitle",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,

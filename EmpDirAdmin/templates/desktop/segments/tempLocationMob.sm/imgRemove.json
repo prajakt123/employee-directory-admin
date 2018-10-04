@@ -51,6 +51,7 @@
     "isvisible": true,
     "kuid": "ac571fb1e7ac4575b0c1db1e1bc2f91a",
     "name": "kony.ui.Image2",
+    "ontouchend": "AS_Image_ae4c4944bf54420a9eac0a4dede32a12",
     "parent": "flxRemove",
     "pf": "tempLocationMob",
     "srcType": 1,

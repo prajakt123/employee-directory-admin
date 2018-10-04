@@ -10,7 +10,12 @@ define({
     this.executeOnParent("editLocation",context.widgetInfo.selectedItems[0]);
   },
   onRemoveLocation:function(widget,context){
-    this.executeOnParent("removeItem",context.widgetInfo.selectedItems[0]);
+    //this.executeOnParent("removeLocation",context.widgetInfo.selectedItems[0]);
+    var locationObj={
+      "rowItem":context.widgetInfo.selectedItems[0],
+      "rowIndex":context.rowIndex
+    }
+    this.executeOnParent("removeLocation",locationObj);
   }
 
 });

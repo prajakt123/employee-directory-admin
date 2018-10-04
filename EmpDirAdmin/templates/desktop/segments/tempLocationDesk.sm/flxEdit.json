@@ -50,6 +50,7 @@
     "kuid": "c143307795ab49f29f72d6cc8462ca44",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_ad3ffe78985f4304914c3a9ff83ec56c",
     "parent": "flxTemplateLocDesk",
     "pf": "tempLocationDesk",
     "responsiveData": {},

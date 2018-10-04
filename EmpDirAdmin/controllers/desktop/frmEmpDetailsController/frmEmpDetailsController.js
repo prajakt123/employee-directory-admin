@@ -261,13 +261,13 @@ define({
     if (globEmpOperatioMode == "add"){
       this.resetForm(this.param);
       this.view.flxViewProfileHeader.setVisibility(false);
-      this.view.flxEditHeader.setVisibility(true);
+      this.view.flxEditHeader.setVisibility(false);
       this.view.forceLayout();
       return;
     }else if(globEmpOperatioMode == "edit"){
       this.changeUIForEditMode();
       this.view.flxViewProfileHeader.setVisibility(true);
-      this.view.flxEditHeader.setVisibility(false);
+      this.view.flxEditHeader.setVisibility(true);
     }else{
       this.changeUIForViewMode();
     }
@@ -1040,6 +1040,7 @@ define({
     if(breakpoint>780){
       viewMode="Desktop";
       debugger;
+      this.view.flxViewProfileHeader.setVisibility(false);
       this.view.alertmsg.setUIForChannel("desktop");
       //       this.view.segEmployeeList.removeAll();
       //       this.view.segEmployeeList.rowTemplate="flxTemplateEmpList";

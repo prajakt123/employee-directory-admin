@@ -48,6 +48,7 @@
     "kuid": "fab8a5a5f2e14e69a2d7415de7626854",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_b5521cf6da13495c91d2af5370932a69",
     "parent": "callWorkFlex",
     "pf": "userwidgetmodel",
     "snapgridsize": 10,

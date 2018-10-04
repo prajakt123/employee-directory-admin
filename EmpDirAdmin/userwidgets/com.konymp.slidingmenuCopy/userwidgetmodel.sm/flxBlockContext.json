@@ -47,6 +47,7 @@
     "kuid": "de93ddd3e899434d8b900b4cff6ca414",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_h10c1e22d2a646d2b9560cf1ff891231",
     "parent": "flxMainSlidingMenu",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,

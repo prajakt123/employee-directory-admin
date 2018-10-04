@@ -57,6 +57,8 @@
     "kuid": "hb6f0b045d2c4e5cbdd57f5edf634ab8",
     "mode": "A",
     "name": "kony.ui.TextBox2",
+    "ondone": "AS_TextField_a87dda1f114e48b08df77a965b423330",
+    "ontextchange": "AS_TextField_b1124cd29221441498bc106460120707",
     "paddinginpixel": false,
     "parent": "flxSearch",
     "pf": "frmSetting",

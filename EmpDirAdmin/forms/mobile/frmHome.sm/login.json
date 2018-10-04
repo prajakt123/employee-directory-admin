@@ -40,6 +40,7 @@
     "containerweight": 0,
     "data": {
         "ide_loginSuccessEvent": "AS_UWI_b22a02ec4f2145a99424013c06da9cef",
+        "loginSuccessEvent": "AS_UWI_b22a02ec4f2145a99424013c06da9cef",
         "logoSource": "login_image.png",
         "passwordPlaceholder": "Password",
         "providerName": "userstore",

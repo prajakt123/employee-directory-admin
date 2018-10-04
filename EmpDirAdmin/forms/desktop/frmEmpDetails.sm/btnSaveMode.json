@@ -52,6 +52,7 @@
     "isvisible": true,
     "kuid": "j7936c5529f444a6ae6b670e16343bc0",
     "name": "kony.ui.Button",
+    "onclick": "AS_Button_cc4061dc5dfd4c5ebd2770848f8eb330",
     "parent": "flxEditHeader",
     "pf": "frmEmpDetails",
     "responsiveData": {

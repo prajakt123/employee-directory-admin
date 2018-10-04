@@ -50,6 +50,7 @@
     "kuid": "c67927c5e53c46fe959983a8b511a5db",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_e33201cac38a4986814e0e7a8f0f60ab",
     "parent": "flxHeader",
     "pf": "templateEmpListMob",
     "retaincontentalignment": false,

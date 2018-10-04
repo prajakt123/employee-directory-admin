@@ -2,6 +2,11 @@ define({
     /*
       This is an auto generated file and any modifications to it may result in corruption of the action sequence.
     */
+    /** onClick defined for SettingsMenu **/
+    AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd: function AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd(eventobject) {
+        var self = this;
+        this.navigateToFormSetting();
+    },
     /** onClick defined for flxUserInfo **/
     AS_FlexContainer_b403f300ff1a4c16847155653101e350: function AS_FlexContainer_b403f300ff1a4c16847155653101e350(eventobject) {
         var self = this;
@@ -16,16 +21,6 @@ define({
     AS_UWI_gd88ff8da7144d8fbeffcad2acdfde27: function AS_UWI_gd88ff8da7144d8fbeffcad2acdfde27(eventobject) {
         var self = this;
         return self.toggleProfile.call(this, eventobject);
-    },
-    /** onClick defined for DirectoryMenuItemMouseover **/
-    AS_FlexContainer_c5107e1860b04197b79796d282d7c1cc: function AS_FlexContainer_c5107e1860b04197b79796d282d7c1cc(eventobject) {
-        var self = this;
-        this.navigateToFrmEmpList();
-    },
-    /** onClick defined for SettingsMenu **/
-    AS_FlexContainer_ec998c0f4ad54fe5893c6aed47e65bf3: function AS_FlexContainer_ec998c0f4ad54fe5893c6aed47e65bf3(eventobject) {
-        var self = this;
-        this.navigateToFrmEmpList();
     },
     /** onSelection defined for lstBoxMaster **/
     AS_ListBox_d5d5fa572b0d432eadb553da25218390: function AS_ListBox_d5d5fa572b0d432eadb553da25218390(eventobject) {
@@ -78,6 +73,11 @@ define({
         var self = this;
         this.view.forceLayout();
     },
+    /** onClick defined for flexGreyBg **/
+    AS_FlexContainer_h58b08dc22604bd688d7075d47731bdc: function AS_FlexContainer_h58b08dc22604bd688d7075d47731bdc(eventobject) {
+        var self = this;
+        this.animateLeftMenu();
+    },
     /** onClick defined for flxRoot **/
     AS_FlexContainer_f542b46a9d0e4d81b611ac13c484c8d4: function AS_FlexContainer_f542b46a9d0e4d81b611ac13c484c8d4(eventobject) {
         var self = this;
@@ -104,7 +104,7 @@ define({
         var self = this;
         this.view.flxOverlay.setVisibility(false);
     },
-    /** onAlertFlexClick defined for alertmsg **/
+    /** onAlertFlexClick defined for alertmsg2 **/
     AS_UWI_b569ccf7746848a98df3fb3f2c1ed751: function AS_UWI_b569ccf7746848a98df3fb3f2c1ed751() {
         var self = this;
         this.hideALertComponentCallBack();
@@ -129,14 +129,10 @@ define({
         var self = this;
         return self.onBreakpointChange.call(this, eventobject, breakpoint);
     },
-    /** onClick defined for SettingsMenu **/
-    AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd: function AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd(eventobject) {
+    /** onClick defined for DirectoryMenuItemMouseover **/
+    AS_FlexContainer_ce06ccae3732476980b2898c22bf8c72: function AS_FlexContainer_ce06ccae3732476980b2898c22bf8c72(eventobject) {
         var self = this;
-        this.navigateToFormSetting();
-    },
-    /** onClick defined for flexGreyBg **/
-    AS_FlexContainer_h58b08dc22604bd688d7075d47731bdc: function AS_FlexContainer_h58b08dc22604bd688d7075d47731bdc(eventobject) {
-        var self = this;
-        this.animateLeftMenu();
+        var ntf = new kony.mvc.Navigation("frmEmpList");
+        ntf.navigate();
     }
 });

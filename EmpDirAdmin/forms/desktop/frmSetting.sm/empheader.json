@@ -40,7 +40,8 @@
     "clipbounds": true,
     "containerweight": 0,
     "data": {
-        "ide_onUserFlxClick": "AS_UWI_gd88ff8da7144d8fbeffcad2acdfde27"
+        "ide_onUserFlxClick": "AS_UWI_gd88ff8da7144d8fbeffcad2acdfde27",
+        "onUserFlxClick": "AS_UWI_gd88ff8da7144d8fbeffcad2acdfde27"
     },
     "id": "empheader",
     "info": null,

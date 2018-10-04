@@ -49,6 +49,7 @@
     "kuid": "e733101520b24749ba0f2092568d116d",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_hdb2384aecd343e5b59944a15403dc35",
     "parent": "frmEmpDetails",
     "pf": "frmEmpDetails",
     "responsiveData": {

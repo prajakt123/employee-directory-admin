@@ -43,7 +43,8 @@
     "dataDiffs": {
         "btnCancelsearch": {
             "__events__": {
-                "ide_onTouchEnd": "AS_Button_f6dc0ebdd65640488af853d876bcb0fe"
+                "ide_onTouchEnd": "AS_Button_f6dc0ebdd65640488af853d876bcb0fe",
+                "onTouchEnd": "AS_Button_f6dc0ebdd65640488af853d876bcb0fe"
             },
             "__info__": {
                 "kuid": "a84d7e29760d49a99bd5483a5c95e564",
@@ -153,7 +154,8 @@
         },
         "flxHamburger": {
             "__events__": {
-                "ide_onClick": "AS_FlexContainer_ieeca972529d4effa9f3e778fa6a7756"
+                "ide_onClick": "AS_FlexContainer_ieeca972529d4effa9f3e778fa6a7756",
+                "onClick": "AS_FlexContainer_ieeca972529d4effa9f3e778fa6a7756"
             },
             "__info__": {
                 "kuid": "e7be897c47204210909aa87aef5ec3ad",
@@ -202,7 +204,8 @@
         },
         "flxUserInfo": {
             "__events__": {
-                "ide_onClick": "AS_FlexContainer_a8e3c62b0e434776970071f6672bd987"
+                "ide_onClick": "AS_FlexContainer_a8e3c62b0e434776970071f6672bd987",
+                "onClick": "AS_FlexContainer_a8e3c62b0e434776970071f6672bd987"
             },
             "__info__": {
                 "kuid": "d84a3682287f45f69002510d8a3f9f06",
@@ -303,7 +306,8 @@
         },
         "imgSearchMob": {
             "__events__": {
-                "ide_onTouchEnd": "AS_Image_abeadc4c616d48458750402d2776b9a7"
+                "ide_onTouchEnd": "AS_Image_abeadc4c616d48458750402d2776b9a7",
+                "onTouchEnd": "AS_Image_abeadc4c616d48458750402d2776b9a7"
             },
             "__info__": {
                 "kuid": "aeaa60cd253e4d93a25bb29112826e66",

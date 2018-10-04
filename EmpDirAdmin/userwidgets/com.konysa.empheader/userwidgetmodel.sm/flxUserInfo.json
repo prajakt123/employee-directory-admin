@@ -51,6 +51,7 @@
     "kuid": "e5f656d1671f44dc9ebd64dd33d5e282",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_cf9bd7a72d52468996d6fda64e9cf7f5",
     "parent": "empheader",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,

@@ -60,6 +60,7 @@
         "ide_onClickFooter": "AS_UWI_e5d10886c84341f4a574f5d2ad561fe4",
         "menuItemHeaderTextSkin": "defLabel",
         "menuItemTextSkin": "konympEDsknLblHeader",
+        "onClickFooter": "AS_UWI_e5d10886c84341f4a574f5d2ad561fe4",
         "profileImageLeft": {
             "Default": {
                 "type": "string",

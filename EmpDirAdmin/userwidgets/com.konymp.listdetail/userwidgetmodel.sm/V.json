@@ -43,6 +43,7 @@
     "isvisible": true,
     "kuid": "c706af0bcd8a40a78cf8323543112f90",
     "name": "kony.ui.Button",
+    "onclick": "AS_Button_1d93df67a5d94b35977702d0c04f9758",
     "parent": "flxDictionary",
     "pf": "userwidgetmodel",
     "wType": "Button"

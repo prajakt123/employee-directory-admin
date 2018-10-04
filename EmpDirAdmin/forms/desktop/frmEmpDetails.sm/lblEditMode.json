@@ -65,6 +65,9 @@
     "parent": "flxEditHeader",
     "pf": "frmEmpDetails",
     "responsiveData": {
+        "b2": {
+            "isVisible": false
+        },
         "b5": {
             "centerY": {
                 "type": "string",

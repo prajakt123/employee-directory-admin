@@ -68,6 +68,7 @@
     "maxtextlength": 30,
     "mode": "A",
     "name": "kony.ui.TextBox2",
+    "ondone": "AS_TextField_addb224a01cd4b28a13b24b70471fed3",
     "parent": "flxUsername",
     "pf": "userwidgetmodel",
     "placeholderskin": "s2eef5355e534e4ca3c67641752fa826",

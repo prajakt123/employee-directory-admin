@@ -1,6 +1,7 @@
 {
     "@class": "com.kony.gen.viz.model.container.KVizScrollFlexForm",
     "DNDConfig": null,
+    "_init_": "AS_Form_abb767961f5a43babc569906f7cfaa6d",
     "_margin_": [
         0,
         0,
@@ -57,7 +58,8 @@
     "currentLocale": "default",
     "desktopweb": {
         "ide_onBreakpointChange": "AS_Form_f2e5af38e3714b5b884688797fdc35d2",
-        "needAppMenu": false
+        "needAppMenu": false,
+        "onBreakpointChange": "AS_Form_f2e5af38e3714b5b884688797fdc35d2"
     },
     "device": "desktopweb",
     "displayorientation": 1,
@@ -93,6 +95,7 @@
     "needappmenu": false,
     "paddinginpixel": false,
     "platform": "desktopweb",
+    "postshow": "AS_Form_d1ceb8b49e804c958faa2d003436a973",
     "prevDevice": "desktopweb",
     "prevPlatform": "desktopweb",
     "retaincontentalignment": false,
@@ -126,7 +129,7 @@
     "titlebar": true,
     "type": 3,
     "vizProps": {
-        "globalRespDesignEnabled": true
+        "globalRespDesignEnabled": false
     },
     "wType": "Form",
     "windows8": {

@@ -53,10 +53,16 @@
     "parent": "flxEmployeeDetails",
     "pf": "frmEmpDetails",
     "responsiveData": {
+        "b4": {
+            "height": {
+                "type": "string",
+                "value": "80px"
+            }
+        },
         "b5": {
             "height": {
                 "type": "string",
-                "value": "75px"
+                "value": "90px"
             },
             "layoutType": 4,
             "top": {

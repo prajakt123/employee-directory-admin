@@ -175,6 +175,9 @@
     },
     "name": "kony.ui.SegmentedUI2",
     "needpageindicator": true,
+    "onrowclick": "AS_Segment_2c647dc91a8c48f492d5bc478fc748b5",
+    "ontouchend": "AS_Segment_520dca4068354cff81164302d4b2d4a8",
+    "ontouchmove": "AS_Segment_0b026fa0a4534f8ebfff62d7c926d6d8",
     "pageoffdotimage": "pageoffdot_4.png",
     "pageondotimage": "pageondot_4.png",
     "paginationconfig": {

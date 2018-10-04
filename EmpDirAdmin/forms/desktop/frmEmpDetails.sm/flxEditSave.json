@@ -44,6 +44,7 @@
     "enablescrolling": true,
     "focusskin": "sbca695895e94cea907390b982ef5eda",
     "id": "flxEditSave",
+    "ide_onClick": "AS_FlexContainer_g95363b8bca440fba8c99a9559552407",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

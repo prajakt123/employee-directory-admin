@@ -52,6 +52,7 @@
     "isvisible": true,
     "kuid": "j06311975abc4394979c10c39d418a82",
     "name": "kony.ui.Button",
+    "onclick": "AS_Button_c602b9c7701944598172099a66e71de1",
     "parent": "filterHEader",
     "pf": "frmEmpList",
     "responsiveData": {

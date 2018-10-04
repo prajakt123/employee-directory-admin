@@ -48,7 +48,8 @@
     "defaultunit": 1,
     "desktopweb": {
         "ide_onBreakpointChange": "AS_Form_fad6611de20d4ba4830a9fb1f6d5ae26",
-        "needAppMenu": false
+        "needAppMenu": false,
+        "onBreakpointChange": "AS_Form_fad6611de20d4ba4830a9fb1f6d5ae26"
     },
     "device": "desktopweb",
     "displayorientation": 1,
@@ -92,6 +93,7 @@
     "needappmenu": true,
     "paddinginpixel": false,
     "platform": "desktopweb",
+    "postshow": "AS_d19e3990",
     "prevDevice": "desktopweb",
     "prevPlatform": "desktopweb",
     "retainscrollposition": false,

@@ -44,6 +44,7 @@
     "isvisible": true,
     "kuid": "h7c947dd1cf5493aa4149b2f3de1f2f6",
     "name": "kony.ui.Button",
+    "onclick": "AS_Button_d43289ef88c34a2c95ef6027b5707ad6",
     "parent": "flxLocationActions",
     "pf": "frmSetting",
     "responsiveData": {

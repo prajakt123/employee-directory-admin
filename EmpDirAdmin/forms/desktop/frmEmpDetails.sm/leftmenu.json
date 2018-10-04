@@ -75,7 +75,9 @@
             }
         },
         "DirectoryMenuItemMouseover": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_FlexContainer_af9b92edea594f6ebd51d02273df024b"
+            },
             "__info__": {
                 "kuid": "d9d2ca3aeb5646f590a26aabd2d2c5bf",
                 "srcKUID": "fc355c9082f6437287a5e6f23782363f",
@@ -156,7 +158,8 @@
         },
         "SettingsMenu": {
             "__events__": {
-                "ide_onClick": "AS_FlexContainer_bc7c86f86f9e40c7aac552e1160a9816"
+                "ide_onClick": "AS_FlexContainer_bc7c86f86f9e40c7aac552e1160a9816",
+                "onClick": "AS_FlexContainer_bc7c86f86f9e40c7aac552e1160a9816"
             },
             "__info__": {
                 "kuid": "e72cb818ecf3448d9301ab6402bf5fc0",
@@ -289,6 +292,12 @@
                 }
             },
             "responsiveData": {
+                "b2": {
+                    "left": {
+                        "type": "string",
+                        "value": "0dp"
+                    }
+                },
                 "b4": {
                     "isVisible": true
                 },
@@ -339,6 +348,12 @@
     "parent": "flxMenuContainer",
     "pf": "frmEmpDetails",
     "responsiveData": {
+        "b2": {
+            "left": {
+                "type": "string",
+                "value": "0dp"
+            }
+        },
         "b4": {
             "isVisible": true
         },

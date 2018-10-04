@@ -51,6 +51,7 @@
     "isvisible": true,
     "kuid": "dfe2582217574b2db0fa9218899db7be",
     "name": "kony.ui.Image2",
+    "ontouchend": "AS_Image_h63be57bf083416ab63fd25f6e019219",
     "parent": "flxEdit",
     "pf": "tempLocationMob",
     "srcType": 1,

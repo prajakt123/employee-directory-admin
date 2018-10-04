@@ -30,6 +30,17 @@ define({
         var self = this;
         return self.toggleProfile.call(this, null);
     },
+    /** onClick defined for DirectoryMenuItemMouseover **/
+    AS_FlexContainer_c208e1a054b44435961eb46be76c8062: function AS_FlexContainer_c208e1a054b44435961eb46be76c8062(eventobject) {
+        var self = this;
+        var ntf = new kony.mvc.Navigation("frmEmpList");
+        ntf.navigate();
+    },
+    /** onClick defined for SettingsMenu **/
+    AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd: function AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd(eventobject) {
+        var self = this;
+        this.navigateToFormSetting();
+    },
     /** onClick defined for flxGreyBg **/
     AS_FlexContainer_daae6224e5a747c2b38b0e8d1c2c0aa6: function AS_FlexContainer_daae6224e5a747c2b38b0e8d1c2c0aa6(eventobject) {
         var self = this;
@@ -164,10 +175,5 @@ define({
         var self = this;
         this.onBreakpointChange(eventobject, breakpoint);
         this.view.flxOverlay.setVisibility(false);
-    },
-    /** onClick defined for SettingsMenu **/
-    AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd: function AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd(eventobject) {
-        var self = this;
-        this.navigateToFormSetting();
     }
 });

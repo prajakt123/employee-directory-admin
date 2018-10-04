@@ -44,6 +44,7 @@
     "isvisible": true,
     "kuid": "jf20025db29c477cb505dd90f9306965",
     "name": "kony.ui.Button",
+    "onclick": "AS_Button_e7c6da3955f84592aad0fe2375f3cc8d",
     "parent": "flxHeaderBar",
     "pf": "userwidgetmodel",
     "wType": "Button",

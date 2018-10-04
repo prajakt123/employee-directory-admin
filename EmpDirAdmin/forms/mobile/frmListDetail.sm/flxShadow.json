@@ -50,6 +50,7 @@
     "kuid": "ga3ef8177ad24d76add71dd9263a19d6",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_f5b71ec467db4b13b8071313b76c4aef",
     "parent": "frmListDetail",
     "pf": "frmListDetail",
     "snapgridsize": 10,

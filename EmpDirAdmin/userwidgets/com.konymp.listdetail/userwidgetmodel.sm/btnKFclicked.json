@@ -43,6 +43,7 @@
     "isvisible": true,
     "kuid": "h59dcb1017ab417fae9459af0328777b",
     "name": "kony.ui.Button",
+    "onclick": "AS_Button_de58ae5756604aa6af84213711d7af77",
     "parent": "listdetail",
     "pf": "userwidgetmodel",
     "wType": "Button",

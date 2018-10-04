@@ -154,7 +154,8 @@
         },
         "SettingsMenu": {
             "__events__": {
-                "ide_onClick": "AS_FlexContainer_f34ed8b4c5f448859b3e5d1b5f16eb6a"
+                "ide_onClick": "AS_FlexContainer_f34ed8b4c5f448859b3e5d1b5f16eb6a",
+                "onClick": "AS_FlexContainer_f34ed8b4c5f448859b3e5d1b5f16eb6a"
             },
             "__info__": {
                 "kuid": "f887038fd691462e9ced5a9cfbfd877b",
@@ -278,6 +279,7 @@
                 "srcKUID": "g18c46395041406aa7035f7e52d5b2da",
                 "wType": "FlexContainer"
             },
+            "isVisible": false,
             "left": {
                 "Default": {
                     "type": "string",
@@ -286,7 +288,6 @@
             },
             "responsiveData": {
                 "b4": {
-                    "isVisible": false,
                     "left": {
                         "type": "string",
                         "value": "-260dp"
@@ -325,7 +326,7 @@
     "info": null,
     "iscustomlayout": false,
     "isdatareferenced": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "f1ce3b3a72c146a2956aa629f44d5cf5",
     "layouttype": 2,
     "masterType": 0,

@@ -60,6 +60,7 @@
     "kuid": "cd540e2aa66a43cab52f8062ca6b7b9e",
     "layouttype": 4,
     "name": "kony.ui.FlexScrollContainer",
+    "onscrollend": "AS_FlexScrollContainer_a7dc81ecd1d04f5986f7998b8373fac4",
     "pagingenabled": false,
     "parent": "flxContentMaster",
     "pf": "frmSetting",

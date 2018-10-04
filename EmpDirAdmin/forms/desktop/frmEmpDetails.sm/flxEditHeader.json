@@ -57,7 +57,7 @@
                 "type": "string",
                 "value": "0px"
             },
-            "isVisible": true,
+            "isVisible": false,
             "left": {
                 "type": "string",
                 "value": "0dp"
@@ -65,6 +65,10 @@
             "top": {
                 "type": "string",
                 "value": "0dp"
+            },
+            "width": {
+                "type": "string",
+                "value": "0%"
             },
             "zIndex": 1
         },
@@ -88,7 +92,7 @@
                 "type": "string",
                 "value": "70px"
             },
-            "isVisible": true,
+            "isVisible": false,
             "left": {
                 "type": "string",
                 "value": "0dp"

@@ -50,6 +50,7 @@
     "kuid": "ia676e71342d40a29919e541d41f06dc",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_c22b4e9c800446ddb4f830ba5f6eef86",
     "parent": "flxRoot",
     "pf": "segTempRowCommonMaster",
     "retaincontentalignment": false,

@@ -72,7 +72,9 @@
                     "height": {
                         "type": "string",
                         "value": "88px"
-                    }
+                    },
+                    "isVisible": true,
+                    "zIndex": 10
                 },
                 "b4": {
                     "height": {
@@ -83,7 +85,8 @@
                 "b5": {
                     "isVisible": false
                 }
-            }
+            },
+            "zIndex": {}
         },
         "empTextMoblie": {
             "__events__": {},
@@ -118,7 +121,8 @@
         },
         "flxHamburger": {
             "__events__": {
-                "ide_onClick": "AS_FlexContainer_c752f79ba4d9490db0559e601134131e"
+                "ide_onClick": "AS_FlexContainer_c752f79ba4d9490db0559e601134131e",
+                "onClick": "AS_FlexContainer_c752f79ba4d9490db0559e601134131e"
             },
             "__info__": {
                 "kuid": "d7b4fa164c0d4079ab7b106af13c5e9b",
@@ -191,7 +195,8 @@
         },
         "flxUserInfo": {
             "__events__": {
-                "ide_onClick": "AS_FlexContainer_bdbcaf843f394502a060e2104b18c70c"
+                "ide_onClick": "AS_FlexContainer_bdbcaf843f394502a060e2104b18c70c",
+                "onClick": "AS_FlexContainer_bdbcaf843f394502a060e2104b18c70c"
             },
             "__info__": {
                 "kuid": "e55c897ae3cb4c29a52693efdf78f760",

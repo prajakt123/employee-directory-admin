@@ -56,6 +56,7 @@
     "kuid": "c41ad407a039482492dd366d28150ccc",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_bd8f054127b14faa96ae4b6f5829a2d4",
     "parent": "flxFilterMobHeader",
     "pf": "frmEmpList",
     "responsiveData": {

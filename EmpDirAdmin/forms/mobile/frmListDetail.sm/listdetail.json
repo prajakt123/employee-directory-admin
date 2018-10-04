@@ -40,7 +40,9 @@
     "containerweight": 0,
     "data": {
         "ide_leftMenuClick": "AS_UWI_i21bfeb9bd5846ea989bd4a69d2c451b",
-        "ide_rightMenuClick": "AS_UWI_fb0ae1ffd4de4a96b93e77d8ccba6b8d"
+        "ide_rightMenuClick": "AS_UWI_fb0ae1ffd4de4a96b93e77d8ccba6b8d",
+        "leftMenuClick": "AS_UWI_i21bfeb9bd5846ea989bd4a69d2c451b",
+        "rightMenuClick": "AS_UWI_fb0ae1ffd4de4a96b93e77d8ccba6b8d"
     },
     "id": "listdetail",
     "info": null,

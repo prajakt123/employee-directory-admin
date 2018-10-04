@@ -57,6 +57,7 @@
         "value": ""
     },
     "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_h18737e83f0742b8aa5c2f4e861668b1",
     "parent": "frmEmpList",
     "pf": "frmEmpList",
     "responsiveData": {

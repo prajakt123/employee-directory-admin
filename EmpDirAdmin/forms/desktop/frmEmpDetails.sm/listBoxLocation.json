@@ -27,7 +27,7 @@
         "type": "string",
         "value": "0px"
     },
-    "_skin_": "sb8c3183fa304d64869bf5d9ebe78c8d",
+    "_skin_": "s848bf8cca98421aa7f14985aecb3b38",
     "_top_": {
         "type": "number",
         "value": ""
@@ -79,7 +79,7 @@
                 "type": "string",
                 "value": "50px"
             },
-            "isVisible": true,
+            "isVisible": false,
             "left": {
                 "type": "string",
                 "value": "0px"

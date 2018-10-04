@@ -44,7 +44,8 @@
     "clipbounds": true,
     "containerweight": 0,
     "data": {
-        "ide_onAlertFlexClick": "AS_UWI_c1c64b76dc5045e1a0282cac28cd38f3"
+        "ide_onAlertFlexClick": "AS_UWI_c1c64b76dc5045e1a0282cac28cd38f3",
+        "onAlertFlexClick": "AS_UWI_c1c64b76dc5045e1a0282cac28cd38f3"
     },
     "id": "alertmsg",
     "info": null,
