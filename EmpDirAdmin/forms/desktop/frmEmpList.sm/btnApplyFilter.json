@@ -78,7 +78,7 @@
             },
             "width": {
                 "type": "string",
-                "value": "99%"
+                "value": "100%"
             }
         }
     },

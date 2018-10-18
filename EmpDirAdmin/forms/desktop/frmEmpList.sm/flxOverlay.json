@@ -58,9 +58,8 @@
         "b4": {
             "height": {
                 "type": "string",
-                "value": "1032px"
-            },
-            "isVisible": false
+                "value": "100%"
+            }
         }
     },
     "retaincontentalignment": false,

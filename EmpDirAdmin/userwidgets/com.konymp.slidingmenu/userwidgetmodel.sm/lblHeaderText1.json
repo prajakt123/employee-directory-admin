@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "48%"
+        "value": "28.38%"
     },
     "_margin_": [
         1,
@@ -22,11 +22,11 @@
         0,
         0
     ],
-    "_skin_": "s5ffcad05e4d465398f7ade7ac45d3e5",
-    "_text_": "Kony",
+    "_skin_": "s62e489f87054af08c1a5c147bba2d42",
+    "_text_": "Username",
     "_top_": {
         "type": "string",
-        "value": "30%"
+        "value": "54.91%"
     },
     "_width_": {
         "type": "ref",
@@ -41,7 +41,7 @@
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "contentalignment": 4,
+    "contentalignment": 5,
     "id": "lblHeaderText1",
     "info": null,
     "ipad": {

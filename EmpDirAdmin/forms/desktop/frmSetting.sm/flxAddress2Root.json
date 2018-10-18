@@ -59,7 +59,7 @@
         "b2": {
             "width": {
                 "type": "string",
-                "value": "400px"
+                "value": "350px"
             }
         }
     },

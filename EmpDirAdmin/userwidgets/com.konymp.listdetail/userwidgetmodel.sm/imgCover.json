@@ -24,7 +24,7 @@
         0
     ],
     "_skin_": "sa24272997a744cc8ef0fbd6b75add43",
-    "_src_": "imagedrag_4.png",
+    "_src_": "imagedrag_1_1.png",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -44,8 +44,8 @@
     },
     "id": "imgCover",
     "imagescalemode": 0,
-    "imagewhenfailed": "profile.png",
-    "imagewhiledownloading": "arrow_left_white_icon.png",
+    "imagewhenfailed": "profile_1.png",
+    "imagewhiledownloading": "arrow_left_white_icon_1.png",
     "info": null,
     "isvisible": true,
     "kuid": "d5c2573e90fb43bfa29187bfe0ed8a7b",

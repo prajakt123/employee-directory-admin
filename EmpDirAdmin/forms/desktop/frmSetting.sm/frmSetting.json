@@ -34,7 +34,7 @@
             "width": 1350
         },
         "b2": {
-            "width": 481
+            "width": 480
         },
         "b4": {
             "width": 780
@@ -129,7 +129,7 @@
     "titlebar": true,
     "type": 3,
     "vizProps": {
-        "globalRespDesignEnabled": false
+        "globalRespDesignEnabled": true
     },
     "wType": "Form",
     "windows8": {

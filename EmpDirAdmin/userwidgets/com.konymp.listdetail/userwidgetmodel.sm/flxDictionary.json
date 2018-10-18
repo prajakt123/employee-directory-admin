@@ -24,7 +24,7 @@
         "type": "string",
         "value": "1%"
     },
-    "_skin_": "s3e85b3c30ed497397d3a998bdaef9eb",
+    "_skin_": "se2206d3f2e0466e953cfddee109c3f0",
     "_top_": {
         "type": "string",
         "value": "1%"
@@ -71,8 +71,8 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxDictionary",
-    "ide_onTouchEnd": "AS_FlexContainer_8a08480b463645c9976a3cf8b52d2830",
-    "ide_onTouchMove": "AS_FlexContainer_206fcc7464da49088ad95efc8b86f01a",
+    "ide_onTouchEnd": "AS_FlexContainer_ad927d78c7f54f13b9bb21c51f840826",
+    "ide_onTouchMove": "AS_FlexContainer_faf02aafc6ce4f75a1ac57b007df031c",
     "info": null,
     "iphone": {
         "render": true
@@ -81,8 +81,6 @@
     "kuid": "cc485c3fc655477e821c085119505854",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "ontouchend": "AS_FlexContainer_8a08480b463645c9976a3cf8b52d2830",
-    "ontouchmove": "AS_FlexContainer_206fcc7464da49088ad95efc8b86f01a",
     "parent": "flxList",
     "pf": "userwidgetmodel",
     "snapgridsize": 10,

@@ -44,7 +44,7 @@
     },
     "id": "imgEmployee",
     "imagescalemode": 0,
-    "imagewhiledownloading": "cover.png",
+    "imagewhiledownloading": "cover_1.png",
     "info": null,
     "invokedProperty": "src",
     "isvisible": true,

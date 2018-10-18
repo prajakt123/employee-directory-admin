@@ -4,7 +4,7 @@
         "apis": {
             "custom": [
                 {
-                    "kuid": "d14814e329344b44bd9539b7048ceb56",
+                    "kuid": "aa1a665612fe4efd9adad51d933fe437",
                     "paramList": [],
                     "propertyKey": "getData",
                     "pw": {
@@ -15,7 +15,7 @@
                     "type": "event"
                 },
                 {
-                    "kuid": "bfa6395f631b4743b5a5e75581b9c17f",
+                    "kuid": "f902df8a86a7439f99c6828c8af42013",
                     "paramList": [
                         {
                             "name": "records"
@@ -37,7 +37,7 @@
             "passthrough": [
                 {
                     "access": "Enable",
-                    "kuid": "bf57e4dae88d4c628096bfbc8b2e3456",
+                    "kuid": "da7f540426ac4853828b59613e661380",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 1,
                     "propertyKey": "leftMenuClick",
@@ -54,7 +54,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "bff872d4354d4694ab51fc1413144bdc",
+                    "kuid": "a59f56df17c84a2082b9b2ce0b5c2e38",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 2,
                     "propertyKey": "rightMenuClick",
@@ -86,7 +86,7 @@
                 {
                     "access": "Write",
                     "defaultValue": true,
-                    "kuid": "jb9e8b7385ac468faaf7ff9d32f7292f",
+                    "kuid": "g1b2d9199ea14925835e9a5bdaaa6059",
                     "originalPropertyKey": "searchList",
                     "propertyIndex": 6,
                     "propertyKey": "searchList",
@@ -100,8 +100,8 @@
                 },
                 {
                     "access": "Write",
-                    "defaultValue": "profile.png",
-                    "kuid": "h0b5170e86f34bf69e193908de2dc0c6",
+                    "defaultValue": "profile_1.png",
+                    "kuid": "j0425fdccb9f47c2ba534b0aad1557dc",
                     "originalPropertyKey": "defaultProfile",
                     "propertyIndex": 7,
                     "propertyKey": "defaultProfile",
@@ -115,8 +115,8 @@
                 },
                 {
                     "access": "Write",
-                    "defaultValue": "cover.png",
-                    "kuid": "a5ade3b8593241328be9201352151528",
+                    "defaultValue": "cover_1.png",
+                    "kuid": "f21d0cb3153a43c691ad10e78eb0d9a4",
                     "originalPropertyKey": "defaultCover",
                     "propertyIndex": 8,
                     "propertyKey": "defaultCover",
@@ -131,7 +131,7 @@
                 {
                     "access": "Write",
                     "defaultValue": true,
-                    "kuid": "i2c20e925b9a4b38a9fa5cd4e1375cfa",
+                    "kuid": "g97dc8ef45be4579a540fe335f26fef6",
                     "originalPropertyKey": "defaultStatus",
                     "propertyIndex": 9,
                     "propertyKey": "defaultStatus",
@@ -146,7 +146,7 @@
                 {
                     "access": "Write",
                     "defaultValue": true,
-                    "kuid": "hbe170f1b14b4969b7ccd73a14d45599",
+                    "kuid": "g068cc59e970434fb390456a5179b607",
                     "originalPropertyKey": "hideHeader",
                     "propertyIndex": 10,
                     "propertyKey": "hideHeader",
@@ -162,7 +162,7 @@
             "passthrough": [
                 {
                     "access": "Enable",
-                    "kuid": "j52227f4e9fe42938eebf11fc8a402f1",
+                    "kuid": "j62f205658214b708539bf60bb7b8f1a",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 1,
                     "propertyKey": "flxDictionaryVisible",
@@ -179,7 +179,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "b9a3117dd5e941c4b54f9e0b5e07320a",
+                    "kuid": "f7407d79e2d245098c1c2b73a8cced83",
                     "originalPropertyKey": "src",
                     "propertyIndex": 2,
                     "propertyKey": "leftSrc",
@@ -205,7 +205,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "j885ff6596de4a67b08d574c0a4c6609",
+                    "kuid": "a907dde49c7c40d69fecd7305e3173c6",
                     "originalPropertyKey": "src",
                     "propertyIndex": 3,
                     "propertyKey": "rightSrc",
@@ -231,7 +231,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "g028f70c5dab4269ab4c0838c1099f9d",
+                    "kuid": "c1ef8bb2d7c84679b2c87cecf2fbc937",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 4,
                     "propertyKey": "leftVisible",
@@ -248,7 +248,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "e23c19e44e3d4093b53bcac137666c22",
+                    "kuid": "cbae93d0f3534410ba0fe3b754281938",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 5,
                     "propertyKey": "rightVisible",

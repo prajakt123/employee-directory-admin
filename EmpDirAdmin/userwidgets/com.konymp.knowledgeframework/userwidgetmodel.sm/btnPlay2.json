@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s93b9ad8b3a14419a1c6a89365ce6ded",
+    "_skin_": "s72ce167984b4a84b85351e7687426b0",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -46,12 +46,11 @@
     "displaytext": true,
     "focusskin": "s2f4eaf8d1cf4901927d3b75511bcc25",
     "id": "btnPlay2",
-    "ide_onClick": "AS_Button_d4ff031c82d54a94a6f71561a03380bd",
+    "ide_onClick": "AS_Button_eec28d7b7ac24740bcdf2adb238813f6",
     "info": null,
     "isvisible": true,
     "kuid": "dcd5b38aeb9d4a7e9562fb05ac71536b",
     "name": "kony.ui.Button",
-    "onclick": "AS_Button_d4ff031c82d54a94a6f71561a03380bd",
     "parent": "flexImageVideo2",
     "pf": "userwidgetmodel",
     "wType": "Button",

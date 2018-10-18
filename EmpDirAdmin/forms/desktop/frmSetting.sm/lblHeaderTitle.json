@@ -73,6 +73,15 @@
     "name": "kony.ui.Label",
     "parent": "flxContentHeader",
     "pf": "frmSetting",
+    "responsiveData": {
+        "b2": {
+            "skin": "s0335195dec645288e51cfc85e5ee62b",
+            "width": {
+                "type": "string",
+                "value": "200px"
+            }
+        }
+    },
     "tooltip": "",
     "wType": "Label",
     "zindex": 1

@@ -85,8 +85,9 @@
             },
             "right": {
                 "type": "string",
-                "value": "100px"
+                "value": "60px"
             },
+            "text": "Clear All",
             "width": {
                 "type": "string",
                 "value": "60px"

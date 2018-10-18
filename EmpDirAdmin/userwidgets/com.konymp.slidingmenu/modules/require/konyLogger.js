@@ -1,6 +1,6 @@
 define(function () {
        /**
-     * @module KonyLogger v0.2
+     * @module KonyLogger v1.1
      * @author AyyappaSwamy.Thatavarthy / Praharshita.Krishna
      * @category functionality
      * @description This module implements the KonyLogger class
@@ -125,6 +125,7 @@ define(function () {
             }
         };
 		
+      	this.enableServerLogging = false;
       	this.logMethod = function(functionName, logLevel, message, eventType){
           	var logObj = {
                 "component": this.reuseableComponentName || "",
@@ -134,6 +135,14 @@ define(function () {
                 "level": logLevel || "",
                 "message": message || ""
             };
+          	if(this.enableServerLogging === true) {
+              	if((KNYMetricsService !== undefined) && (KNYMetricsService !== null) && (KNYMetricsService !== "")){
+                  	if(typeof KNYMetricsService.sendEvent === "function"){
+                  		/** sendEvent params - eventType, subEventType, formID, widgetID, flowTag, metaInfo{JSON} **/
+                    	KNYMetricsService.sendEvent("Custom", "KonyLogger", "MarketPlaceComponent", logObj.component, null, logObj); 	
+                    }
+                }
+            }
           	this.printMethod(JSON.stringify(logObj,null,'\t'));
         };
       	

@@ -46,9 +46,9 @@
     "groupcells": false,
     "hasSections": false,
     "id": "segEmployees",
-    "ide_onRowClick": "AS_Segment_2c647dc91a8c48f492d5bc478fc748b5",
-    "ide_onTouchEnd": "AS_Segment_520dca4068354cff81164302d4b2d4a8",
-    "ide_onTouchMove": "AS_Segment_0b026fa0a4534f8ebfff62d7c926d6d8",
+    "ide_onRowClick": "AS_Segment_b210797367534a1dbe39e0d2e36f7621",
+    "ide_onTouchEnd": "AS_Segment_fe00262da69643f584f8d3bb53619c02",
+    "ide_onTouchMove": "AS_Segment_c39eae6681ff45cebeed6a4520def782",
     "info": null,
     "ipad": {
         "psp": {
@@ -175,11 +175,8 @@
     },
     "name": "kony.ui.SegmentedUI2",
     "needpageindicator": true,
-    "onrowclick": "AS_Segment_2c647dc91a8c48f492d5bc478fc748b5",
-    "ontouchend": "AS_Segment_520dca4068354cff81164302d4b2d4a8",
-    "ontouchmove": "AS_Segment_0b026fa0a4534f8ebfff62d7c926d6d8",
-    "pageoffdotimage": "pageoffdot_4.png",
-    "pageondotimage": "pageondot_4.png",
+    "pageoffdotimage": "pageoffdot_1_1.png",
+    "pageondotimage": "pageondot_1_1.png",
     "paginationconfig": {
         "position": "bottom"
     },

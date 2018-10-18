@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "48%"
+        "value": "33.60%"
     },
     "_margin_": [
         1,
@@ -22,11 +22,11 @@
         0,
         0
     ],
-    "_skin_": "s2a9f2740de14d9bb1d3465936585c7d",
-    "_text_": "admin@kony.com",
+    "_skin_": "s2e5fea24e824d2cbc7c5e73d45e13b7",
+    "_text_": "Email ID",
     "_top_": {
         "type": "string",
-        "value": "42%"
+        "value": "74.90%"
     },
     "_width_": {
         "type": "ref",
@@ -41,7 +41,7 @@
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "contentalignment": 4,
+    "contentalignment": 5,
     "id": "lblHeaderText2",
     "info": null,
     "ipad": {

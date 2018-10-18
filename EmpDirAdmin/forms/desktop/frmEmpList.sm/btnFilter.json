@@ -2,6 +2,10 @@
     "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
     "__parentReadjusting__": false,
+    "_bottom_": {
+        "type": "number",
+        "value": ""
+    },
     "_height_": {
         "type": "string",
         "value": "50dp"
@@ -55,6 +59,10 @@
             "isVisible": false
         },
         "b4": {
+            "bottom": {
+                "type": "string",
+                "value": "0px"
+            },
             "focusSkin": "safd69f6c3dc482aabdc060f5ea07aec",
             "isVisible": true,
             "left": {
@@ -65,12 +73,13 @@
             "text": "Filter",
             "top": {
                 "type": "string",
-                "value": "982dp"
+                "value": ""
             },
             "width": {
                 "type": "string",
                 "value": "100%"
-            }
+            },
+            "zIndex": 200
         }
     },
     "retaincontentalignment": false,

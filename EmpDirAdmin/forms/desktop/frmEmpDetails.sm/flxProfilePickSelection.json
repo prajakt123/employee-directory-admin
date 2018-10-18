@@ -70,6 +70,10 @@
             "top": {
                 "type": "string",
                 "value": "0dp"
+            },
+            "width": {
+                "type": "string",
+                "value": "160px"
             }
         }
     },

@@ -206,6 +206,9 @@ getLocationMasterRowTemplate:function(id){
   flxLocationItem.add(lblLocation, lblAddressOne, lblAddressTwo, lblCountry, lblCity, lblZip, flxEdit, flxRemove, lblId);
   return flxLocationItem;
 },
+      
+      
+      
  getCommonMasterRowTemplate:function(id){
   if(id===undefined || id===null)return null;
   var flxCommonItem = new kony.ui.FlexContainer({
@@ -274,7 +277,7 @@ getLocationMasterRowTemplate:function(id){
     //"left": "95%",
      "right": "45px",
     "skin": "sknFlxTransparentBGPointer",
-    "width": "2%",
+    "width": "7%",
     "zIndex": 10
   }, {}, {});
   flxEdit.setDefaultUnit(kony.flex.DP);
@@ -286,7 +289,7 @@ getLocationMasterRowTemplate:function(id){
     "isVisible": true,
     "skin": "slImage",
     "src": "empediticon.png",
-    "width": "12px",
+    "width": "22px",
     "zIndex": 1
   }, {
     "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
@@ -320,7 +323,7 @@ getLocationMasterRowTemplate:function(id){
     //"left": "97%",
     "right": "15px",
     "skin": "sknFlxTransparentBGPointer",
-    "width": "2%",
+    "width": "3%",
     "zIndex": 10
   }, {}, {});
   flxRemove.setDefaultUnit(kony.flex.DP);
@@ -332,7 +335,7 @@ getLocationMasterRowTemplate:function(id){
     "isVisible": true,
     "skin": "slImage",
     "src": "empremoveicon.png",
-    "width": "19px",
+    "width": "22px",
     "zIndex": 1
   }, {
     "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,

@@ -27,7 +27,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s8a334ac7d284f8c94035b0bd12e759a",
+    "_skin_": "sfe6aef728db4b98b963569c1fc46b8d",
     "_top_": {
         "type": "string",
         "value": "5%"
@@ -95,13 +95,13 @@
             "isVisible": true,
             "layoutType": 4,
             "left": {
-                "type": "string",
-                "value": "0.00%"
+                "type": "number",
+                "value": "0"
             },
             "skin": "sfe6aef728db4b98b963569c1fc46b8d",
             "top": {
                 "type": "string",
-                "value": "5%"
+                "value": "50px"
             }
         }
     },

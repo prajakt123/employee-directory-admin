@@ -51,7 +51,7 @@
     "ide_onScrollEnd": "AS_FlexScrollContainer_a7dc81ecd1d04f5986f7998b8373fac4",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kiosk": {
         "psp": {
             "verticalScrollIndicator": true
@@ -66,15 +66,10 @@
     "pf": "frmSetting",
     "responsiveData": {
         "b1": {
-            "isVisible": false,
             "zIndex": 100
         },
-        "b2": {
-            "isVisible": false
-        },
-        "b4": {
-            "isVisible": false
-        }
+        "b2": {},
+        "b4": {}
     },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

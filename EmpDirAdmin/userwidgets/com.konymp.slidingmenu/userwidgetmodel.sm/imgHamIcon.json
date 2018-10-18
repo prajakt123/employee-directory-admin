@@ -19,8 +19,8 @@
         0,
         0
     ],
-    "_skin_": "sa24272997a744cc8ef0fbd6b75add43",
-    "_src_": "menu_icon.png",
+    "_skin_": "s9f3b59d7fee4fbfaa2d880d74d96d9a",
+    "_src_": "hamburger_1.png",
     "_width_": {
         "type": "string",
         "value": "25dp"
@@ -53,5 +53,5 @@
     "srcType": 1,
     "wType": "Image",
     "widgetalignment": 5,
-    "zindex": 1
+    "zindex": 6
 }

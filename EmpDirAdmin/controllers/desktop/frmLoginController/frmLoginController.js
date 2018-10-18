@@ -56,6 +56,7 @@ define({
 
   },
 
+  
   /**
 	 * @function userStoreLoginFailure
 	 * @description - This function is the failure callback of login

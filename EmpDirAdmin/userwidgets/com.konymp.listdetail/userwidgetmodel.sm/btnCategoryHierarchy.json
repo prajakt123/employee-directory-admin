@@ -22,7 +22,7 @@
         "type": "string",
         "value": "0%"
     },
-    "_skin_": "s00bcc27281a42028fd47c8a145d088c",
+    "_skin_": "s3f2b08dd08b4726a3929c91e2c8ae14",
     "_text_": "Hierarchy",
     "_top_": {
         "type": "string",
@@ -36,7 +36,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s846531a1c2e40f393bb6e5fe48edfe9",
+    "focusskin": "s404b40241c841c6a3e786c905d36b78",
     "id": "btnCategoryHierarchy",
     "info": null,
     "isvisible": true,

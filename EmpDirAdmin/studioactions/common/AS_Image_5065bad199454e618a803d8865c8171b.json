@@ -14,8 +14,8 @@
         }],
         "contextObj": {
             "KUID": "uf6e3557d18e4dac8ff79ade6a3b1f25",
-            "name": "uwuf6e3557d18e4dac8ff79ade6a3b1f25",
-            "type": "userwidgets"
+            "type": "userwidgets",
+            "name": "uwuf6e3557d18e4dac8ff79ade6a3b1f25"
         },
         "language": "js",
         "actions": [{

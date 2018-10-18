@@ -1,6 +1,10 @@
 {
     "DNDConfig": null,
     "__parentReadjusting__": false,
+    "_bottom_": {
+        "type": "number",
+        "value": ""
+    },
     "_height_": {
         "type": "string",
         "value": "260px"
@@ -74,9 +78,13 @@
             }
         },
         "b4": {
+            "bottom": {
+                "type": "string",
+                "value": "0px"
+            },
             "height": {
                 "type": "string",
-                "value": "1032px"
+                "value": "100%"
             },
             "isVisible": true,
             "left": {
@@ -89,11 +97,11 @@
             },
             "top": {
                 "type": "string",
-                "value": "0dp"
+                "value": ""
             },
             "width": {
                 "type": "string",
-                "value": "485px"
+                "value": "100%"
             }
         }
     },

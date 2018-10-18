@@ -40,7 +40,7 @@
         "value": "50%"
     },
     "children": [
-        "alertmsg"
+        "flxAlertMasterContainer"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -72,7 +72,8 @@
             "centerX": {
                 "type": "string",
                 "value": ""
-            }
+            },
+            "isVisible": false
         }
     },
     "retaincontentalignment": false,

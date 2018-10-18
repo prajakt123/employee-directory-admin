@@ -110,6 +110,10 @@
                 "type": "string",
                 "value": "20px"
             },
+            "top": {
+                "type": "string",
+                "value": "80px"
+            },
             "width": {
                 "type": "string",
                 "value": ""

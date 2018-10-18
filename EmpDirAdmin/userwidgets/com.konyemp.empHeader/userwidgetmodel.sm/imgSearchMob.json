@@ -5,7 +5,7 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "20dp"
+        "value": "100%"
     },
     "_margin_": [
         0,
@@ -19,19 +19,15 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "10px"
-    },
     "_skin_": "s9f3b59d7fee4fbfaa2d880d74d96d9a",
     "_src_": "search_1.png",
     "_top_": {
         "type": "string",
-        "value": "10dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "20dp"
+        "value": "100%"
     },
     "canUpdateUI": true,
     "centerx": {
@@ -46,7 +42,6 @@
     "context": {
         "channel": "desktop",
         "formID": "uwuebdd606f3d1410e951ceecf43e97848",
-        "platform": "desktopweb",
         "templateType": "userwidgets",
         "topLevelBox": null
     },
@@ -57,7 +52,7 @@
     "isvisible": true,
     "kuid": "a1333212355744e7bbf588ef0f2375e4",
     "name": "kony.ui.Image2",
-    "parent": "flxCancelAndSearch",
+    "parent": "flxImgSearch",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

@@ -53,10 +53,22 @@
     "isvisible": true,
     "kuid": "f0df8f027bd04d5c8fb946307bb52b69",
     "layouttype": 2,
+    "minwidth": {
+        "type": "number",
+        "value": ""
+    },
     "name": "kony.ui.FlexContainer",
     "onclick": "AS_FlexContainer_f542b46a9d0e4d81b611ac13c484c8d4",
     "parent": "frmSetting",
     "pf": "frmSetting",
+    "responsiveData": {
+        "b2": {
+            "minWidth": {
+                "type": "string",
+                "value": "1374px"
+            }
+        }
+    },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "snapgridsize": 10,

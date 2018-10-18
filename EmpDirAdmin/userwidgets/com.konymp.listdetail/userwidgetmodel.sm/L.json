@@ -22,7 +22,7 @@
         "type": "string",
         "value": "6%"
     },
-    "_skin_": "scda064c10854d8abf316735f361ec06",
+    "_skin_": "s4b402bb8c4d46c4b6dd42ddd2e1c66e",
     "_text_": "L",
     "_top_": {
         "type": "string",
@@ -36,14 +36,13 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "scda064c10854d8abf316735f361ec06",
+    "focusskin": "s4b402bb8c4d46c4b6dd42ddd2e1c66e",
     "id": "L",
-    "ide_onClick": "AS_Button_b3bb6ca5334249d78034b49ad4702df8",
+    "ide_onClick": "AS_Button_j98cb5de0a524202affdbd89b32cb12c",
     "info": null,
     "isvisible": true,
     "kuid": "ff23e188a97f43c9a6a4b9a3a689d1cb",
     "name": "kony.ui.Button",
-    "onclick": "AS_Button_b3bb6ca5334249d78034b49ad4702df8",
     "parent": "flxDictionary",
     "pf": "userwidgetmodel",
     "wType": "Button"

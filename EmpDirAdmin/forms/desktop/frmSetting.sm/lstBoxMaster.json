@@ -68,6 +68,10 @@
             "height": {
                 "type": "string",
                 "value": "95%"
+            },
+            "width": {
+                "type": "string",
+                "value": "360px"
             }
         }
     },

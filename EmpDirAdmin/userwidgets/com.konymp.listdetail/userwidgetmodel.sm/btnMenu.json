@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s7c397606e90409dbb09bc42a5ba2d41",
+    "_skin_": "sca0fb0b26e24d5c860d2c7d7b4c3546",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -36,7 +36,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s7c397606e90409dbb09bc42a5ba2d41",
+    "focusskin": "sca0fb0b26e24d5c860d2c7d7b4c3546",
     "id": "btnMenu",
     "info": null,
     "isvisible": true,

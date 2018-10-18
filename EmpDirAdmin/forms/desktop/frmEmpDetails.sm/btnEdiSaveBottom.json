@@ -44,6 +44,7 @@
     "displaytext": true,
     "focusskin": "s152afde278047bd971b2ad9addf97a5",
     "id": "btnEdiSaveBottom",
+    "ide_onClick": "AS_Button_acda5789137445ab8ca71f23a1c26842",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

@@ -51,6 +51,14 @@
     "name": "kony.ui.FlexContainer",
     "parent": "flxContentMaster",
     "pf": "frmSetting",
+    "responsiveData": {
+        "b2": {
+            "width": {
+                "type": "string",
+                "value": "100%"
+            }
+        }
+    },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "snapgridsize": 10,

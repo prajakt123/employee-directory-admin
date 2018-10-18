@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "700px"
+        "value": "650px"
     },
     "_margin_": [
         1,
@@ -30,7 +30,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "84px"
+        "value": "120px"
     },
     "_wrapping_": 2,
     "android": {

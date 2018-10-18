@@ -2,10 +2,10 @@ define({
     /*
       This is an auto generated file and any modifications to it may result in corruption of the action sequence.
     */
-    /** onClick defined for SettingsMenu **/
-    AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd: function AS_FlexContainer_e30cd5ba092f490c8251af8d527246cd(eventobject) {
+    /** onAlertFlexClick defined for alertmsg **/
+    AS_UWI_b569ccf7746848a98df3fb3f2c1ed751: function AS_UWI_b569ccf7746848a98df3fb3f2c1ed751() {
         var self = this;
-        this.navigateToFormSetting();
+        this.hideALertComponentCallBack();
     },
     /** onClick defined for flxUserInfo **/
     AS_FlexContainer_b403f300ff1a4c16847155653101e350: function AS_FlexContainer_b403f300ff1a4c16847155653101e350(eventobject) {
@@ -73,6 +73,11 @@ define({
         var self = this;
         this.view.forceLayout();
     },
+    /** onClick defined for DirectoryMenuItemMouseover **/
+    AS_FlexContainer_d1fb2ab8b8f94128913da5ec9205e531: function AS_FlexContainer_d1fb2ab8b8f94128913da5ec9205e531(eventobject) {
+        var self = this;
+        this.navigateToFrmEmpList();
+    },
     /** onClick defined for flexGreyBg **/
     AS_FlexContainer_h58b08dc22604bd688d7075d47731bdc: function AS_FlexContainer_h58b08dc22604bd688d7075d47731bdc(eventobject) {
         var self = this;
@@ -104,11 +109,6 @@ define({
         var self = this;
         this.view.flxOverlay.setVisibility(false);
     },
-    /** onAlertFlexClick defined for alertmsg2 **/
-    AS_UWI_b569ccf7746848a98df3fb3f2c1ed751: function AS_UWI_b569ccf7746848a98df3fb3f2c1ed751() {
-        var self = this;
-        this.hideALertComponentCallBack();
-    },
     /** onClick defined for flxAlertContainer2 **/
     AS_FlexContainer_c11c871d7c4a44ae929b042361d7b1b7: function AS_FlexContainer_c11c871d7c4a44ae929b042361d7b1b7(eventobject) {
         var self = this;
@@ -128,11 +128,5 @@ define({
     AS_Form_f2e5af38e3714b5b884688797fdc35d2: function AS_Form_f2e5af38e3714b5b884688797fdc35d2(eventobject, breakpoint) {
         var self = this;
         return self.onBreakpointChange.call(this, eventobject, breakpoint);
-    },
-    /** onClick defined for DirectoryMenuItemMouseover **/
-    AS_FlexContainer_ce06ccae3732476980b2898c22bf8c72: function AS_FlexContainer_ce06ccae3732476980b2898c22bf8c72(eventobject) {
-        var self = this;
-        var ntf = new kony.mvc.Navigation("frmEmpList");
-        ntf.navigate();
     }
 });

@@ -1,171 +1,261 @@
-define({
-  onNavigated: function (context) {
-    this.flag = 0;
+define({ 
+  departmentMenu:null,
+  designationMenu:null,
+  departmentSubMenuList:[],
+  designationSubMenuList:[],
+  isRightMenuFetched:false,
+
+  selectedDepartentIndex:null,
+  selectedDesignationIndex:null,
+
+  onNavigate:function(){
+    this.isRightMenuFetched=false;
   },
-  animation: function (object, scaleX, scaleY, left, flag) {
-    var defaultImage = kony.ui.makeAffineTransform();
-    defaultImage.scale(scaleX, scaleY);
-    var duration = 0.5;
-    if (flag == false) {
-      duration = 0;
-    }
-    object.animate(
-      kony.ui.createAnimation({
-        100: {
-          "left": left,
-          "stepConfig": {
-            "timingFunction": kony.anim.EASE
-          },
-          "transform": defaultImage
+  onFormInit:function(){
+    //Right menu
+    this.view.slidingmenu.flxTargetContainer.listdetail.rightMenuClick=this.rightMenuClick.bind(this);
+    //Left menu items.
+    this.view.slidingmenu.flxTargetContainer.listdetail.leftMenuClick=this.leftMenuClick.bind(this);
+  },
+  postShow:function(){
+  },
+  //left menu button click.
+  leftMenuClick:function(){
+    debugger;
+    this.view.slidingmenu.slidingMenuDirection = "Left";
+    var LeftmenuData =[
+          {menuItemName:"Directory", menuItemIcon:"imgline.png"},
+          {menuItemName:'Colleagues',menuItemIcon:"imgline.png"},
+          {menuItemName:'Messages',menuItemIcon:"imgline.png"},
+          {menuItemName:'Events',menuItemIcon:"imgline.png"},
+          {menuItemName:'Settings',menuItemIcon:"imgline.png"}
+        ];
+    this.view.slidingmenu.addMenuItems(LeftmenuData);
+
+    this.view.slidingmenu.profileImageSrc="clear_all.png";
+    this.view.slidingmenu.profileImageLeft="10%";
+    this.view.slidingmenu.profileImageTop="20%";
+    this.view.slidingmenu.profileImageIsVisible = true;
+    this.view.slidingmenu.onProfileClick =function(){
+      alert("from left menu!");
+    };
+
+    this.view.slidingmenu.headingTextIsVisible= true;
+    this.view.slidingmenu.headingTop="20%";
+    this.view.slidingmenu.headingLeft="35%";
+    this.view.slidingmenu.headingText="Kony";
+
+    this.view.slidingmenu.subHeadingTextIsVisible=true;
+    this.view.slidingmenu.subHeadingText="admin@kony.com";
+    this.view.slidingmenu.subHeadingLeft="35%";
+    this.view.slidingmenu.subHeadingTop="40%";
+
+    this.view.slidingmenu.showSlidingMenu();
+
+    this.view.slidingmenu.footerText="Logout";
+    this.view.slidingmenu.onFooterClick=this.onLogout;
+
+    this.view.forceLayout();
+    this.view.slidingmenu.onMenuItemClick=this.onMenuItemClick;
+  },
+  //on right menu click.
+  rightMenuClick:function(){
+    debugger;
+    if(this.isRightMenuFetched===false){
+      var menuSubMenuList=this.view.slidingmenu.flxTargetContainer.listdetail.getData();
+      if(Array.isArray(menuSubMenuList) && menuSubMenuList.length >0){
+        var departmentList;
+        var designationList;
+        for(var i=0;i<menuSubMenuList.length;i++){
+          if(menuSubMenuList[i][0]==="Department"){
+            departmentList=menuSubMenuList[i][2];
+          }else if(menuSubMenuList[i][0]==="Designation"){
+            designationList=menuSubMenuList[i][2];
+          }
         }
-      }), {
-        delay: 0,
-        fillMode: kony.anim.FILL_MODE_FORWARDS,
-        duration: duration
-      }, {
-        animationEnd: function () { }
-      });
-  },
-  setShadowPosition: function () {
-    if (this.view.listdetail.left == "-70%") {
-      this.view.flxShadow.isVisible = true;
-      this.view.flxShadow.left = "-80%";
+        this.departmentMenu= this.processMenuItem("Department");
+        this.designationMenu=this.processMenuItem("Designation");
+        this.departmentSubMenuList=this.processSubMenuItemList("Department",departmentList);
+        this.designationSubMenuList=this.processSubMenuItemList("Designation",designationList);
+      }
+      this.isRightMenuFetched=true;
     }
-    else if (this.view.listdetail.left == "70%") {
-      this.view.flxShadow.isVisible = true;
-      this.view.flxShadow.left = "80%";
-    }
-    else {
-      this.view.flxShadow.isVisible = false;
-    }
+    this.processFilterData();
+    this.view.slidingmenu.slidingMenuDirection = "Right";
+
+    this.view.slidingmenu.profileImageSrc="profile.png";
+    this.view.slidingmenu.profileImageLeft="80%";
+    this.view.slidingmenu.profileImageTop="20%";
+    this.view.slidingmenu.profileImageIsVisible = true;
+    this.view.slidingmenu.onProfileClick =this.clearFilter;
+
+    this.view.slidingmenu.headingTextIsVisible= true;
+    this.view.slidingmenu.headingTop="20%";
+    this.view.slidingmenu.headingLeft="25%";
+    this.view.slidingmenu.headingText="Filter By";
+
+    this.view.slidingmenu.subHeadingTextIsVisible=false;
+    this.view.slidingmenu.subHeadingText="admin@kony.com";
+    this.view.slidingmenu.subHeadingLeft="35%";
+    this.view.slidingmenu.subHeadingTop="40%";
+
+    this.view.slidingmenu.footerText="Apply";
+    this.view.slidingmenu.onFooterClick=this.applyFilter;
+
+    this.view.slidingmenu.showSlidingMenu();
+    this.view.slidingmenu.onMenuItemClick=this.onFilterItemClick;
   },
 
-  menuClick: function () {
-
-    this.animation(this.view.listdetail, 0.8, 0.8, "70%", true);
-    this.animation(this.view.flxShadow, 0.8, 0.8, "70%", true);
-    this.view.hamburger.left = "0%";
-    this.view.forceLayout();
+  // process and create the menu item json
+  processMenuItem:function(menuItem){
+    debugger;
+    var obj={menuItemName:menuItem, menuItemIcon:"imgline.png"};
+    return obj;
   },
-  filterClick: function () {
-    this.view.filterMenu.left = "20%";
-    this.animation(this.view.listdetail, 0.8, 0.8, "-70%", true);
-    this.animation(this.view.flxShadow, 0.8, 0.8, "-70%", true);
-    this.view.forceLayout();
-  },
-
-  listFilterClick: function () {
-    this.view.hamburger.left = "-100%";
-    this.view.flxCover.zIndex = 10;
-    this.view.flxCover.isVisible = true;
-    this.view.flxCover.left = "0%";
-    this.view.flxCover.width = "20%";
-    this.view.flxCover.height = "100%";
-    this.view.flxShadow.isVisible = true;
-    this.view.forceLayout();
-    if (!this.flag) {
-      this.view.filterMenu.addMenuItems(this.view.listdetail.getData());
-      this.flag = 1;
-    }
-    this.filterClick();
-  },
-
-  listMenuClick: function () {
-    this.view.flxCover.zIndex = 10;
-    this.view.flxCover.isVisible = true;
-    this.view.flxCover.left = "80%";
-    this.view.flxCover.width = "20%";
-    this.view.flxCover.height = "100%";
-    this.view.flxShadow.isVisible = true;
-    this.view.forceLayout();
-    var loginMenuData = [{
-      text: "Directory",
-      src: "selection.png",
-      callback: this.edclick.bind(this)
-    },
-                         {
-                           text: "Colleagues",
-                           src: "selection.png",
-                           callback: function () {
-                             alert("Colleagues");
-                           }
-                         },
-                         {
-                           text: "Messages",
-                           src: "selection.png",
-                           callback: function () {
-                             alert("Messages");
-                           }
-                         },
-                         {
-                           text: "Events",
-                           src: "selection.png",
-                           callback: function () {
-                             alert("Events");
-                           }
-                         },
-                         {
-                           text: "Settings",
-                           src: "selection.png",
-                           callback: function () {
-                             alert("Settings");
-                           }
-                         }
-                        ];
-    this.view.hamburger.addMenuItems(loginMenuData);
-    this.menuClick();
-  },
-  edclick: function () {
-    this.view.hamburger.left = "-100%";
-    this.view.flxCover.isVisible = false;
-    this.animation(this.view.flxShadow, 1, 1, "0%", true);
-    this.animation(this.view.listdetail, 1, 1, "0%", true);
-    this.view.flxShadow.isVisible = false;
-    this.view.forceLayout();
-  },
-  flxCoverOnClick: function () {
-    this.view.flxShadow.isVisible = false;
-    if (this.view.listdetail.left == "-70%" || this.view.listdetail.left == "70%") {
-      if (this.view.hamburger.left == "0%") {
-        this.view.hamburger.left = "-100%";
-        this.animation(this.view.flxShadow, 1, 1, "0%", true);
-        this.animation(this.view.listdetail, 1, 1, "0%", true);
-        this.view.forceLayout();
-        this.view.flxCover.isVisible = false;
-      } else if (this.view.filterMenu.left == "20%") {
-        this.view.filterMenu.left = "100%";
-        this.animation(this.view.flxShadow, 1, 1, "0%", true);
-        this.animation(this.view.listdetail, 1, 1, "0%", true);
-        this.view.filterMenu.addMenuItems(this.view.listdetail.getData());
-        this.view.listdetail.filterAndSetData([]);
-        this.view.forceLayout();
-        this.view.flxCover.isVisible = false;
+  //process and create the submenu item json
+  processSubMenuItemList:function(menuItem,subMenuItemList){
+    debugger;
+    var processedSubMenuList=[];
+    if(Array.isArray(subMenuItemList)){
+      var obj;
+      for(var i=0;i<subMenuItemList.length;i++){
+        obj={menuItemName:menuItem, submenuItemName:subMenuItemList[i]["text"], submenuItemIcon:'checkboxinactive.png'};
+        processedSubMenuList.push(obj);
       }
     }
-    this.view.flxShadow.isVisible = false;
+    return processedSubMenuList;
   },
-  resetPosition: function () {
-    this.view.hamburger.left = "-100%";
-    this.animation(this.view.flxShadow, 1, 1, "0%", true);
-    this.animation(this.view.listdetail, 1, 1, "0%", false);
-    this.view.listdetail.left = "0%";
-    this.view.flxCover.isVisible = false;
-    this.view.flxShadow.isVisible = false;
-    this.view.forceLayout();
-    var nav = new kony.mvc.Navigation("frmHome");
-    nav.navigate();
-  },
-  filterApplyClick: function () {
+  //function to process and format the filter data & set to the sliding menu.
+  processFilterData:function(){
     debugger;
-    this.view.listdetail.filterAndSetData(this.view.filterMenu.getSelectedValues());
-    this.view.flxCover.isVisible = false;
-    this.view.flxShadow.isVisible = false;
-    this.animation(this.view.flxShadow, 1, 1, "0%", true);
-    this.animation(this.view.listdetail, 1, 1, "0%", true);
-    this.view.filterMenu.left = "100%";
-    this.view.forceLayout();
+    var menuList=[];
+    menuList.push(this.departmentMenu);
+    menuList.push(this.designationMenu);
+    var subMenuList=[];
+    subMenuList=subMenuList.concat(this.departmentSubMenuList);
+    subMenuList=subMenuList.concat(this.designationSubMenuList);
+    this.setFilterToSlidingMenu(menuList,subMenuList);
+    debugger;
+  },
+  //function to set the menu and sub menu to the sliding menu.
+  setFilterToSlidingMenu:function(menuList,subMenuList){
+    this.view.slidingmenu.addMenuItems(menuList,subMenuList);
+  },
+  onFilterItemClick:function(menuIndex){
+    debugger;
+    if(menuIndex[0]===0){
+      if(Array.isArray(this.departmentSubMenuList) && this.departmentSubMenuList[menuIndex[1]]!==undefined){
+        if(this.departmentSubMenuList[menuIndex[1]]["submenuItemIcon"]==="checkboxactive.png"){
+          this.departmentSubMenuList[menuIndex[1]]["submenuItemIcon"]="checkboxinactive.png";
+        }else{
+          this.departmentSubMenuList[menuIndex[1]]["submenuItemIcon"]="checkboxactive.png";
+        }
+      }
 
+    }else if(menuIndex[0]===1){
+      if(Array.isArray(this.designationSubMenuList) && this.designationSubMenuList[menuIndex[1]]!==undefined){
+        if(this.designationSubMenuList[menuIndex[1]]["submenuItemIcon"]==="checkboxactive.png"){
+          this.designationSubMenuList[menuIndex[1]]["submenuItemIcon"]="checkboxinactive.png";
+        }else{
+          this.designationSubMenuList[menuIndex[1]]["submenuItemIcon"]="checkboxactive.png";
+        }
+      }
+     
+    }
+    this.processFilterData();
+  },
+  onMenuItemClick:function(menuindex){
+    switch (Number(menuindex)) {
+      case 0: 
+        alert("Product Management");
+        break;
+      case 1:
+        alert("Colleagues");
+        break; 
+      case 2:
+        alert("Messages");
+        break; 
+      case 3:
+        alert("Events");
+        break; 
+      case 4:
+        alert("Settings");
+        break; 
+    }
+  },
+  /***************/
+  applyFilter:function(){
+    var departmentList=[];
+    var designationList=[]
+    if(Array.isArray(this.departmentSubMenuList)){
+      var departmentSubMenuListLength=this.departmentSubMenuList.length;
+      var departmentSubMenu;
+      for(var i=0;i<departmentSubMenuListLength;i++){
+        departmentSubMenu=this.departmentSubMenuList[i];
+        if(typeof departmentSubMenu ==='object' && departmentSubMenu !==null && typeof departmentSubMenu["submenuItemIcon"]==='string'){
+          if(departmentSubMenu["submenuItemIcon"]==="checkboxactive.png"){
+            departmentList.push(departmentSubMenu["submenuItemName"]);
+          }
+        }
+      }
+    }
+    if(Array.isArray(this.designationSubMenuList)){
+      var designationSubMenuListLength=this.designationSubMenuList.length;
+      var designationSubMenu;
+      for(var i=0;i<designationSubMenuListLength;i++){
+        designationSubMenu=this.designationSubMenuList[i];
+        if(typeof designationSubMenu ==='object' &&  designationSubMenu!==null && typeof designationSubMenu["submenuItemIcon"]=='string'){
+          if(designationSubMenu['submenuItemIcon']==='checkboxactive.png'){
+            designationList.push(designationSubMenu['submenuItemName']);
+          }
+        }
+      }
+    }
+    var filterData=[
+      {"Department":departmentList},
+      {"Designation":designationList}
+    ];
+    debugger;
+    this.view.slidingmenu.flxTargetContainer.listdetail.filterAndSetData(filterData);
+  },
+  /**************/
+  validateText:function(data){
+    if(data===null || data === undefined){
+      return "";
+    }else if( typeof data==='string'){
+      data=data.trim();
+      return data;
+    }
+    return "";
+  },
+  onLogout:function(){
+    var navObj=new kony.mvc.Navigation("frmHome");
+    navObj.navigate();
+  },
+  clearFilter:function(){
+    if(Array.isArray(this.departmentSubMenuList)){
+      var departmentSubMenuListLength=this.departmentSubMenuList.length;
+      var departmentSubMenu;
+      for(var i=0;i<departmentSubMenuListLength;i++){
+        departmentSubMenu=this.departmentSubMenuList[i];
+        if(typeof departmentSubMenu ==='object' && departmentSubMenu !==null ){
+          departmentSubMenu["submenuItemIcon"]="checkboxinactive.png";
+        }
+      }
+    }
+    if(Array.isArray(this.designationSubMenuList)){
+      var designationSubMenuListLength=this.designationSubMenuList.length;
+      var designationSubMenu;
+      for(var i=0;i<designationSubMenuListLength;i++){
+        designationSubMenu=this.designationSubMenuList[i];
+        if(typeof designationSubMenu ==='object' &&  designationSubMenu!==null && typeof designationSubMenu["submenuItemIcon"]=='string'){
+          designationSubMenu['submenuItemIcon']='checkboxinactive.png';
+        }
+      }
+    }
+    this.view.slidingmenu.flxTargetContainer.listdetail.filterAndSetData([
+      {"Department":[]},
+      {"Designation":[]}
+    ]);
   }
 });
-
-

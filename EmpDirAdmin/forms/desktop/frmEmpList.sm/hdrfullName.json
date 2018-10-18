@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "80px"
+        "value": "5px"
     },
     "_margin_": [
         0,
@@ -75,18 +75,8 @@
     "pf": "frmEmpList",
     "responsiveData": {
         "b1": {},
-        "b2": {
-            "left": {
-                "type": "string",
-                "value": "95px"
-            }
-        },
-        "b4": {
-            "left": {
-                "type": "string",
-                "value": "100px"
-            }
-        }
+        "b2": {},
+        "b4": {}
     },
     "textstyle": {},
     "tooltip": "",

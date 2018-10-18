@@ -36,7 +36,6 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "leftmenu2",
         "leftmenu",
         "flexGreyBg"
     ],
@@ -60,7 +59,15 @@
             }
         },
         "b2": {
-            "isVisible": true
+            "isVisible": true,
+            "top": {
+                "type": "string",
+                "value": "60dp"
+            },
+            "width": {
+                "type": "string",
+                "value": "0%"
+            }
         },
         "b4": {
             "width": {

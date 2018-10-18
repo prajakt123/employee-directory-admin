@@ -36,7 +36,8 @@
     "canUpdateUI": true,
     "children": [
         "Label0e9ce70d099f343",
-        "CopybtnClearAll0f386a0c1196b46"
+        "CopybtnClearAll0f386a0c1196b46",
+        "flxImage"
     ],
     "clipbounds": true,
     "containerweight": 100,

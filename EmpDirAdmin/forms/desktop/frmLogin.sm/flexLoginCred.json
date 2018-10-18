@@ -53,7 +53,26 @@
     "name": "kony.ui.FlexContainer",
     "parent": "flexLoginMain",
     "pf": "frmLogin",
-    "responsiveData": {},
+    "responsiveData": {
+        "b1": {
+            "height": {
+                "type": "string",
+                "value": "85%"
+            }
+        },
+        "b2": {
+            "height": {
+                "type": "string",
+                "value": "85%"
+            }
+        },
+        "b3": {
+            "height": {
+                "type": "string",
+                "value": "85%"
+            }
+        }
+    },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "snapgridsize": 10,

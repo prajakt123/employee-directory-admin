@@ -50,7 +50,7 @@
     "focusskin": "ps090d4aa1631111e881e67756e63af01b",
     "id": "userIon",
     "info": null,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "fd231eaede844b18919127365a216fba",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",

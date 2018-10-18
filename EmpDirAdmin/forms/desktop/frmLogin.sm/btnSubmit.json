@@ -63,6 +63,12 @@
                 "type": "string",
                 "value": "25%"
             }
+        },
+        "b3": {
+            "height": {
+                "type": "string",
+                "value": "11%"
+            }
         }
     },
     "retaincontentalignment": false,

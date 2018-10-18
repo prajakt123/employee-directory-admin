@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "sc0dca9da8ea428292dc4257309a8275",
+    "_skin_": "s40b8ede3c4a4d41bbe8a0993daae5e2",
     "_text_": "Details",
     "_top_": {
         "type": "string",
@@ -36,7 +36,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s846531a1c2e40f393bb6e5fe48edfe9",
+    "focusskin": "s404b40241c841c6a3e786c905d36b78",
     "id": "btnCategoryDetails",
     "info": null,
     "isvisible": true,

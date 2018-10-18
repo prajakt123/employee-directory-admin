@@ -23,7 +23,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s079700a4e344f0a8c2aaf6f435132bb",
+    "_skin_": "sec7eb6366ab413eb56739ced00a3605",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -41,24 +41,25 @@
         "flxfocus",
         "lbl34px",
         "lblnunito",
-        "imgChevron"
+        "imgChevron",
+        "imgHamIconRight",
+        "lblSeparatorSkin"
     ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxCover",
-    "ide_onClick": "AS_FlexContainer_6e618c481f6b4ebfa0baef71fae7c499",
+    "ide_onClick": "AS_FlexContainer_fec3d0efa79a450489632cf6dbe3fafe",
     "info": null,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "c87675ba3d454f7b940ac828a761c11a",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "onclick": "AS_FlexContainer_6e618c481f6b4ebfa0baef71fae7c499",
-    "parent": "slidingmenu",
+    "parent": "flxTargetContainer",
     "pf": "userwidgetmodel",
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 1
+    "zindex": 99
 }

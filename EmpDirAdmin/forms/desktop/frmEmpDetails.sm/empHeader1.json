@@ -170,6 +170,14 @@
             "top": {},
             "width": {}
         },
+        "flxImgSearch": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d85ed9aa87704da7911604e1f6c82a1d",
+                "srcKUID": "fbf3eb10fb8749679bfa236b56028798",
+                "wType": "FlexContainer"
+            }
+        },
         "flxLogo": {
             "__events__": {},
             "__info__": {
@@ -268,7 +276,7 @@
         "imgSearchMob": {
             "__events__": {},
             "__info__": {
-                "kuid": "a2f29989e23c4d5dbb9d104fba33316b",
+                "kuid": "f893dab0c71348d3b0f19cd5a3e8989e",
                 "srcKUID": "a1333212355744e7bbf588ef0f2375e4",
                 "wType": "Image"
             }

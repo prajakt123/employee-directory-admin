@@ -33,7 +33,6 @@
         "value": "100%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
         "leftmenu",
@@ -65,6 +64,10 @@
             }
         },
         "b4": {
+            "height": {
+                "type": "string",
+                "value": "1032px"
+            },
             "isVisible": true,
             "top": {
                 "type": "string",

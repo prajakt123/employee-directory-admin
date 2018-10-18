@@ -15,7 +15,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s02c05b85b024c3f81d3794e522b5916",
+    "_skin_": "s2c4a3510d2d46ed916006b2a1180301",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -25,10 +25,12 @@
     ],
     "containerweight": 100,
     "currentLocale": "default",
-    "device": "iPhone7",
+    "device": "iPhoneX",
     "displayorientation": 3,
     "enabledforidletimeout": false,
-    "globalUserWidgetRefs": [],
+    "globalUserWidgetRefs": [
+        "u94c20eb15b74713a5e601cd5673f01d"
+    ],
     "id": "userwidgetmodel",
     "info": null,
     "initdone": false,
@@ -47,11 +49,11 @@
     },
     "paddinginpixel": false,
     "platform": "iphone",
-    "prevDevice": "iPhone7",
+    "prevDevice": "iPhoneX",
     "prevPlatform": "iphone",
     "retainscrollposition": false,
-    "shellCSS": "iOS_iPhone7",
-    "titleBarSkin": "s92adc17eba0439faf3d1720702c40bf",
+    "shellCSS": "iOS_iPhoneX",
+    "titleBarSkin": "s4f352659e3a4b428ea210066b0b27ef",
     "titlebar": true,
     "type": 3,
     "wType": "Form"

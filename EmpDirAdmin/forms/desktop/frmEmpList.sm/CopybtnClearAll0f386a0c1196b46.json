@@ -77,11 +77,15 @@
             },
             "right": {
                 "type": "string",
-                "value": "50px"
+                "value": "85px"
             },
             "top": {
                 "type": "string",
                 "value": ""
+            },
+            "width": {
+                "type": "string",
+                "value": "15%"
             }
         }
     },

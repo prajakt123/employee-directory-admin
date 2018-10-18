@@ -40,8 +40,8 @@
         "value": "50%"
     },
     "children": [
-        "imgSearchMob",
-        "btnCancelsearch"
+        "btnCancelsearch",
+        "flxImgSearch"
     ],
     "clipbounds": true,
     "containerweight": 100,

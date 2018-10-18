@@ -75,6 +75,10 @@
             }
         },
         "b2": {
+            "height": {
+                "type": "string",
+                "value": "750px"
+            },
             "layoutType": 2,
             "width": {
                 "type": "string",

@@ -50,6 +50,11 @@
     "onclick": "AS_FlexContainer_fb0d86edfa714e6ca077509680ea4bb7",
     "parent": "flxMenuContainer",
     "pf": "frmEmpDetails",
+    "responsiveData": {
+        "b4": {
+            "isVisible": false
+        }
+    },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "snapgridsize": 10,

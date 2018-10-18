@@ -68,7 +68,11 @@
         "b1": {
             "left": {
                 "type": "string",
-                "value": "58%"
+                "value": "52%"
+            },
+            "right": {
+                "type": "string",
+                "value": ""
             }
         },
         "b2": {

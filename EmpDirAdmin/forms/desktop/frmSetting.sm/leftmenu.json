@@ -74,8 +74,8 @@
         },
         "DirectoryMenuItemMouseover": {
             "__events__": {
-                "ide_onClick": "AS_FlexContainer_ce06ccae3732476980b2898c22bf8c72",
-                "onClick": "AS_FlexContainer_c5107e1860b04197b79796d282d7c1cc"
+                "ide_onClick": "AS_FlexContainer_d1fb2ab8b8f94128913da5ec9205e531"
+                
             },
             "__info__": {
                 "kuid": "i5036b68b0ae426dbf0c090bc3706605",
@@ -192,7 +192,7 @@
         },
         "SettingsMenu": {
             "__events__": {
-                "ide_onClick": "AS_FlexContainer_ec998c0f4ad54fe5893c6aed47e65bf3",
+                "ide_onClick": "AS_FlexContainer_ja53e078f9174eae96542f8994cbacc3",
                 "onClick": "AS_FlexContainer_ec998c0f4ad54fe5893c6aed47e65bf3"
             },
             "__info__": {
@@ -377,17 +377,17 @@
             "left": {},
             "responsiveData": {
                 "b2": {
-                    "isVisible": false,
+                    "isVisible": true,
                     "left": {
                         "type": "string",
                         "value": "0px"
                     }
                 },
                 "b4": {
-                    "isVisible": false,
+                    "isVisible": true,
                     "left": {
                         "type": "string",
-                        "value": "-260dp"
+                        "value": "0dp"
                     }
                 }
             },

@@ -19,7 +19,7 @@
         "actions": [{
             "id": "ADD_SNIPPET__aeb11fe3a5a543f49b2fa5c1beeb5477",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "var searchStr = eventobject.text;\nthis.processSearch(searchStr);\nthis.view.flxSearch.setVisibility(false);\n\nthis.view.empHeader1.imgSearchMob.setVisibility(false);\nthis.view.empHeader1.btnCancelsearch.setVisibility(true);",
+            "codeSnippet": "var searchStr = eventobject.text;\nthis.processSearch(searchStr);\nthis.view.flxSearch.setVisibility(false);\n\nthis.view.empHeader1.imgSearchMob.setVisibility(false);\nthis.view.empHeader1.btnCancelsearch.setVisibility(true);\nthis.view.forceLayout();",
             "parentId": null,
             "callbackType": null
         }]

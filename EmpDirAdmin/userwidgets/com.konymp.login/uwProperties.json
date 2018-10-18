@@ -4,7 +4,7 @@
         "apis": {
             "custom": [
                 {
-                    "kuid": "b8c64ea168364246a76a1d7b2c8147e6",
+                    "kuid": "b38a7588c6be4defb71bc62370d41ef4",
                     "paramList": [
                         {
                             "name": "providername"
@@ -19,7 +19,7 @@
                     "type": "event"
                 },
                 {
-                    "kuid": "gf1302f3d1df46d2929d8ff8b941a8c2",
+                    "kuid": "i97ad51289054e30bad08827a1fb281c",
                     "paramList": [],
                     "propertyKey": "getUsername",
                     "pw": {
@@ -30,7 +30,7 @@
                     "type": "event"
                 },
                 {
-                    "kuid": "eaa82a99b1af45298dde78babe654220",
+                    "kuid": "b0bfb55ce084497ba97bc71ba3e56811",
                     "paramList": [],
                     "propertyKey": "getPassword",
                     "pw": {
@@ -41,7 +41,7 @@
                     "type": "event"
                 },
                 {
-                    "kuid": "f97dfd67a66a406594c35b2b56740981",
+                    "kuid": "beb95dcf6a264e93ab116bbb05eaa36a",
                     "paramList": [
                         {
                             "name": "input"
@@ -56,7 +56,7 @@
                     "type": "event"
                 },
                 {
-                    "kuid": "a304980e67c4475d9cf6a5e6758b91bc",
+                    "kuid": "ec1fdd49ce824fd0946211ab633170df",
                     "paramList": [],
                     "propertyIndex": 15,
                     "propertyKey": "rememberMe",
@@ -73,7 +73,7 @@
         "events": {
             "custom": [
                 {
-                    "kuid": "g1f902257dec41aa99c9df1905eefed5",
+                    "kuid": "b20337a738904318a4aa7285f5a30c8d",
                     "paramList": [
                         {
                             "name": "response"
@@ -89,7 +89,7 @@
                     "type": "event"
                 },
                 {
-                    "kuid": "b4a224c839884120bf22d806c7f26f7f",
+                    "kuid": "g1ee904f76074635ad699e3adc942e8f",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "usernameOnDone",
@@ -101,7 +101,7 @@
                     "type": "event"
                 },
                 {
-                    "kuid": "h058f06183b54da6a5c1b78e3f37fc44",
+                    "kuid": "dcd4e08cb4ce4d59b2df519a12a58d17",
                     "paramList": [],
                     "propertyIndex": 4,
                     "propertyKey": "passwordOnDone",
@@ -113,7 +113,7 @@
                     "type": "event"
                 },
                 {
-                    "kuid": "d35f065b3e0e4ca48a31b967800234b4",
+                    "kuid": "a6ea65c73fbe494b9f3540c11828e5c4",
                     "paramList": [],
                     "propertyIndex": 5,
                     "propertyKey": "submitOnClick",
@@ -125,7 +125,7 @@
                     "type": "event"
                 },
                 {
-                    "kuid": "cc97bd943af64a7ea8499e6d3c933c4c",
+                    "kuid": "db09ad5592504a0e8486676fc4ebd972",
                     "paramList": [],
                     "propertyIndex": 6,
                     "propertyKey": "remembermeOnSelection",
@@ -137,7 +137,7 @@
                     "type": "event"
                 },
                 {
-                    "kuid": "d48b758b97114660ad564c1994959fc4",
+                    "kuid": "dc018bb4c9a6445d87ebe883cd76aaff",
                     "paramList": [],
                     "propertyIndex": 7,
                     "propertyKey": "loginFailureEvent",
@@ -152,7 +152,7 @@
             "passthrough": [
                 {
                     "access": "Enable",
-                    "kuid": "e0d6c8f83f7042eba2427a221f2ca3c3",
+                    "kuid": "e61cf0401eec4307aed837fd3827a1bb",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 1,
                     "propertyKey": "forgotPasswordOnClick",
@@ -184,7 +184,7 @@
                 {
                     "access": "Write",
                     "defaultValue": "8",
-                    "kuid": "bcb146bfe93b4cfba8cac67574fb2b7c",
+                    "kuid": "hea5c5eb5db747679d26761d68af8a6b",
                     "originalPropertyKey": "usernameMinimumChar",
                     "propertyIndex": 27,
                     "propertyKey": "usernameMinimumChar",
@@ -199,7 +199,7 @@
                 {
                     "access": "Write",
                     "defaultValue": "8",
-                    "kuid": "bdb2adf4c3094207aef2d473a56cf98c",
+                    "kuid": "c37136e8fe114410865da74b92a70853",
                     "originalPropertyKey": "passwordMinimumChar",
                     "propertyIndex": 28,
                     "propertyKey": "passwordMinimumChar",
@@ -214,7 +214,7 @@
                 {
                     "access": "Write",
                     "defaultValue": "Username Too Small",
-                    "kuid": "db1e6cbc27a0421b8b9b525f19e0ed7a",
+                    "kuid": "a677d3ee648c40e38e09de58439c9346",
                     "originalPropertyKey": "usernameValidationMsg",
                     "propertyIndex": 29,
                     "propertyKey": "usernameValidationMsg",
@@ -229,7 +229,7 @@
                 {
                     "access": "Write",
                     "defaultValue": "Password Too Small",
-                    "kuid": "f893a18dfa6040ef848b7ab5d1a344de",
+                    "kuid": "g7b93c6f1f2845b4a2b03710db4e7387",
                     "originalPropertyKey": "passwordValidationMsg",
                     "propertyIndex": 30,
                     "propertyKey": "passwordValidationMsg",
@@ -244,7 +244,7 @@
                 {
                     "access": "Write",
                     "defaultValue": "userstore",
-                    "kuid": "cdca95818c4a4b05b1fafd4d3897971e",
+                    "kuid": "cfd0664be9c143cd82ffa6a730f2ed82",
                     "originalPropertyKey": "providerName",
                     "propertyIndex": 31,
                     "propertyKey": "providerName",
@@ -259,7 +259,7 @@
                 {
                     "access": "Write",
                     "defaultValue": true,
-                    "kuid": "g53b3e8a758446e68f193523337a8dd5",
+                    "kuid": "j2bcf7733ab2458eb7c1cca1790832df",
                     "originalPropertyKey": "encryptCredentials",
                     "propertyIndex": 32,
                     "propertyKey": "encryptCredentials",
@@ -275,7 +275,7 @@
             "passthrough": [
                 {
                     "access": "Enable",
-                    "kuid": "b98812684e524237b6f661bc48a41769",
+                    "kuid": "h64ba28d64ad411491b8dd7bd90948f0",
                     "originalPropertyKey": "src",
                     "propertyIndex": 1,
                     "propertyKey": "logoSource",
@@ -301,7 +301,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "f411dd5a7c8a4799bc249de515e626a5",
+                    "kuid": "cee729a6b6724a60b8d6f02b69760cae",
                     "originalPropertyKey": "imageScaleMode",
                     "propertyIndex": 2,
                     "propertyKey": "logoScaleMode",
@@ -318,7 +318,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "fecfe5c5002e41f7b3ed8eb7a2e48887",
+                    "kuid": "fa8cf7ee2bea47f9980533da9dd6e015",
                     "originalPropertyKey": "text",
                     "propertyIndex": 3,
                     "propertyKey": "usernamePlaceholder",
@@ -335,7 +335,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "f4207b4b892d4dc1b097cbb15bf580ae",
+                    "kuid": "heacaefe0dd74595bb719eb6f102d50d",
                     "originalPropertyKey": "text",
                     "propertyIndex": 4,
                     "propertyKey": "passwordPlaceholder",
@@ -352,7 +352,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "e887bc918d3541b5861bb46f3adbce88",
+                    "kuid": "jf50fbfa9cef448c828da9b0f6bbcb9e",
                     "originalPropertyKey": "maxTextLength",
                     "propertyIndex": 5,
                     "propertyKey": "usernameMaxChar",
@@ -369,7 +369,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "c62c9c6b54b647a79edec34351506426",
+                    "kuid": "a21d69000b2a443285373707d0d024c4",
                     "originalPropertyKey": "maxTextLength",
                     "propertyIndex": 6,
                     "propertyKey": "passwordMaxChar",
@@ -386,7 +386,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "a9bcc71c06f0446595fc3ebd572a4a6b",
+                    "kuid": "e14d57268769499588e0f5fcb6907df4",
                     "originalPropertyKey": "textInputMode",
                     "propertyIndex": 7,
                     "propertyKey": "usernameInputMode",
@@ -418,7 +418,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "ed030bb038fc48a999f2373bd2743551",
+                    "kuid": "b55e46ace6aa4db8b8b9f5216e61916b",
                     "originalPropertyKey": "textInputMode",
                     "propertyIndex": 8,
                     "propertyKey": "passwordInputMode",
@@ -450,7 +450,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "b50f3450d3a74e65919c4edeb42c2147",
+                    "kuid": "e0b910c20a6345dba9d5874da1d99eb3",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 9,
                     "propertyKey": "remembermeProperty",
@@ -467,7 +467,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "d050be98b5ba413eaccf693fb1b2b21d",
+                    "kuid": "hfba4558ad8b44aca1c7f4af985d30fc",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 10,
                     "propertyKey": "touchIDProperty",
@@ -484,7 +484,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "ab1ed4661e23414ca3ff9e78011727c2",
+                    "kuid": "g35ac3d568fb4035a9b3e1812aa6c41f",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 11,
                     "propertyKey": "socialLoginVisible",
@@ -501,7 +501,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "a51ea3b2ef7940c0b3db7708ee1f1e35",
+                    "kuid": "hbfbd66b345742d5a16fc51c25501ac1",
                     "originalPropertyKey": "text",
                     "propertyIndex": 12,
                     "propertyKey": "forgotPasswordText",
@@ -518,7 +518,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "f67d4d0864b44c468c2d382b039d7a7e",
+                    "kuid": "f6cdceedb98c43eb9a3880d99283ce6a",
                     "originalPropertyKey": "text",
                     "propertyIndex": 13,
                     "propertyKey": "submitButtonText",
@@ -535,7 +535,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "a281d5a1ec8c43bfb4650c30e7a20664",
+                    "kuid": "j807f3b124724eadae880a4c64ba4d8d",
                     "originalPropertyKey": "src",
                     "propertyKey": "rememberMeSelectedSource",
                     "pw": {
@@ -560,7 +560,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "e3a269e20f6a43e1a9f1cf1e2524e683",
+                    "kuid": "a1487ffc220f4ce5a13d908f3dd9116b",
                     "originalPropertyKey": "src",
                     "propertyKey": "rememberMeUnSelectedSource",
                     "pw": {
@@ -585,7 +585,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "ef0b1081bb9246c0ba458d84d957df8d",
+                    "kuid": "f5a1385249154bbdb32282fa3a835375",
                     "originalPropertyKey": "centerY",
                     "propertyIndex": 16,
                     "propertyKey": "touchIdCenterY",
@@ -629,7 +629,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "aee9b45dd8724ac2972d7ad4820e437b",
+                    "kuid": "ecfac5695e9f4fbd9e53acffc13dbeb4",
                     "originalPropertyKey": "centerY",
                     "propertyIndex": 17,
                     "propertyKey": "socialLoginCenterY",
@@ -673,7 +673,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "d629848a73314d2ba36a075d3fbdabf5",
+                    "kuid": "d56595a5ff494ce797de36841457d9fa",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 18,
                     "propertyKey": "facebookLogin",
@@ -690,7 +690,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "b34512436e174a078c3868d59191b6e3",
+                    "kuid": "dcd128209e324135abddaf3ad3a4152d",
                     "originalPropertyKey": "centerX",
                     "propertyIndex": 19,
                     "propertyKey": "facebookCenterX",
@@ -734,7 +734,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "da15f2e08ac84637aead169823ce18a4",
+                    "kuid": "e938978d3a9a4b56949ae07dbf32281c",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 20,
                     "propertyKey": "linkedinLogin",
@@ -751,7 +751,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "ea79647ffb6448dbb26803dc45897bab",
+                    "kuid": "e1dac8e33e96479a8c35fc3b30f53c14",
                     "originalPropertyKey": "centerX",
                     "propertyIndex": 21,
                     "propertyKey": "linkedinCenterX",
@@ -795,7 +795,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "e5858a5780de45b587e9490890df7a72",
+                    "kuid": "b0a126a0c2a044e0b55b926522fdd68e",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 22,
                     "propertyKey": "office365Login",
@@ -812,7 +812,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "bfb96d09aa80491f9446af87514862c1",
+                    "kuid": "effaa36e8a584a77a9de7f0cce5a05aa",
                     "originalPropertyKey": "centerX",
                     "propertyIndex": 23,
                     "propertyKey": "office365CenterX",
@@ -856,7 +856,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "c1350624c71e464fad71b6d0bf11732f",
+                    "kuid": "deca3725378b46c990083e040cefd407",
                     "originalPropertyKey": "src",
                     "propertyIndex": 24,
                     "propertyKey": "facebookSource",
@@ -882,7 +882,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "f311b3ec3100446f88c198deca991f7b",
+                    "kuid": "fddfa3f663054c5898d796b0f86fc595",
                     "originalPropertyKey": "src",
                     "propertyIndex": 25,
                     "propertyKey": "linkedinSource",
@@ -908,7 +908,7 @@
                 },
                 {
                     "access": "Enable",
-                    "kuid": "ee04b813603f4aff8488cdb1e2f33220",
+                    "kuid": "a671c3bbbfc34ae28febc7b46407626d",
                     "originalPropertyKey": "src",
                     "propertyIndex": 26,
                     "propertyKey": "office365Source",

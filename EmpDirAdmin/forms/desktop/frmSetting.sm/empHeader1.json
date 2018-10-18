@@ -36,6 +36,7 @@
         "value": "100%"
     },
     "areflexpropsreferenced": false,
+    "autogrowmode": 0,
     "canUpdateUI": true,
     "clipbounds": true,
     "containerweight": 0,
@@ -66,7 +67,12 @@
                 }
             },
             "responsiveData": {
-                "b2": {}
+                "b2": {
+                    "height": {
+                        "type": "string",
+                        "value": "60px"
+                    }
+                }
             }
         },
         "empTextMoblie": {
@@ -139,6 +145,14 @@
                 }
             }
         },
+        "flxImgSearch": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b7630a46688a416f99eb05fa63ee38be",
+                "srcKUID": "fbf3eb10fb8749679bfa236b56028798",
+                "wType": "FlexContainer"
+            }
+        },
         "flxLogo": {
             "__events__": {},
             "__info__": {
@@ -166,7 +180,7 @@
                 "b2": {
                     "right": {
                         "type": "string",
-                        "value": "10px"
+                        "value": "0px"
                     }
                 },
                 "b4": {
@@ -184,7 +198,16 @@
                 "kuid": "j16566a1b6854b0190354b713ebbb3ad",
                 "srcKUID": "b2030a48f40245f5bff48ef77d8ebd5c",
                 "wType": "Image"
-            }
+            },
+            "responsiveData": {
+                "b2": {
+                    "right": {
+                        "type": "string",
+                        "value": "0px"
+                    }
+                }
+            },
+            "right": {}
         },
         "imgDropDown": {
             "__events__": {},
@@ -192,6 +215,11 @@
                 "kuid": "d43577dfd39640bfa7856d03a0db224f",
                 "srcKUID": "a3af02c34f664d79ab9d90eba188c028",
                 "wType": "Image"
+            },
+            "responsiveData": {
+                "b2": {
+                    "isVisible": false
+                }
             }
         },
         "imgHamburger": {
@@ -227,7 +255,7 @@
         "imgSearchMob": {
             "__events__": {},
             "__info__": {
-                "kuid": "aabc7ce6b96243b887add391a3f6448a",
+                "kuid": "cbbf3d24ba9e4fd9bb472b07761bb811",
                 "srcKUID": "a1333212355744e7bbf588ef0f2375e4",
                 "wType": "Image"
             }
@@ -238,6 +266,11 @@
                 "kuid": "e965b1f8e1ba4b3ab05e890560d465cd",
                 "srcKUID": "i1629eba85864da8b3e40e64a28eba9e",
                 "wType": "Label"
+            },
+            "responsiveData": {
+                "b2": {
+                    "isVisible": false
+                }
             }
         }
     },

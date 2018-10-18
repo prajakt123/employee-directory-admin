@@ -76,7 +76,7 @@
             },
             "right": {
                 "type": "string",
-                "value": "60px"
+                "value": "30px"
             },
             "width": {
                 "type": "string",

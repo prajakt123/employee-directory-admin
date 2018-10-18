@@ -65,9 +65,10 @@
                 "type": "string",
                 "value": "260px"
             },
+            "isVisible": false,
             "width": {
                 "type": "string",
-                "value": "400px"
+                "value": "350px"
             }
         },
         "b4": {}

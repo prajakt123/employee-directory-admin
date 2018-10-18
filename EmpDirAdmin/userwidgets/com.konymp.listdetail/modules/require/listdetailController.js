@@ -1,4 +1,8 @@
+
+
 define(function() {
+
+
   var konyLoggerModule = require('com/konymp/listdetail/konyLogger');
   var konymp = {};
   konymp.logger = new konyLoggerModule("List Detail Component");
@@ -168,6 +172,7 @@ define(function() {
         if(response!==null && response!==undefined && response.records!==null && response.records!==undefined && response.records[0]!==undefined){
           this.parsedEmployeeList=this.parseRecords(response.records[0]);
           this.department=response.records[0].Department;
+          this.departmentList=this.department;
           this.designation=response.records[0].Designation;
           this.locationList=response.records[0].Location;
           this.mediaList=response.records[0].Media;
@@ -189,162 +194,6 @@ define(function() {
     /**
          * @function fetchAllDetailsSuccess
          * @description Success Callback for fetchAllDetails
-         * @private
-         * @param {Object} response 
-         * @callback fetchAllDetails
-         */
-    fetchAllDetailsSuccess2: function(response) {
-      try {
-        konymp.logger.trace("----------Entering fetchAllDetailsSuccess Function---------", konymp.logger.FUNCTION_ENTRY);
-        var myData = [];
-        var dataSet = [];
-        this.employee = response.records[0].Employee;
-        this.designation = response.records[0].Designation;
-        this.department = response.records[0].Department;
-        this.contact = response.records[0].Contact;
-        this.location = response.records[0].Location;
-        this.media = response.records[0].Media;
-        this.status = response.records[0].Status;
-        /*for (var i = 0; i < this.employee.length; i++) {
-                    for (var j = 0; j < this.department.length; j++) {
-                        if (this.employee[i].Department_id == this.department[j].Department_id) {
-                            var last_name = "";
-                            if (this.employee[i].Last_name != undefined && this.employee[i].Last_name != null) {
-                                last_name = this.employee[i].Last_name;
-                            }
-                            myData.push({
-                                "name": this.employee[i].First_name + " " + last_name,
-                                "department": this.department[j].Name,
-                                "designation_id": this.employee[i].Designation_id,
-                                "key": this.employee[i].First_name.charAt(0),
-                                "employee_id": this.employee[i].Employee_id,
-                                "manager_id": this.employee[i].Manager_id,
-                                "location_id": this.employee[i].Location_id,
-                                "status_id": this.employee[i].Status_id
-                            });
-                        }
-                    }
-                }
-                for (var i = 0; i < myData.length; i++) {
-                    for (var j = 0; j < this.designation.length; j++) {
-                        if (myData[i].designation_id == this.designation[j].Designation_id) {
-                            dataSet.push({
-                                "name": myData[i].name,
-                                "department": myData[i].department,
-                                "designation": this.designation[j].Name,
-                                "key": myData[i].key,
-                                "employee_id": myData[i].employee_id,
-                                "manager_id": myData[i].manager_id,
-                                "location_id": myData[i].location_id,
-                                "status_id": myData[i].status_id
-                            });
-                        }
-                    }
-                }
-                myData = [];
-                for (var i = 0; i < dataSet.length; i++) {
-                    var profile_media_id = "";
-                    var cover_media_id = "";
-                    var profileURL = this._defaultProfile;
-                    var coverURL = this._defaultCover;
-                    for (var j = 0; j < this.media.length; j++) {
-                        if (dataSet[i].employee_id == this.media[j].employee_id) {
-                            if (this.media[j].Media_name == "profile") {
-                                if (this.media[j].Url != null && this.media[j].Url != "") {
-                                    profileURL = this.media[j].Url;
-                                }
-                                profile_media_id = this.media[j].Media_id;
-                                continue;
-                            } else if (this.media[j].Media_name == "cover") {
-                                if (this.media[j].Url != null && this.media[j].Url != "") {
-                                    coverURL = this.media[j].Url;
-                                }
-                                cover_media_id = this.media[j].Media_id;
-                            }
-                        }
-                    }
-                    myData.push({
-                        "name": dataSet[i].name,
-                        "department": dataSet[i].department,
-                        "designation": dataSet[i].designation,
-                        "key": dataSet[i].key,
-                        "image": {
-                            "src": profileURL
-                        },
-                        "employee_id": dataSet[i].employee_id,
-                        "manager_id": dataSet[i].manager_id,
-                        "location_id": dataSet[i].location_id,
-                        "status_id": dataSet[i].status_id,
-                        "profile_media_id": profile_media_id,
-                        "cover_media_id": cover_media_id,
-                        "coverSrc": coverURL
-                    });
-                }
-                dataSet = [];
-                for (var i = 0; i < this.status.length; i++) {
-                    for (var j = 0; j < myData.length; j++) {
-                        if (this.status[i].Status_id == myData[j].status_id) {
-                            var skin;
-                            if (this.status[i].Status_id == 1) {
-                                skin = "sknAvailable";
-                            } else if (this.status[i].Status_id == 2) {
-                                skin = "sknAway";
-                            } else {
-                                skin = "sknMeeting";
-                            }
-                            dataSet.push({
-                                "name": myData[j].name,
-                                "department": myData[j].department,
-                                "designation": myData[j].designation,
-                                "image": myData[j].image,
-                                "key": {
-                                    "text": myData[j].key,
-                                    "isVisible": this._defaultStatus,
-                                    "skin": skin
-                                },
-                                "employee_id": myData[j].employee_id,
-                                "manager_id": myData[j].manager_id,
-                                "location_id": myData[j].location_id,
-                                "profile_media_id": myData[j].profile_media_id,
-                                "cover_media_id": myData[j].cover_media_id,
-                                "coverSrc": myData[j].coverSrc
-                            });
-                        }
-                    }
-                }
-                this.view.segEmployees.widgetDataMap = {
-                    "empname": "name",
-                    "designation": "designation",
-                    "department": "department",
-                    "empimage": "image",
-                    "lblInvisible": "key"
-                };
-                kony.application.dismissLoadingScreen();
-                myData = this.sortSectionData(dataSet, "name");
-                this.view.segEmployees.setData(myData);
-                this.view.segEmployees.isVisible = true;
-                this.view.forceLayout();
-                this.globalData = myData;
-                this.noOfProfilePics = 0;
-                this.profilePics = [];
-                for (i = 0; i < this.media.length; i++) {
-                    if (this.media[i].Media_name == "profile" && (this.media[i].Url == null || this.media[i].Url == "")) {
-                        this.profilePics.push(this.media[i]);
-                        this.noOfProfilePics++;
-                    }
-                }
-                this.currentProfilePicCount = 0;
-                if (this.noOfProfilePics > 0) {
-                    this.fetchImageAndMap(this.currentProfilePicCount);
-                }*/
-      } catch (exception) {
-        konymp.logger.error(JSON.stringify(exception), konymp.logger.EXCEPTION);
-      }
-      konymp.logger.trace("----------Exiting fetchAllDetailsSuccess Function---------", konymp.logger.FUNCTION_EXIT);
-    },
-    /**
-         * @function fetchAllDetailsFailure
-         * @description Failure Callback for fetchAllDetails
          * @private
          * @param {Object} response 
          * @callback fetchAllDetails
@@ -1610,7 +1459,6 @@ define(function() {
          * @return {object} filterData 
          */
     getData: function() {
-      debugger;
       konymp.logger.trace("----------Entering getData API---------", konymp.logger.FUNCTION_EXIT);
       var dept = [];
       var desgn = [];
@@ -1642,6 +1490,7 @@ define(function() {
          * @param {object} records 
          */
     filterAndSetData: function(records) {
+      debugger;
       konymp.logger.trace("----------Entering filterAndSetData API---------", konymp.logger.FUNCTION_EXIT);
       //var masterData = this.globalData;
       var masterData = this.parsedEmployeeList;
@@ -1657,30 +1506,36 @@ define(function() {
       var department = records[0]["Department"];
       var designation = records[1]["Designation"];
       var dept = 1;
-      for (i = 0; i < masterData.length; i++) {
-        if(Array.isArray(masterData[i].designation) && masterData[i].designation[0]!==undefined){
-          for (j = 0; j < Object.keys(designation).length; j++) {
-            if (Object.keys(designation)[j] == masterData[i].designation[0].Name && designation[Object.keys(designation)[j]] == 1) {
-              designationJSON.push(masterData[i]);
-              break;
+      if(Array.isArray(designation)){
+        for (i = 0; i < masterData.length; i++) {
+          if(Array.isArray(masterData[i].designation) && masterData[i].designation[0]!==undefined){
+            for (j = 0; j < designation.length; j++) {
+              if (designation[j] === masterData[i].designation[0].Name) {
+                designationJSON.push(masterData[i]);
+                break;
+              }
             }
           }
         }
       }
+
       var tempjson = designationJSON;
       if (designationJSON.length === 0) {
         tempjson = this.parsedEmployeeList;
       }
-      for (i = 0; i < tempjson.length; i++) {
-        if(Array.isArray(masterData[i].department) && masterData[i].department[0]!==undefined){
-          for (j = 0; j < Object.keys(department).length; j++) {
-            if (Object.keys(department)[j] == tempjson[i].department[0].Name && department[Object.keys(department)[j]] == 1) {
-              departmentJSON.push(tempjson[i]);
-              break;
+      if(Array.isArray(department)){
+        for (i = 0; i < tempjson.length; i++) {
+          if(Array.isArray(masterData[i].department) && masterData[i].department[0]!==undefined){
+            for (j = 0; j < Object.keys(department).length; j++) {
+              if (department[j] == tempjson[i].department[0].Name) {
+                departmentJSON.push(tempjson[i]);
+                break;
+              }
             }
           }
         }
       }
+      debugger;
       if (departmentJSON.length === 0 && designationJSON.length === 0) {
         //this.view.segEmployees.setData(this.globalData);
         this.populateDataToSegment(this.parsedEmployeeList);

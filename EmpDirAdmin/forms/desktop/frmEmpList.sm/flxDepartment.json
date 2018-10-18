@@ -91,8 +91,8 @@
                 "value": "50%"
             },
             "height": {
-                "type": "ref",
-                "value": "preferred"
+                "type": "string",
+                "value": "265px"
             },
             "left": {
                 "type": "string",

@@ -80,12 +80,20 @@
     "pf": "frmEmpDetails",
     "responsiveData": {
         "b2": {
+            "height": {
+                "type": "string",
+                "value": "81%"
+            },
             "top": {
                 "type": "string",
                 "value": "40px"
             }
         },
         "b4": {
+            "height": {
+                "type": "string",
+                "value": "81%"
+            },
             "left": {
                 "type": "string",
                 "value": "0px"

@@ -23,7 +23,7 @@
         "type": "string",
         "value": "0%"
     },
-    "_skin_": "s9b8e70a7ca944f88d37f38b192fa8bb",
+    "_skin_": "s43b333fc687430ab65dae19b8a8fff6",
     "_top_": {
         "type": "string",
         "value": "12dp"
@@ -45,15 +45,14 @@
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "s7ed958c89644576a2ecc226c90dd386",
+    "focusskin": "sd54b7e214f046cc9c078852e0675402",
     "id": "flexCloseClick",
-    "ide_onClick": "AS_FlexContainer_c0bfa2ba808b461983e9e4bd5598f3dd",
+    "ide_onClick": "AS_FlexContainer_eacf9dd3df0244ca91e5b61dd6d913ea",
     "info": null,
     "isvisible": true,
     "kuid": "d31a9ee37fd742fdb9ccf8677688ca11",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "onclick": "AS_FlexContainer_c0bfa2ba808b461983e9e4bd5598f3dd",
     "parent": "flxHeadingBar",
     "pf": "userwidgetmodel",
     "snapgridsize": 10,

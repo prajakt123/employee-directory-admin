@@ -64,6 +64,20 @@
     "name": "kony.ui.Label",
     "parent": "frmLogin",
     "pf": "frmLogin",
+    "responsiveData": {
+        "b2": {},
+        "b3": {
+            "height": {
+                "type": "string",
+                "value": "50px"
+            },
+            "isVisible": false,
+            "top": {
+                "type": "string",
+                "value": "95%"
+            }
+        }
+    },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",

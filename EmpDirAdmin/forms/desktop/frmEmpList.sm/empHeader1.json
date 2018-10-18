@@ -43,7 +43,7 @@
     "dataDiffs": {
         "btnCancelsearch": {
             "__events__": {
-                "ide_onTouchEnd": "AS_Button_f6dc0ebdd65640488af853d876bcb0fe",
+                "ide_onClick": "AS_Button_b4900b7cfe6f4fb983c319933a6d6e73",
                 "onTouchEnd": "AS_Button_f6dc0ebdd65640488af853d876bcb0fe"
             },
             "__info__": {
@@ -59,9 +59,11 @@
                     "isVisible": false
                 },
                 "b4": {
-                    "isVisible": false
+                    "isVisible": false,
+                    "zIndex": 150
                 }
-            }
+            },
+            "zIndex": {}
         },
         "empHeader": {
             "__events__": {},
@@ -180,6 +182,16 @@
                 }
             }
         },
+        "flxImgSearch": {
+            "__events__": {
+                "ide_onClick": "AS_FlexContainer_cb9183d1735c4e7dac4d9e52e35475e5"
+            },
+            "__info__": {
+                "kuid": "fe3175f16e9e4719afd7042ef4c2a568",
+                "srcKUID": "fbf3eb10fb8749679bfa236b56028798",
+                "wType": "FlexContainer"
+            }
+        },
         "flxLogo": {
             "__events__": {},
             "__info__": {
@@ -252,10 +264,12 @@
                     "right": {
                         "type": "string",
                         "value": ""
-                    }
+                    },
+                    "zIndex": 100
                 }
             },
-            "right": {}
+            "right": {},
+            "zIndex": {}
         },
         "imgDropDown": {
             "__events__": {},
@@ -305,12 +319,9 @@
             }
         },
         "imgSearchMob": {
-            "__events__": {
-                "ide_onTouchEnd": "AS_Image_abeadc4c616d48458750402d2776b9a7",
-                "onTouchEnd": "AS_Image_abeadc4c616d48458750402d2776b9a7"
-            },
+            "__events__": {},
             "__info__": {
-                "kuid": "aeaa60cd253e4d93a25bb29112826e66",
+                "kuid": "c7341031b19f4a39a63990894a36f04a",
                 "srcKUID": "a1333212355744e7bbf588ef0f2375e4",
                 "wType": "Image"
             }

@@ -12,18 +12,15 @@ define({
         var self = this;
         return self.animateLeftMenu.call(this);
     },
-    /** onTouchEnd defined for imgSearchMob **/
-    AS_Image_abeadc4c616d48458750402d2776b9a7: function AS_Image_abeadc4c616d48458750402d2776b9a7(eventobject, x, y) {
+    /** onClick defined for btnCancelsearch **/
+    AS_Button_b4900b7cfe6f4fb983c319933a6d6e73: function AS_Button_b4900b7cfe6f4fb983c319933a6d6e73(eventobject) {
+        var self = this;
+        return self.cancelSearchMob.call(this);
+    },
+    /** onClick defined for flxImgSearch **/
+    AS_FlexContainer_cb9183d1735c4e7dac4d9e52e35475e5: function AS_FlexContainer_cb9183d1735c4e7dac4d9e52e35475e5(eventobject) {
         var self = this;
         this.view.flxSearch.setVisibility(true);
-    },
-    /** onTouchEnd defined for btnCancelsearch **/
-    AS_Button_f6dc0ebdd65640488af853d876bcb0fe: function AS_Button_f6dc0ebdd65640488af853d876bcb0fe(eventobject, x, y) {
-        var self = this;
-        this.onPostShow();
-        this.view.empHeader1.btnCancelsearch.setVisibility(false);
-        this.view.empHeader1.imgSearchMob.setVisibility(true);
-        this.view.btnFilter.setVisibility(false);
     },
     /** onUserFlxClick defined for empheader **/
     AS_UWI_ab2a8e35a9e34246be947c938a5a7255: function AS_UWI_ab2a8e35a9e34246be947c938a5a7255(eventobject) {
@@ -127,7 +124,7 @@ define({
         this.view.flxOverlay.setVisibility(false);
     },
     /** onAlertFlexClick defined for alertmsg **/
-    AS_UWI_c1c64b76dc5045e1a0282cac28cd38f3: function AS_UWI_c1c64b76dc5045e1a0282cac28cd38f3() {
+    AS_UWI_b569ccf7746848a98df3fb3f2c1ed751: function AS_UWI_b569ccf7746848a98df3fb3f2c1ed751() {
         var self = this;
         this.hideALertComponentCallBack();
     },
@@ -146,6 +143,11 @@ define({
         var self = this;
         return self.ClearFilter.call(this);
     },
+    /** onClick defined for flxImage **/
+    AS_FlexContainer_cd10fed2732541fe922a34a93e0d119c: function AS_FlexContainer_cd10fed2732541fe922a34a93e0d119c(eventobject) {
+        var self = this;
+        this.view.flxMobFilter.setVisibility(false);
+    },
     /** onTextChange defined for txtBxSearch **/
     AS_TextField_ja9150d585e0480abb910b1324296030: function AS_TextField_ja9150d585e0480abb910b1324296030(eventobject, changedtext) {
         var self = this;
@@ -154,6 +156,7 @@ define({
         this.view.flxSearch.setVisibility(false);
         this.view.empHeader1.imgSearchMob.setVisibility(false);
         this.view.empHeader1.btnCancelsearch.setVisibility(true);
+        this.view.forceLayout();
     },
     /** onClick defined for flxCloseSearch **/
     AS_FlexContainer_fa1547aabf9b4fca9cd7a8f9d33762b0: function AS_FlexContainer_fa1547aabf9b4fca9cd7a8f9d33762b0(eventobject) {

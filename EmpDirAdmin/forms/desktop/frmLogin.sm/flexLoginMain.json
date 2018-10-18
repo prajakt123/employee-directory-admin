@@ -51,17 +51,26 @@
     "parent": "frmLogin",
     "pf": "frmLogin",
     "responsiveData": {
-        "b1": {},
+        "b1": {
+            "height": {
+                "type": "string",
+                "value": "480px"
+            }
+        },
         "b2": {
+            "height": {
+                "type": "string",
+                "value": "470px"
+            },
             "width": {
                 "type": "string",
-                "value": "70%"
+                "value": "65%"
             }
         },
         "b3": {
             "height": {
                 "type": "string",
-                "value": "60%"
+                "value": "450px"
             },
             "width": {
                 "type": "string",

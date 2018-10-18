@@ -104,8 +104,8 @@
                 "value": "50%"
             },
             "height": {
-                "type": "ref",
-                "value": "preferred"
+                "type": "string",
+                "value": "240px"
             },
             "left": {
                 "type": "string",

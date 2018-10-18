@@ -45,7 +45,7 @@
     "id": "Group",
     "ide_onClick": "AS_FlexContainer_c9c6a29e0bda4fe5bd2ef0b65c8c9435",
     "info": null,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "b3d7daeb8af64efc81d84f1687b91c34",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
@@ -53,11 +53,8 @@
     "parent": "flxSearchHeader",
     "pf": "frmEmpList",
     "responsiveData": {
-        "b1": {
-            "isVisible": false
-        },
+        "b1": {},
         "b2": {
-            "isVisible": true,
             "right": {
                 "type": "string",
                 "value": "0px"

@@ -76,7 +76,11 @@
         "b4": {
             "height": {
                 "type": "string",
-                "value": "1032px"
+                "value": "100%"
+            },
+            "minWidth": {
+                "type": "string",
+                "value": "1374px"
             }
         }
     },

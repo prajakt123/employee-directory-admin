@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s87fa6118942444a87052066bc08e6fa",
+    "_skin_": "sd5ed7f81606407cbf5f6201ceed077a",
     "_text_": "Cancel",
     "_top_": {
         "type": "string",
@@ -38,12 +38,11 @@
     "displaytext": true,
     "focusskin": "s2f4eaf8d1cf4901927d3b75511bcc25",
     "id": "btnTouchCancel",
-    "ide_onClick": "AS_Button_2d63d9a7737a4d2b92bce31368476d66",
+    "ide_onClick": "AS_Button_d2e76fafcfee4c6e9ded5f5bb053a430",
     "info": null,
     "isvisible": true,
     "kuid": "d90e73c7bd5845978996cd1298d53e9d",
     "name": "kony.ui.Button",
-    "onclick": "AS_Button_2d63d9a7737a4d2b92bce31368476d66",
     "parent": "flxTouchIDButtons",
     "pf": "userwidgetmodel",
     "wType": "Button",

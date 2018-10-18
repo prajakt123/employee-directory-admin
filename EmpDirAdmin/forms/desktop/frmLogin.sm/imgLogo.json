@@ -53,6 +53,12 @@
     "parent": "flexLoginEventLogo",
     "pf": "frmLogin",
     "responsiveData": {
+        "b1": {
+            "left": {
+                "type": "string",
+                "value": "15dp"
+            }
+        },
         "b2": {
             "left": {
                 "type": "string",
@@ -62,7 +68,7 @@
         "b3": {
             "left": {
                 "type": "string",
-                "value": "0dp"
+                "value": "15dp"
             }
         }
     },

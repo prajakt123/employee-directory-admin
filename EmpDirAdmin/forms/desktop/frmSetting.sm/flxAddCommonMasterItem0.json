@@ -61,12 +61,8 @@
     "parent": "flxContentMaster",
     "pf": "frmSetting",
     "responsiveData": {
-        "b1": {
-            "isVisible": false
-        },
-        "b4": {
-            "isVisible": false
-        }
+        "b1": {},
+        "b4": {}
     },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

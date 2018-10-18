@@ -170,7 +170,6 @@
         "type": "string",
         "value": "0%"
     },
-    "autogrowmode": 0,
     "canUpdateUI": true,
     "containerweight": 100,
     "counter": "03",
@@ -215,7 +214,12 @@
                 "value": "0.00%"
             }
         },
-        "b4": {}
+        "b4": {
+            "height": {
+                "type": "string",
+                "value": "100%"
+            }
+        }
     },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

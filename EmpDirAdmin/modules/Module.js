@@ -20,14 +20,18 @@ function isAdmin(emailId){
   return isAdmin;
 }
 function searchKeyInCollection(searchKey,itemList){
+  debugger;
   var matchedRecord=[];
   if(searchKey===null||searchKey===undefined||itemList===null||itemList===undefined)
     return matchedRecord;
   var itemListLength=itemList.length;
   var item;
+  var keyName;
+  searchKey=searchKey.toLowerCase();
   for(var i=0;i<itemListLength;i++){
     item=itemList[i];
     for(var key in item){
+     
       if(item[key].toLowerCase().indexOf(searchKey)!==-1){
         matchedRecord.push(item);
         break;

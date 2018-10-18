@@ -1,15 +1,19 @@
-define({ 
-  selectedDataModel:null,
-  operationMode:null,
-  recordList:null,
-  status:"close",
-  selectedRowIndex:null,
+define({
+  selectedDataModel: null,
+  operationMode: null,
+  recordList: null,
+  status: "close",
+  selectedRowIndex: null,
 
-  onFormInit:function(){
-    debugger;
-    this.view.segLocationItems.widgetDataMap={
+  /**
+     * @function onFormInit
+     * @description - Gets called wjen the form is initialized.
+     **/
+  onFormInit: function() {
+
+    this.view.segLocationItems.widgetDataMap = {
       "flxHeaderLocation": "flxHeaderLocation",
-      "lblId":"lblId",
+      "lblId": "lblId",
       "lblLocationValue": "lblLocationValue",
       "flxEdit": "flxEdit",
       "imgEdit": "imgEdit",
@@ -19,18 +23,18 @@ define({
       "imgDropDown": "imgDropDown",
       "flxCity": "flxCity",
       "lblCityValue": "lblCityValue",
-      "lblCity":"lblCity",
-      "flxLocality":"flxLocality",
-      "lblLocalityValue":"lblLocalityValue",
-      "lblLocality":"lblLocality",
-      "flxAddress":"flxAddress",
-      "lblAddressValue":"lblAddressValue",
-      "lblAddress":"lblAddress",
-      "flxCoutry":"flxCoutry",
-      "lblCountryValue":"lblCountryValue",
-      "lblCountry":"lblCountry",
-      "flxZipcode":"flxZipcode",
-      "lblZipCodeValue":"lblZipCodeValue"
+      "lblCity": "lblCity",
+      "flxLocality": "flxLocality",
+      "lblLocalityValue": "lblLocalityValue",
+      "lblLocality": "lblLocality",
+      "flxAddress": "flxAddress",
+      "lblAddressValue": "lblAddressValue",
+      "lblAddress": "lblAddress",
+      "flxCoutry": "flxCoutry",
+      "lblCountryValue": "lblCountryValue",
+      "lblCountry": "lblCountry",
+      "flxZipcode": "flxZipcode",
+      "lblZipCodeValue": "lblZipCodeValue"
       //        "flxEditCancel":"flxEditCancel",
       //        "imgEditLoc":"imgEditLoc"
 
@@ -38,133 +42,144 @@ define({
     };
   },
 
-  expandLocationDetail:function(context){
-    debugger;
+  /**
+     * @function expandLocationDetail
+     * @description - To expand the location row to show more location Info.
+     **/
+  expandLocationDetail: function(context) {
 
-    if(context!==null && context!==undefined){
-      try{
-        var data=context.widgetInfo.selectedItems[0];
-        if( data.flxAddress.isVisible===true){
-          data.imgDropDown ="drop_down.png";
-          data.flxAddress={"isVisible":false};
-        }else{
-          data.flxAddress={"isVisible":true};
-          data.imgDropDown ="drop_down_arrow_orange.png";
+
+    if (context !== null && context !== undefined) {
+      try {
+        var data = context.widgetInfo.selectedItems[0];
+        if (data.flxAddress.isVisible === true) {
+          data.imgDropDown = "drop_down.png";
+          data.flxAddress = {
+            "isVisible": false
+          };
+        } else {
+          data.flxAddress = {
+            "isVisible": true
+          };
+          data.imgDropDown = "drop_down_arrow_orange.png";
         }
 
-        this.view.segLocationItems.setDataAt(data,context.rowIndex);
-      }catch(excp){
+        this.view.segLocationItems.setDataAt(data, context.rowIndex);
+      } catch (excp) {
         kony.print(excp);
       }
     }
 
   },
+
   /**
-	 * @function textChange
-	 * @description - 
-	 **/
-  onPostShow:function(){
+     * @function onPostShow
+     * @description - To set the horizontal menu image to hamburger menu image widget.
+     **/
+  onPostShow: function() {
+    this.view.empHeader1.imgHamburger.src = "hamburger_menu.png";
+    //this.view.leftmenu.DirectoryMenuItemMouseover.onClick=this.navigateToFrmEmpList();
     this.onMasterDataSelected(null);
+    this.view.txtBoxSearch.text="";
   },
   /**
-	 * @function textChange
-	 * @description - Call back function for the search functionality on text change.
-	 **/
-  textChange:function(){
+     * @function textChange
+     * @description - Call back function for the search functionality on text change.
+     **/
+  textChange: function() {
 
-    var searchKey=this.view.txtBoxSearch.text;
-    if(searchKey!==undefined&&searchKey!==null){
-      searchKey=searchKey.trim();
-      if(searchKey.length>2){
+    var searchKey = this.view.txtBoxSearch.text;
+    if (searchKey !== undefined && searchKey !== null) {
+      searchKey = searchKey.trim();
+      if (searchKey.length > 1) {
         this.searchRecord(searchKey);
-      }else if(searchKey.length===0){
+      } else if (searchKey.length === 0) {
         this.resetRecords();
       }
     }
   },
 
   /**
-	 * @function onNavigate
-	 * @description - This function sets the visibility off for the profile popup.
-	 **/
+     * @function onNavigate
+     * @description - This function sets the visibility off for the profile popup.
+     **/
 
-  onNavigate:function(){
-    debugger;
+  onNavigate: function() {
+
+    this.view.empHeader1.imgHamburger.src = "hamburger_menu.png";
     this.view.flxProfileMain.setVisibility(false);
-    this.requireModule=require("settingsModule");
+    this.requireModule = require("settingsModule");
+
   },
 
-  onBreakpointChange: function(eventobject,breakpoint){
-    debugger;
+  /**
+     * @function onBreakpointChange
+     * @description - Callback for the breakpoint change of this form for responsive web.
+     * @Param{ JSON - eventobject} eventobject from the platform.
+     * @Param{ number - breakpoint} breakpoint value for the current view size.
+     **/
+  onBreakpointChange: function(eventobject, breakpoint) {
 
-    var viewMode;
+    this.view.empHeader1.imgHamburger.src = "hamburger_menu.png";
+        if (breakpoint > BREAKPOINT.TABLET) {
+      //viewMode Desktop
 
-    //if(breakpoint===constants.BREAKPOINT_MAX_VALUE){
-    if(breakpoint>780){
-      viewMode="Desktop";
-      debugger;
 
-      this.view.segLocationItems.rowTemplate="flxTemplateLocDesk";
-      //this.populateDataToSegment(this.employeeList);
-      //       this.view.alertmsg.setUIForChannel("desktop");
-      //       this.view.forceLayout();
+      this.view.segLocationItems.rowTemplate = "flxTemplateLocDesk";
 
-    }else if( breakpoint>=640 && breakpoint<=780 ){
 
-      viewMode="Tablet";
-      this.view.segLocationItems.rowTemplate="flxLocationTab";
-      //       this.setUIforTablet(viewMode);
-      //       this.view.alertmsg.setUIForChannel("tablet");
-      //       this.view.forceLayout();
+    } else if (breakpoint >= BREAKPOINT.MOBILE && breakpoint <= BREAKPOINT.TABLET) {
 
-    }else if(breakpoint<640){
-      viewMode="Mobile";
-      this.view.segLocationItems.rowTemplate="flxLocation";
-      //       this.setUIforMobile(viewMode);
-      //       this.view.alertmsg.setUIForChannel("mobile");
-      //       this.view.forceLayout();
+      //viewMode Tablet
+      this.view.segLocationItems.rowTemplate = "flxLocationTab";
+
+
+    } else if (breakpoint < BREAKPOINT.MOBILE) {
+      //viewMode Mobile
+      this.view.segLocationItems.rowTemplate = "flxLocation";
+
     }
     this.onPostShow();
 
   },
 
   /**
-	 * @function textDone
-	 * @description - This function is called when the user enters the text to search.
-	 **/
-  textDone:function(){
+     * @function textDone
+     * @description - This function is called when the user enters the text to search.
+     **/
+  textDone: function() {
 
-    var searchKey=this.view.txtBoxSearch.text;
-    if(searchKey!==undefined&&searchKey!==null){
-      searchKey=searchKey.trim();
-      if(searchKey.length>2){
+    var searchKey = this.view.txtBoxSearch.text;
+    if (searchKey !== undefined && searchKey !== null) {
+      searchKey = searchKey.trim();
+      if (searchKey.length > 2) {
         this.searchRecord(searchKey);
-      }else if(searchKey.length===0){
+      } else if (searchKey.length === 0) {
         this.resetRecords();
       }
     }
   },
 
   /**
-	 * @function toggleProfile
-	 * @description - Toggle visibility of the profile popup on click of profile dropdown.
+     * @function toggleProfile
+     * @description - Toggle visibility of the profile popup on click of profile dropdown.
      * @param {JSON} - eventobject for the widget.
-	 **/
-  toggleProfile:function(eventobject){
+     **/
+  toggleProfile: function(eventobject) {
 
-    if(eventobject==="userProfile"){
+    if (eventobject === "userProfile") {
       this.view.flxOverlay.setVisibility(true);
       this.view.flxProfileMain.setVisibility(true);
     }
   },
 
   /**
-	 * @function resetRecords
-	 * @description - Populates the data of the selected item for the listbox dropdown.
-	 **/
-  resetRecords:function(){
-    var selectedItem=this.view.lstBoxMaster.selectedKey;
-    switch(selectedItem){
+     * @function resetRecords
+     * @description - Populates the data of the selected item for the listbox dropdown.
+     **/
+  resetRecords: function() {
+    var selectedItem = this.view.lstBoxMaster.selectedKey;
+    switch (selectedItem) {
       case "0":
         //search indepartment
         this.setDepartments(this.recordList);
@@ -180,14 +195,14 @@ define({
   },
 
   /**
-	 * @function searchRecord
-	 * @description - Searches the entered string with the search key.
+     * @function searchRecord
+     * @description - Searches the entered string with the search key.
      * @param {JSON}-searchkey obtained on textDone.
-	 **/
-  searchRecord:function(searchKey){
-    var selectedItem=this.view.lstBoxMaster.selectedKey;
-    var matchedRecord=searchKeyInCollection(searchKey, this.recordList);
-    switch(selectedItem){
+     **/
+  searchRecord: function(searchKey) {
+    var selectedItem = this.view.lstBoxMaster.selectedKey;
+    var matchedRecord = searchKeyInCollection(searchKey, this.recordList);
+    switch (selectedItem) {
       case "0":
         //search indepartment
         this.setDepartments(matchedRecord);
@@ -203,72 +218,71 @@ define({
   },
 
   /**
-	 * @function addNewDepartment
-	 * @description - Adding the new department to the department list
+     * @function addNewDepartment
+     * @description - Adding the new department to the department list
      * @param {JSON} - eventobject for the widget.
-	 **/
-  addNewDepartment:function(eventObject){
-    this.operationMode="add";
-    var  id=eventObject.id;
-    id=id.split("btnAddNewMaster")[1];
+     **/
+  addNewDepartment: function(eventObject) {
+    this.operationMode = "add";
+    var id = eventObject.id;
+    id = id.split("btnAddNewMaster")[1];
     this.enableCommonMaster(id);
   },
 
   /**
-	 * @function addNewDesignation
-	 * @description - Adding the new designation to the designation list
+     * @function addNewDesignation
+     * @description - Adding the new designation to the designation list
      * @param {JSON} - eventobject for the widget.
-	 **/
-  addNewDesignation:function(eventObject){
-    this.operationMode="add";
-    id=eventObject.id;
-    id=id.split("btnAddNewMaster")[1];
+     **/
+  addNewDesignation: function(eventObject) {
+    this.operationMode = "add";
+    id = eventObject.id;
+    id = id.split("btnAddNewMaster")[1];
     this.enableCommonMaster(id);
   },
 
   /**
-	 * @function addNewLocation
-	 * @description - Adding the new location to the location list
+     * @function addNewLocation
+     * @description - Adding the new location to the location list
      * @param {JSON} - eventobject for the widget.
-	 **/
-  addNewLocation:function(eventObject){
-    this.operationMode="add";
-    id=eventObject.id;
-    id=id.split("btnAddNewMaster")[1];
+     **/
+  addNewLocation: function(eventObject) {
+    this.operationMode = "add";
+    id = eventObject.id;
+    id = id.split("btnAddNewMaster")[1];
     this.showLocationForm();
   },
 
   /**
-	 * @function getLocationObject
-	 * @description - Create a location JSON object. from the provided values by the user.
-	 **/
-  getLocationObject:function(){
-    var locationObj={};
-    locationObj["Address1"]=(this.view.txtBoxAddress1.text).trim();
-    locationObj["Address2"]=(this.view.txtBoxAddress2.text).trim();
-    locationObj["City"]=(this.view.txtBoxEmpCity.text).trim();
-    locationObj["Country"]=(this.view.textBoxCountry.text).trim();
-    locationObj["State"]=(this.view.txtBoxEmpState.text).trim();
-    locationObj["Zipcode"]=(this.view.txtBoxEmpZip.text).trim();
+     * @function getLocationObject
+     * @description - Create a location JSON object. from the provided values by the user.
+     **/
+  getLocationObject: function() {
+    var locationObj = {};
+    locationObj["Address1"] = (this.view.txtBoxAddress1.text).trim();
+    locationObj["Address2"] = (this.view.txtBoxAddress2.text).trim();
+    locationObj["City"] = (this.view.txtBoxEmpCity.text).trim();
+    locationObj["Country"] = (this.view.textBoxCountry.text).trim();
+    locationObj["State"] = (this.view.txtBoxEmpState.text).trim();
+    locationObj["Zipcode"] = (this.view.txtBoxEmpZip.text).trim();
     return locationObj;
   },
 
   /**
-	 * @function createUpdateLocationSuccessCB
-	 * @description - This function is the success callback for create or Update location.
+     * @function createUpdateLocationSuccessCB
+     * @description - This function is the success callback for create or Update location.
      * @param {JSON} - Result response from backend.
-	 **/
-  createUpdateLocationSuccessCB:function(result){
+     **/
+  createUpdateLocationSuccessCB: function(result) {
     dismissLoadingScreen();
     this.hideLocationEditor();
-    if(this.operationMode==="add"){
-
+    if (this.operationMode === "add") {
       this.view.alertmsg.setTitle("User Message");
       this.view.alertmsg.setMessage("Location created successfully!");
       this.view.flxAlertContainer2.setVisibility(true);
       this.view.forceLayout();
 
-    }else if(this.operationMode==="edit"){
+    } else if (this.operationMode === "edit") {
       this.view.alertmsg.setTitle("User Message");
       this.view.alertmsg.setMessage("Location updated successfully!");
       this.view.flxAlertContainer2.setVisibility(true);
@@ -280,30 +294,30 @@ define({
 
 
   /**
-	 * @function createUpdateLocationFailureCB
-	 * @description - This function is the failure callback for create or Update location.
+     * @function createUpdateLocationFailureCB
+     * @description - This function is the failure callback for create or Update location.
      * @param {JSON} - Result response from backend.
-	 **/
-  createUpdateLocationFailureCB:function(result){
+     **/
+  createUpdateLocationFailureCB: function(result) {
     dismissLoadingScreen();
     alert(JSON.stringify(result));
   },
 
   /**
-	 * @function createUpdateLocation
-	 * @description - Creating a new location or updating the existing location.
-	 **/
-  createUpdateLocation:function(){
-    try{
-      if(!this.validateLocationForm()){
+     * @function createUpdateLocation
+     * @description - Creating a new location or updating the existing location.
+     **/
+  createUpdateLocation: function() {
+    try {
+      if (!this.validateLocationForm()) {
         return;
       }
-      var locationObj=this.getLocationObject();
-      if(locationObj===undefined||locationObj===null){
+      var locationObj = this.getLocationObject();
+      if (locationObj === undefined || locationObj === null) {
         return;
       }
-      var objectInstance=getObjectInstance();
-      if(objectInstance!==null){
+      var objectInstance = getObjectInstance();
+      if (objectInstance !== null) {
         var dataObject;
         dataObject = new kony.sdk.dto.DataObject("Location");
         dataObject.setRecord(locationObj);
@@ -313,13 +327,13 @@ define({
         };
         if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
           showLoadingScreen(this.view);
-          if(this.operationMode==="add"){
-            objectInstance.create(options, this.createUpdateLocationSuccessCB.bind(this),this.createUpdateLocationFailureCB.bind(this));
-          }else if(this.operationMode==="edit"){
-            locationObj["Location_id"]=this.view.lblLocationId.text;
-            if(locationObj["Location_id"]!==undefined||locationObj["Location_id"]===null||(locationObj["Location_id"]).trim()!==""){
-              objectInstance.update(options, this.createUpdateLocationSuccessCB.bind(this),this.createUpdateLocationFailureCB.bind(this));
-            }else{
+          if (this.operationMode === "add") {
+            objectInstance.create(options, this.createUpdateLocationSuccessCB.bind(this), this.createUpdateLocationFailureCB.bind(this));
+          } else if (this.operationMode === "edit") {
+            locationObj["Location_id"] = this.view.lblLocationId.text;
+            if (locationObj["Location_id"] !== undefined || locationObj["Location_id"] === null || (locationObj["Location_id"]).trim() !== "") {
+              objectInstance.update(options, this.createUpdateLocationSuccessCB.bind(this), this.createUpdateLocationFailureCB.bind(this));
+            } else {
               dismissLoadingScreen();
               this.view.alertmsg.setTitle("User Message");
               this.view.alertmsg.setMessage("location id not found");
@@ -338,86 +352,99 @@ define({
 
         }
       }
-    }catch(excp){
+    } catch (excp) {
       dismissLoadingScreen();
-      kony.print("Exception occured in getDesignation: "+JSON.stringify(excp) );
+      kony.print("Exception occured in getDesignation: " + JSON.stringify(excp));
     }
   },
 
   /**
-	 * @function validateLocationForm
-	 * @description - Validate the location values provided in the form.
-	 **/
-  validateLocationForm:function(){
-    var isValid=true;
-    if(validateText(this.view.txtBoxAddress1.text)===""){
-      isValid=false;
+     * @function validateLocationForm
+     * @description - Validate the location values provided in the form.
+     **/
+  validateLocationForm: function() {
+    var isValid = true;
+    if (validateText(this.view.txtBoxAddress1.text) === "") {
+      isValid = false;
     }
-    if(validateText(this.view.txtBoxAddress2.text)===""){
-      isValid=false;
+    if (validateText(this.view.txtBoxAddress2.text) === "") {
+      isValid = false;
     }
-    if(validateText(this.view.txtBoxEmpCity.text)===""){
-      isValid=false;
+    if (validateText(this.view.txtBoxEmpCity.text) === "") {
+      isValid = false;
     }
-    if(validateText(this.view.txtBoxEmpZip.text)===""){
-      isValid=false;
+    if (validateText(this.view.txtBoxEmpZip.text) === "") {
+      isValid = false;
     }
-    if(validateText(this.view.txtBoxEmpState.text)===""){
-      isValid=false;
+    if (validateText(this.view.txtBoxEmpState.text) === "") {
+      isValid = false;
     }
-    if(validateText(this.view.textBoxCountry.text)===""){
-      isValid=false;
+    if (validateText(this.view.textBoxCountry.text) === "") {
+      isValid = false;
     }
-    return isValid;   
+    return isValid;
   },
 
   /**
-	 * @function createCommonMasterSuccess
-	 * @description - This function is the success callback of _createCommonMaster
+     * @function createCommonMasterSuccess
+     * @description - This function is the success callback of _createCommonMaster
      * @param {JSON - error} - error response from the back end
-	 **/
- createCommonMasterSuccess:function(result){
+     **/
+  createCommonMasterSuccess: function(result) {
     dismissLoadingScreen();
-    kony.print("Master created successfully: "+JSON.stringify(result));
+    kony.print("Master created successfully: " + JSON.stringify(result));
     //this.view.txtBoxName0.text="";
-    this.view.txtBoxNameCommon0.text="";
+    this.view.txtBoxNameCommon0.text = "";
     this.view.flxAddCommonMasterItem0.setVisibility(false);
     this.onMasterDataSelected(null);
   },
 
   /**
-	 * @function createCommonMasterFailure
-	 * @description - This function is the failure callback of _createCommonMaster
+     * @function createCommonMasterFailure
+     * @description - This function is the failure callback of _createCommonMaster
      * @param {JSON - error} - error response from the back end
-	 **/
-  createCommonMasterFailure:function(result){
+     **/
+  createCommonMasterFailure: function(result) {
     dismissLoadingScreen();
-    alert(JSON.stringify(result));
+    if(this.selectedDataModel=="Designation"){
+      this.view.alertmsg.setTitle("User Message");
+    this.view.alertmsg.setMessage("Designation already exists");
+    this.view.flxAlertContainer2.setVisibility(true);
+    this.view.forceLayout();
+    }else if(this.selectedDataModel==="Department"){
+       this.view.alertmsg.setTitle("User Message");
+    this.view.alertmsg.setMessage("Department already exists");
+    this.view.flxAlertContainer2.setVisibility(true);
+    this.view.forceLayout();
+      
+    }
+    
+    //alert(JSON.stringify(result));
   },
 
   /**
-	 * @function enableCommonMaster
-	 * @description - This function is to enable common master
+     * @function enableCommonMaster
+     * @description - This function is to enable common master
      * this function will call enable error label in UI
      * @param {JSON} - Text box id.
-	 **/
-  enableCommonMaster:function(id){
-    this.view["txtBoxNameCommon"+id].text="";
+     **/
+  enableCommonMaster: function(id) {
+    this.view["txtBoxNameCommon" + id].text = "";
     this.view.flxAddCommonMasterItem0.setVisibility(true);
   },
 
   /**
-	 * @function _createCommonMaster
-	 * @description - It creates new designation or department object in the backend. 
+     * @function _createCommonMaster
+     * @description - It creates new designation or department object in the backend.
      * @param {JSON} - id of the text box in the list row.
-	 **/
-  _createCommonMaster:function(id){
-    try{
-      var objectInstance=getObjectInstance();
-      if(objectInstance!==null){
-        var masterName=this.view["txtBoxNameCommon"+id].text;
-        masterName=validateText(masterName);
-        if(masterName===""){
+     **/
+  _createCommonMaster: function(id) {
+    try {
+      var objectInstance = getObjectInstance();
+      if (objectInstance !== null) {
+        var masterName = this.view["txtBoxNameCommon" + id].text;
+        masterName = validateText(masterName);
+        if (masterName === "") {
           this.view.alertmsg.setTitle("User Message");
           this.view.alertmsg.setMessage("Please provide valid name");
           this.view.flxAlertContainer2.setVisibility(true);
@@ -427,16 +454,18 @@ define({
           return;
         }
         var dataObject;
-        if(this.selectedDataModel!==null){
+        if (this.selectedDataModel !== null) {
           dataObject = new kony.sdk.dto.DataObject(this.selectedDataModel);
-        }else{
+        } else {
           this.view.alertmsg.setTitle("User Message");
           this.view.alertmsg.setMessage("Data model is not selected");
           this.view.flxAlertContainer2.setVisibility(true);
           this.view.forceLayout();
           return;
         }
-        dataObject.setRecord({"Name":masterName})
+        dataObject.setRecord({
+          "Name": masterName
+        })
         var options = {
           "dataObject": dataObject,
           "headers": {}
@@ -444,7 +473,7 @@ define({
         };
         if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
           showLoadingScreen(this.view);
-          objectInstance.create(options, this.createCommonMasterSuccess.bind(this),this.createCommonMasterFailure.bind(this));
+          objectInstance.create(options, this.createCommonMasterSuccess.bind(this), this.createCommonMasterFailure.bind(this));
         } else {
           dismissLoadingScreen();
           this.view.alertmsg.setTitle("User Message");
@@ -453,138 +482,139 @@ define({
           this.view.forceLayout();
         }
       }
-    }catch(excp){
+    } catch (excp) {
       dismissLoadingScreen();
-      kony.print("Exception occured in getDesignation: "+JSON.stringify(excp) );
+      kony.print("Exception occured in getDesignation: " + JSON.stringify(excp));
     }
   },
 
   /**
-	 * @function onMasterDataSelected
-	 * @description - Selection callback for the option selected from the listbox dropdown.
+     * @function onMasterDataSelected
+     * @description - Selection callback for the option selected from the listbox dropdown.
      * @param {JSON} - Key of the selected item.
-	 **/
-  onMasterDataSelected(param){
-    debugger;
-    this.operationMode="view";
+     **/
+  onMasterDataSelected(param) {
+
+    this.operationMode = "view";
     kony.print("in on masterdata selected");
-    var selectedItem=this.view.lstBoxMaster.selectedKey;
-    switch(selectedItem){
+    var selectedItem = this.view.lstBoxMaster.selectedKey;
+    switch (selectedItem) {
       case "0":
-        this.view.lblMasterTitle.text="DEPARTMENT";
-        this.view.btnAddNewMaster0.text="Add New Department";
-        this.view.btnAddNewMaster0.onClick=this.addNewDepartment;
+        this.view.lblMasterTitle.text = "DEPARTMENT";
+        this.view.btnAddNewMaster0.text = "Add New Department";
+        this.view.btnAddNewMaster0.onClick = this.addNewDepartment;
         this.getDepartment();
         this.view.flxCommonHeader.setVisibility(true);
         this.view.flxLocationHeader.setVisibility(false);
         this.view.flxSCCommon.setVisibility(true);
         this.view.flxLocationDetails.setVisibility(false);
-        this.selectedDataModel="Department";
+        this.selectedDataModel = "Department";
         break;
       case "1":
-        this.view.lblMasterTitle.text="DESIGNATION";
-        this.view.btnAddNewMaster0.text="Add New Designation";
-        this.view.btnAddNewMaster0.onClick=this.addNewDesignation;
+        this.view.lblMasterTitle.text = "DESIGNATION";
+        this.view.btnAddNewMaster0.text = "Add New Designation";
+        this.view.btnAddNewMaster0.onClick = this.addNewDesignation;
         this.getDesignation();
         this.view.flxCommonHeader.setVisibility(true);
         this.view.flxLocationHeader.setVisibility(false);
         this.view.flxSCCommon.setVisibility(true);
         this.view.flxLocationDetails.setVisibility(false);
-        this.selectedDataModel="Designation";
+        this.selectedDataModel = "Designation";
         break;
       case "2":
-        this.view.btnAddNewMaster0.text="Add New Location";
-        this.view.btnAddNewMaster0.onClick=this.addNewLocation;
+        this.view.btnAddNewMaster0.text = "Add New Location";
+        this.view.btnAddNewMaster0.onClick = this.addNewLocation;
         this.getLocation();
         this.view.flxLocationHeader.setVisibility(true);
         this.view.flxCommonHeader.setVisibility(false);
         this.view.flxLocationDetails.setVisibility(true);
         this.view.flxSCCommon.setVisibility(false);
         this.view.forceLayout();
-        this.selectedDataModel="Location";
+        this.selectedDataModel = "Location";
     }
   },
 
   /**
-	 * @function setDesignations
-	 * @description - Set the row item Designation to the flexscroll container..
-     * @param {JSON} - 
-	 **/
-  setDesignations:function(designations){
+     * @function setDesignations
+     * @description - Set the row item Designation to the flexscroll container..
+     **/
+  setDesignations: function(designations) {
     var masterTemplate;
-    var lblName,txtBoxName,flxRemove,flxEdit,lblId,flxSave,separatorLine;
+    var lblName, txtBoxName, flxRemove, flxEdit, lblId, flxSave, separatorLine;
     this.view.flxSCCommon.removeAll();
-    var length=designations.length;
-    if(length>9){
-      this.view.flxSCCommon.width="102%";
-    }else{
-      this.view.flxSCCommon.width="101%";
+    var length = designations.length;
+    if (length > 9) {
+      this.view.flxSCCommon.width = "102%";
+    } else {
+      this.view.flxSCCommon.width = "101%";
     }
-    for(var i=0;i<designations.length;i++){
-      masterTemplate=this.requireModule.getCommonMasterRowTemplate(i);
-      if(masterTemplate===null)continue;
-      lblName=masterTemplate["lblName"+i];
-      txtBoxName=masterTemplate["txtBoxName"+i];
-      flxRemove=masterTemplate["flxRemove"+i];
-      flxEdit=masterTemplate["flxEdit"+i];
-      lblId=masterTemplate["lblId"+i];
-      flxSave=masterTemplate["flxSave"+i];
+    for (var i = 0; i < designations.length; i++) {
+      masterTemplate = this.requireModule.getCommonMasterRowTemplate(i);
+      if (masterTemplate === null) continue;
+      lblName = masterTemplate["lblName" + i];
+      txtBoxName = masterTemplate["txtBoxName" + i];
+      flxRemove = masterTemplate["flxRemove" + i];
+      flxEdit = masterTemplate["flxEdit" + i];
+      lblId = masterTemplate["lblId" + i];
+      flxSave = masterTemplate["flxSave" + i];
 
-      lblName.text=designations[i]["Name"];
-      txtBoxName.text=designations[i]["Name"];
-      lblId.text=designations[i]["Designation_id"];
-      flxRemove.onClick=this.removeItem;
-      flxEdit.onClick=this.editItem;
-      flxSave.onClick=this.saveItem;
+      lblName.text = designations[i]["Name"];
+      txtBoxName.text = designations[i]["Name"];
+      lblId.text = designations[i]["Designation_id"];
+      flxRemove.onClick = this.removeItem;
+      flxEdit.onClick = this.editItem;
+      flxSave.onClick = this.saveItem;
       // separatorLine=getHorizontalLine(i);
-      separatorLine=this.requireModule.getHorizontalLine(i);
-      this.view.flxSCCommon.add(masterTemplate,separatorLine);
-      masterTemplate.hoverSkin="sknFlxWhiteBG";
+      separatorLine = this.requireModule.getHorizontalLine(i);
+      this.view.flxSCCommon.add(masterTemplate, separatorLine);
+      masterTemplate.hoverSkin = "sknFlxWhiteBG";
     }
     this.view.forceLayout();
   },
 
   /**
-	 * @function getDesignationSuccessCB
-	 * @description - This function is the success callback of getDesignation
+     * @function getDesignationSuccessCB
+     * @description - This function is the success callback of getDesignation
      * @param {JSON} - response from the back end
-	 **/
-  getDesignationSuccessCB:function(result){
-    kony.print("result: "+result);
-    dismissLoadingScreen(); 
-    var designations=result.records;
-    this.recordList=designations;
+     **/
+  getDesignationSuccessCB: function(result) {
+    kony.print("result: " + result);
+    dismissLoadingScreen();
+    var designations = result.records;
+    this.recordList = designations;
     this.setDesignations(designations);
   },
 
   /**
-	 * @function getDesignationFailureCB
-	 * @description - This function is the failure callback of getDesignation
+     * @function getDesignationFailureCB
+     * @description - This function is the failure callback of getDesignation
      * @param {JSON - error} - error response from the back end
-	 **/
-  getDesignationFailureCB:function(result){
-    kony.print("result: "+result);
-    dismissLoadingScreen();   
+     **/
+  getDesignationFailureCB: function(result) {
+    kony.print("result: " + result);
+    dismissLoadingScreen();
   },
 
   /**
-	 * @function getDesignation
-	 * @description - Get all designation from the backend.
-	 **/
-  getDesignation:function(){
+     * @function getDesignation
+     * @description - Get all designation from the backend.
+     **/
+  getDesignation: function() {
     kony.print("in designation");
-    try{
-      var objectInstance=getObjectInstance();
-      if(objectInstance!==null){
+    try {
+      var objectInstance = getObjectInstance();
+      if (objectInstance !== null) {
         var dataObject = new kony.sdk.dto.DataObject("Designation");
         var options = {
           "dataObject": dataObject,
           "headers": {},
-          "queryParams": {"$filter":"((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))"}
+          "queryParams": {
+            "$filter": "((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))"
+          }
         };
         if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
           showLoadingScreen(this.view);
-          objectInstance.fetch(options, this.getDesignationSuccessCB.bind(this),this.getDesignationFailureCB.bind(this));
+          objectInstance.fetch(options, this.getDesignationSuccessCB.bind(this), this.getDesignationFailureCB.bind(this));
         } else {
           dismissLoadingScreen();
           this.view.alertmsg.setTitle("User Message");
@@ -595,95 +625,96 @@ define({
 
         }
       }
-    }catch(excp){
+    } catch (excp) {
       dismissLoadingScreen();
-      kony.print("Exception occured in getDesignation: "+JSON.stringify(excp) );
+      kony.print("Exception occured in getDesignation: " + JSON.stringify(excp));
     }
   },
 
   /**
-	 * @function setDepartments
-	 * @description - Set all the department list to the flex.
+     * @function setDepartments
+     * @description - Set all the department list to the flex.
      * @param {JSON} - list of departments from form employee list.
-	 **/
-  setDepartments:function(departments){
+     **/
+  setDepartments: function(departments) {
     var masterTemplate;
-    var lblName,txtBoxName,flxRemove,flxEdit,lblId,flxSave,separatorLine;
+    var lblName, txtBoxName, flxRemove, flxEdit, lblId, flxSave, separatorLine;
     this.view.flxSCCommon.removeAll();
-    var length=departments.length;
-    if(length>9){
-      this.view.flxSCCommon.width="102%";
-    }else{
-      this.view.flxSCCommon.width="101%";
+    var length = departments.length;
+    if (length > 9) {
+      this.view.flxSCCommon.width = "102%";
+    } else {
+      this.view.flxSCCommon.width = "101%";
     }
-    for(var i=0;i<departments.length;i++){
-      masterTemplate=this.requireModule.getCommonMasterRowTemplate(i);
-      if(masterTemplate===null)continue;
-      lblName=masterTemplate["lblName"+i];
-      txtBoxName=masterTemplate["txtBoxName"+i];
-      flxRemove=masterTemplate["flxRemove"+i];
-      flxEdit=masterTemplate["flxEdit"+i];
-      lblId=masterTemplate["lblId"+i];
-      flxSave=masterTemplate["flxSave"+i];
+    for (var i = 0; i < departments.length; i++) {
+      masterTemplate = this.requireModule.getCommonMasterRowTemplate(i);
+      if (masterTemplate === null) continue;
+      lblName = masterTemplate["lblName" + i];
+      txtBoxName = masterTemplate["txtBoxName" + i];
+      flxRemove = masterTemplate["flxRemove" + i];
+      flxEdit = masterTemplate["flxEdit" + i];
+      lblId = masterTemplate["lblId" + i];
+      flxSave = masterTemplate["flxSave" + i];
 
-      lblName.text=departments[i]["Name"];
-      txtBoxName.text=departments[i]["Name"];
-      lblId.text=departments[i]["Department_id"];
-      flxRemove.onClick=this.removeItem;
-      flxEdit.onClick=this.editItem;
-      flxSave.onClick=this.saveItem;
+      lblName.text = departments[i]["Name"];
+      txtBoxName.text = departments[i]["Name"];
+      lblId.text = departments[i]["Department_id"];
+      flxRemove.onClick = this.removeItem;
+      flxEdit.onClick = this.editItem;
+      flxSave.onClick = this.saveItem;
 
-      //separatorLine=getHorizontalLine(i);
-      separatorLine=this.requireModule.getHorizontalLine(i);
+      separatorLine = this.requireModule.getHorizontalLine(i);
 
-      this.view.flxSCCommon.add(masterTemplate,separatorLine);
+      this.view.flxSCCommon.add(masterTemplate, separatorLine);
       this.view.forceLayout();
     }
     this.view.forceLayout();
   },
 
   /**
-	 * @function getDepartmentSuccessCB
-	 * @description - This function is the success callback of getDepartment
+     * @function getDepartmentSuccessCB
+     * @description - This function is the success callback of getDepartment
      * @param {JSON} -  response from the back end
-	 **/
-  getDepartmentSuccessCB:function(result){
-    kony.print("result: "+result);
+     **/
+  getDepartmentSuccessCB: function(result) {
+    kony.print("result: " + result);
     dismissLoadingScreen();
-    var departments=result.records;
-    this.recordList=departments;
+    var departments = result.records;
+    this.recordList = departments;
     this.setDepartments(departments);
   },
 
   /**
-	 * @function getDepartmentFailureCB
-	 * @description - This function is the failure callback of getDepartment
+     * @function getDepartmentFailureCB
+     * @description - This function is the failure callback of getDepartment
      * @param {JSON - error} - error response from the back end
-	 **/
-  getDepartmentFailureCB:function(result){
-    kony.print("result: "+result);
+     **/
+  getDepartmentFailureCB: function(result) {
+    kony.print("result: " + result);
     dismissLoadingScreen();
   },
 
   /**
-	 * @function getDepartment
-	 * @description - Gets all departments.
-	 **/
+     * @function getDepartment
+     * @description - Gets all departments.
+     **/
 
-  getDepartment:function(){
+  getDepartment: function() {
     kony.print("in department");
-    try{
-      var objectInstance=getObjectInstance();
-      if(objectInstance!==null){
+    try {
+      var objectInstance = getObjectInstance();
+      if (objectInstance !== null) {
         var dataObject = new kony.sdk.dto.DataObject("Department");
         var options = {
           "dataObject": dataObject,
           "headers": {},
-          "queryParams": {"$filter":"((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))"}
+          "queryParams": {
+            "$filter": "((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))"
+          }
         };
         if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
           showLoadingScreen(this.view);
-          objectInstance.fetch(options, this.getDepartmentSuccessCB.bind(this),this.getDepartmentFailureCB.bind(this));
+          objectInstance.fetch(options, this.getDepartmentSuccessCB.bind(this), this.getDepartmentFailureCB.bind(this));
         } else {
           dismissLoadingScreen();
           this.view.alertmsg.setTitle("User Message");
@@ -692,95 +723,83 @@ define({
           this.view.forceLayout();
         }
       }
-    }catch(excp){
+    } catch (excp) {
       dismissLoadingScreen();
-      kony.print("Exception occured in getDepartment: "+JSON.stringify(excp) );
+      kony.print("Exception occured in getDepartment: " + JSON.stringify(excp));
     }
 
   },
 
   /**
-	 * @function getLocationFailureCB
-	 * @description - This function is the failure callback of getLocation
+     * @function getLocationFailureCB
+     * @description - This function is the failure callback of getLocation
      * @param {JSON - error} - error response from the back end
-	 **/
-  getLocationFailureCB:function(result){
-    kony.print("result: "+result);
+     **/
+  getLocationFailureCB: function(result) {
+    kony.print("result: " + result);
     dismissLoadingScreen();
   },
 
   /**
-	 * @function searchLocation
-	 * @description - Searches the given location by the user.
+     * @function searchLocation
+     * @description - Searches the given location by the user.
      * @param {JSON - error} - error response from the back end
-	 **/
-  searchLocation:function(search_key){
+     **/
+  searchLocation: function(search_key) {
 
-    var matchedRecord=searchKeyInCollection(search_key, this.recordList);
+    var matchedRecord = searchKeyInCollection(search_key, this.recordList);
     this.setLocations(matchedRecord);
     return;
   },
 
   /**
-	 * @function setLocations
-	 * @description - Updates the given location.
-	 **/
-  setLocations:function(locations){
-    debugger;
+     * @function setLocations
+     * @description - Updates the given location.
+     **/
+  setLocations: function(locations) {
+
     var masterTemplate;
-    var lblLocation,lblAddressOne,lblAddressTwo,lblCountry,lblCity,lblZip,flxEdit,flxRemove,lblId,separatorLine;
+    var lblLocation, lblAddressOne, lblAddressTwo, lblCountry, lblCity, lblZip, flxEdit, flxRemove, lblId, separatorLine;
     this.view.flxSCCommon.removeAll();
-    var length=locations.length;
-    if(length>9){
-      this.view.flxSCCommon.width="102%";
-    }else{
-      this.view.flxSCCommon.width="101%";
+    var length = locations.length;
+    if (length > 9) {
+      this.view.flxSCCommon.width = "102%";
+    } else {
+      this.view.flxSCCommon.width = "101%";
     }
-    try{
+    try {
       var segobj;
-      var segList=[];
-      for(var i=0;i<locations.length;i++){
-        segobj={};
-        //         masterTemplate=this.requireModule.getLocationMasterRowTemplate(i);
-        //         lblLocation=masterTemplate["lblLocation"+i];
-        //         lblAddressOne=masterTemplate["lblAddressOne"+i];
-        //         lblAddressTwo=masterTemplate["lblAddressTwo"+i];
-        //         lblCountry=masterTemplate["lblCountry"+i];
-        //         lblCity=masterTemplate["lblCity"+i];
-        //         lblZip=masterTemplate["lblZip"+i];
-        //         flxEdit=masterTemplate["flxEdit"+i];
-        //         flxRemove=masterTemplate["flxRemove"+i];
-        //         lblId=masterTemplate["lblId"+i];
+      var segList = [];
+      for (var i = 0; i < locations.length; i++) {
+        segobj = {};
 
 
-        segobj["lblCity"]="City";
-        segobj["lblLocality"]="Locality";
-        segobj["lblCountry"]="Country";
-        segobj["lblZipCode"]="Zip Code";
-        segobj["lblAddress"]="Address";
-        segobj["lblLocationValue"]=locations[i]["State"];
-        segobj["lblAddressValue"]=locations[i]["Address1"];
-        segobj["lblLocalityValue"]=locations[i]["Address2"];
-        segobj["lblCountryValue"]=locations[i]["Country"];
-        segobj["lblCityValue"]=locations[i]["City"];
-        segobj["lblZipCodeValue"]=locations[i]["Zipcode"];
 
-        segobj["lblId"]=locations[i]["Location_id"];
-        //segobj["flxEdit"]={"onClick":this.editLocation};
-        //segobj["flxRemove"]={"onClick":this.removeItem};
-        segobj["imgEdit"]="empediticon.png";
-        segobj["imgRemove"]="empremoveicon.png";
-        segobj["imgDropDown"]="drop_down.png";
-        segobj["flxAddress"]={"isVisible":false}
+        segobj["lblCity"] = "City";
+        segobj["lblLocality"] = "Locality";
+        segobj["lblCountry"] = "Country";
+        segobj["lblZipCode"] = "Zip Code";
+        segobj["lblAddress"] = "Address";
+        segobj["lblLocationValue"] = locations[i]["State"];
+        segobj["lblAddressValue"] = locations[i]["Address1"];
+        segobj["lblLocalityValue"] = locations[i]["Address2"];
+        segobj["lblCountryValue"] = locations[i]["Country"];
+        segobj["lblCityValue"] = locations[i]["City"];
+        segobj["lblZipCodeValue"] = locations[i]["Zipcode"];
+
+        segobj["lblId"] = locations[i]["Location_id"];
+        segobj["imgEdit"] = "empediticon.png";
+        segobj["imgRemove"] = "empremoveicon.png";
+        segobj["imgDropDown"] = "drop_down.png";
+        segobj["flxAddress"] = {
+          "isVisible": false
+        }
         segList.push(segobj);
-        //separatorLine=this.requireModule.getHorizontalLine(i);
-        //this.view.flxSCCommon.add(masterTemplate,separatorLine);
-        //this.view.forceLayout();
       }
       this.view.segLocationItems.removeAll();
       this.view.segLocationItems.addAll(segList);
       this.view.forceLayout();
-    }catch(excp){
+    } catch (excp) {
       alert("Exception occured while populating the location data");
 
 
@@ -790,49 +809,47 @@ define({
   },
 
   /**
-	 * @function getLocationSuccessCB
-	 * @description - This function is the failure callback of getLocation
+     * @function getLocationSuccessCB
+     * @description - This function is the failure callback of getLocation
      * @param {JSON} -  response result from the back end
-	 **/
-  getLocationSuccessCB:function(result){
-    kony.print("result: "+result);
+     **/
+  getLocationSuccessCB: function(result) {
+    kony.print("result: " + result);
     dismissLoadingScreen();
-    var locations=result.records;
-    this.recordList=locations;
+    var locations = result.records;
+    this.recordList = locations;
     this.setLocations(locations);
 
   },
 
   /**
-	 * @function editLocation
-	 * @description - This function is to edit the locations added by the user.
+     * @function editLocation
+     * @description - This function is to edit the locations added by the user.
      * @param {JSON}- eventobject of the widget.
-	 **/
-  editLocation:function(eventObject){
-    if(typeof eventObject==='object' && typeof eventObject!==null){
-      this.operationMode="edit";
-      //var id=eventObject.id;
-      // id=id.split("flxEdit")[1];
-      // var parent=eventObject.parent;
-      var locationObj={};
-      locationObj["id"]=eventObject["lblId"];
-      locationObj["address_one"]=eventObject["lblAddressValue"];
-      locationObj["address_two"]=eventObject["lblLocalityValue"];
-      locationObj["country"]=eventObject["lblCountryValue"];
-      locationObj["city"]=eventObject["lblCityValue"];
-      locationObj["zip"]=eventObject["lblZipCodeValue"];
-      locationObj["state"]=eventObject["lblLocationValue"];
+     **/
+  editLocation: function(eventObject) {
+    if (typeof eventObject === 'object' && typeof eventObject !== null) {
+      this.operationMode = "edit";
+
+      var locationObj = {};
+      locationObj["id"] = eventObject["lblId"];
+      locationObj["address_one"] = eventObject["lblAddressValue"];
+      locationObj["address_two"] = eventObject["lblLocalityValue"];
+      locationObj["country"] = eventObject["lblCountryValue"];
+      locationObj["city"] = eventObject["lblCityValue"];
+      locationObj["zip"] = eventObject["lblZipCodeValue"];
+      locationObj["state"] = eventObject["lblLocationValue"];
       this.showlocationEditor(locationObj);
     }
 
   },
 
   /**
-	 * @function showlocationEditor
-	 * @description - Enable the editing screen for location.
+     * @function showlocationEditor
+     * @description - Enable the editing screen for location.
      * @param {JSON} - Location Object
-	 **/
-  showlocationEditor:function(locationObj){
+     **/
+  showlocationEditor: function(locationObj) {
     this.setLocationData(locationObj);
     this.view.flxGreyBG.setVisibility(true);
     this.view.flxEmpLocationInfoContainer.setVisibility(true);
@@ -840,71 +857,73 @@ define({
   },
 
   /**
-	 * @function setCommonData
-	 * @description - This function sets the location details given byt hte user.
-	 **/
-  setLocationData:function(locationObj){
-    this.view.lblLocationId.text=locationObj["id"];
-    this.view.txtBoxAddress1.text=locationObj["address_one"];
-    this.view.txtBoxAddress2.text=locationObj["address_two"];
-    this.view.txtBoxEmpCity.text=locationObj["city"];
-    this.view.txtBoxEmpZip.text=locationObj["zip"];
-    this.view.txtBoxEmpState.text=locationObj["state"];
-    this.view.textBoxCountry.text=locationObj["country"];
+     * @function setCommonData
+     * @description - This function sets the location details given by the user.
+     **/
+  setLocationData: function(locationObj) {
+    this.view.lblLocationId.text = locationObj["id"];
+    this.view.txtBoxAddress1.text = locationObj["address_one"];
+    this.view.txtBoxAddress2.text = locationObj["address_two"];
+    this.view.txtBoxEmpCity.text = locationObj["city"];
+    this.view.txtBoxEmpZip.text = locationObj["zip"];
+    this.view.txtBoxEmpState.text = locationObj["state"];
+    this.view.textBoxCountry.text = locationObj["country"];
   },
 
   /**
-	 * @function hideLocationEditor
-	 * @description - This function enables the location editing functionality of the form.
-	 **/
-  showLocationForm:function(){
+     * @function hideLocationEditor
+     * @description - This function enables the location editing functionality of the form.
+     **/
+  showLocationForm: function() {
     this.resetLocationData();
     this.view.flxGreyBG.setVisibility(true);
     this.view.flxEmpLocationInfoContainer.setVisibility(true);
   },
 
   /**
-	 * @function hideLocationEditor
-	 * @description - This function hides the location editing functionality of the form.
-	 **/
-  hideLocationEditor:function(){
+     * @function hideLocationEditor
+     * @description - This function hides the location editing functionality of the form.
+     **/
+  hideLocationEditor: function() {
     this.view.flxGreyBG.setVisibility(false);
     this.view.flxEmpLocationInfoContainer.setVisibility(false);
     this.resetLocationData();
   },
 
   /**
-	 * @function resetLocationData
-	 * @description - This function resets the location details from the form.
-	 **/
-  resetLocationData:function(){
-    this.view.lblLocationId.text="";
-    this.view.txtBoxAddress1.text="";
-    this.view.txtBoxAddress2.text="";
-    this.view.txtBoxEmpCity.text="";
-    this.view.txtBoxEmpZip.text="";
-    this.view.txtBoxEmpState.text="";
-    this.view.textBoxCountry.text="";
+     * @function resetLocationData
+     * @description - This function resets the location details from the form.
+     **/
+  resetLocationData: function() {
+    this.view.lblLocationId.text = "";
+    this.view.txtBoxAddress1.text = "";
+    this.view.txtBoxAddress2.text = "";
+    this.view.txtBoxEmpCity.text = "";
+    this.view.txtBoxEmpZip.text = "";
+    this.view.txtBoxEmpState.text = "";
+    this.view.textBoxCountry.text = "";
   },
 
   /**
-	 * @function getLocation
-	 * @description - This function get the location from the backend
-	 **/
-  getLocation:function(){
+     * @function getLocation
+     * @description - This function get the location from the backend
+     **/
+  getLocation: function() {
     kony.print("in location");
-    try{
-      var objectInstance=getObjectInstance();
-      if(objectInstance!==null){
+    try {
+      var objectInstance = getObjectInstance();
+      if (objectInstance !== null) {
         var dataObject = new kony.sdk.dto.DataObject("Location");
         var options = {
           "dataObject": dataObject,
           "headers": {},
-          "queryParams": {"$filter":"((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))"}
+          "queryParams": {
+            "$filter": "((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))"
+          }
         };
         if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
           showLoadingScreen(this.view);
-          objectInstance.fetch(options, this.getLocationSuccessCB.bind(this),this.getLocationFailureCB.bind(this));
+          objectInstance.fetch(options, this.getLocationSuccessCB.bind(this), this.getLocationFailureCB.bind(this));
         } else {
           dismissLoadingScreen();
           this.view.alertmsg.setTitle("User Message");
@@ -915,105 +934,98 @@ define({
 
         }
       }
-    }catch(excp){
+    } catch (excp) {
       dismissLoadingScreen();
-      kony.print("Exception occured in getLocation: "+JSON.stringify(excp) );
+      kony.print("Exception occured in getLocation: " + JSON.stringify(excp));
     }
   },
 
   /**
-	 * @function navigateToFrmEmpList
-	 * @description - This function is to navigate the user to form employee list
-	 **/
-  navigateToFrmEmpList:function(){
-    try{
-      var navObj=new kony.mvc.Navigation("frmEmpList");
+     * @function navigateToFrmEmpList
+     * @description - This function is to navigate the user to form employee list
+     **/
+  navigateToFrmEmpList: function() {
+    try {
+      var navObj = new kony.mvc.Navigation("frmEmpList");
       navObj.navigate();
-    }catch(excp){
-      kony.print("Exception occured while navigating to the list form: "+JSON.stringify(excp));
+    } catch (excp) {
+      kony.print("Exception occured while navigating to the list form: " + JSON.stringify(excp));
     }
   },
 
   /**
-	 * @function editItem
-	 * @description - 
-     * @param {JSON - eventObject} 
-	 **/
-  editItem:function(eventObject){
-    debugger;
-    var id=eventObject.id;
-    id=id.split("flxEdit")[1];
-    var parent=eventObject.parent;
-    parent["lblName"+id].setVisibility(false);
-    parent["txtBoxName"+id].setVisibility(true);
-    parent["flxRemove"+id].setVisibility(false);
-    parent["flxEdit"+id].setVisibility(false);
-    parent["flxSave"+id].setVisibility(true);
+     * @function editItem
+     * @description - edit the selected item
+     * @param {JSON - eventObject}
+     **/
+  editItem: function(eventObject) {
+
+    var id = eventObject.id;
+    id = id.split("flxEdit")[1];
+    var parent = eventObject.parent;
+    parent["lblName" + id].setVisibility(false);
+    parent["txtBoxName" + id].setVisibility(true);
+    parent["flxRemove" + id].setVisibility(false);
+    parent["flxEdit" + id].setVisibility(false);
+    parent["flxSave" + id].setVisibility(true);
     this.view.forceLayout();
   },
-
   /**
-	 * @function saveItem
-	 * @description - This function is the failure callback of login
-     * this function will call enable error label in UI
-     * @param {JSON - error} - error response from the back end
-	 **/
-  saveItem:function(eventObject){
-    debugger;
-    var id=eventObject.id;
-    id=id.split("flxSave")[1];
-    var parent=eventObject.parent;
-    var dataObject={};
-    if(this.selectedDataModel==="Department"){
-      dataObject["Department_id"]=parent["lblId"+id].text;
-      dataObject["Name"]=parent["txtBoxName"+id].text;
-    }else if(this.selectedDataModel==="Designation"){
-      dataObject["Designation_id"]=parent["lblId"+id].text;
-      dataObject["Name"]=parent["txtBoxName"+id].text;
+     * @function saveItem
+     * @description - Saves the edited item.
+     * @param {JSON} - event object of the selected row.
+     **/
+  saveItem: function(eventObject) {
+
+    var id = eventObject.id;
+    id = id.split("flxSave")[1];
+    var parent = eventObject.parent;
+    var dataObject = {};
+    if (this.selectedDataModel === "Department") {
+      dataObject["Department_id"] = parent["lblId" + id].text;
+      dataObject["Name"] = parent["txtBoxName" + id].text;
+    } else if (this.selectedDataModel === "Designation") {
+      dataObject["Designation_id"] = parent["lblId" + id].text;
+      dataObject["Name"] = parent["txtBoxName" + id].text;
     }
-    this.updateMasterItem(this.selectedDataModel,dataObject,parent,this.updateCommonItemSuccess,this.updateCommonItemFailure);
+    this.updateMasterItem(this.selectedDataModel, dataObject, parent, this.updateCommonItemSuccess, this.updateCommonItemFailure);
   },
 
   /**
-	 * @function updateCommonItemSuccess
-	 * @description - This function is the success callback of saveItem
+     * @function updateCommonItemSuccess
+     * @description - This function is the success callback of saveItem
      * @param {JSON} - success response from the back end
-	 **/
-  updateCommonItemSuccess:function(rootFlex,result){
+     **/
+  updateCommonItemSuccess: function(rootFlex, result) {
 
-    var id=rootFlex.id;
-    id=id.split("flxCommonItem")[1];
-    rootFlex["lblName"+id].text=rootFlex["txtBoxName"+id].text;
-    rootFlex["lblName"+id].setVisibility(true);
-    rootFlex["txtBoxName"+id].setVisibility(false);
-    rootFlex["flxSave"+id].setVisibility(false);
-    rootFlex["flxEdit"+id].setVisibility(true);
-    rootFlex["flxRemove"+id].setVisibility(true);
+    var id = rootFlex.id;
+    id = id.split("flxCommonItem")[1];
+    rootFlex["lblName" + id].text = rootFlex["txtBoxName" + id].text;
+    rootFlex["lblName" + id].setVisibility(true);
+    rootFlex["txtBoxName" + id].setVisibility(false);
+    rootFlex["flxSave" + id].setVisibility(false);
+    rootFlex["flxEdit" + id].setVisibility(true);
+    rootFlex["flxRemove" + id].setVisibility(true);
     dismissLoadingScreen();
   },
 
   /**
-	 * @function updateCommonItemFailure
-	 * @description - This function is the failure callback of saveItem
+     * @function updateCommonItemFailure
+     * @description - This function is the failure callback of saveItem
      * @param {JSON - error} - error response from the back end
-	 **/
-  updateCommonItemFailure:function(result){
-    debugger;
+     **/
+  updateCommonItemFailure: function(result) {
+
     alert(JSON.stringify(result));
     dismissLoadingScreen();
   },
 
-  /**
-	 * @function updateMasterItem
-	 * @description - This function is the failure callback of login
-     * this function will call enable error label in UI
-     * @param {JSON - error} - error response from the back end
-	 **/
-  updateMasterItem:function(dataModel,data,rootFlex,successCB,failureCB){
-    if(dataModel&&data&&rootFlex&&successCB&&failureCB){
-      try{
-        var objectInstance=getObjectInstance();
-        if(objectInstance!==null){
+
+  updateMasterItem: function(dataModel, data, rootFlex, successCB, failureCB) {
+    if (dataModel && data && rootFlex && successCB && failureCB) {
+      try {
+        var objectInstance = getObjectInstance();
+        if (objectInstance !== null) {
           var dataObject = new kony.sdk.dto.DataObject(dataModel);
           dataObject.setRecord(data);
           var options = {
@@ -1023,7 +1035,7 @@ define({
           };
           if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
             showLoadingScreen(this.view);
-            objectInstance.update(options,successCB.bind(this,rootFlex), failureCB.bind(this));
+            objectInstance.update(options, successCB.bind(this, rootFlex), failureCB.bind(this));
           } else {
             dismissLoadingScreen();
             this.view.alertmsg.setTitle("User Message");
@@ -1033,11 +1045,11 @@ define({
 
           }
         }
-      }catch(excp){
+      } catch (excp) {
         dismissLoadingScreen();
-        kony.print("Exception occured in getDepartment: "+JSON.stringify(excp) );
+        kony.print("Exception occured in getDepartment: " + JSON.stringify(excp));
       }
-    }else{
+    } else {
       this.view.alertmsg.setTitle("User Message");
       this.view.alertmsg.setMessage("Improper data received");
       this.view.flxAlertContainer2.setVisibility(true);
@@ -1049,75 +1061,74 @@ define({
   },
 
   /**
-	 * @function removeItem
-	 * @description - This function is the failure callback of login
-     * this function will call enable error label in UI
+     * @function removeItem
+     * @description - Gets called when user selects a employee to remove.
      * @param {JSON - error} - error response from the back end
-	 **/
-  removeItem:function(eventObject){
+     **/
+  removeItem: function(eventObject) {
 
-    var title="Do you want to remove this "+this.selectedDataModel+" ?";
-    var self=this;
-    var userConfirmed=function(isConfirmed){
-      if(isConfirmed){
-        var dataObject={};
-        if(self.selectedDataModel==="Location"){
-          dataObject["Location_id"]=parent["lblId"];
+    var title = "Do you want to remove this " + this.selectedDataModel + " ?";
+    var self = this;
+    var userConfirmed = function(isConfirmed) {
+      if (isConfirmed) {
+        var dataObject = {};
+        if (self.selectedDataModel === "Location") {
+          dataObject["Location_id"] = parent["lblId"];
         }
-        var id=eventObject.id;
-        id=id.split("flxRemove")[1];
-        var parent=eventObject.parent;
-        if(self.selectedDataModel==="Department"){
-          dataObject["Department_id"]=parent["lblId"+id].text;
-        }else if(self.selectedDataModel==="Designation"){
-          dataObject["Designation_id"]=parent["lblId"+id].text;
+        var id = eventObject.id;
+        id = id.split("flxRemove")[1];
+        var parent = eventObject.parent;
+        if (self.selectedDataModel === "Department") {
+          dataObject["Department_id"] = parent["lblId" + id].text;
+        } else if (self.selectedDataModel === "Designation") {
+          dataObject["Designation_id"] = parent["lblId" + id].text;
         }
-        self.removeMasterItem(self.selectedDataModel,dataObject,parent,self.removeCommonItemSuccess,self.removeCommonItemFailure);
+        self.removeMasterItem(self.selectedDataModel, dataObject, parent, self.removeCommonItemSuccess, self.removeCommonItemFailure);
       }
     };
-    getUserRemoveConfirmation(title,userConfirmed);
+    getUserRemoveConfirmation(title, userConfirmed);
   },
-  
+
   /**
-   * @function
-   *
-   * @param eventObject 
-   */
-  removeLocation:function(param){
-    var eventObject=param["rowItem"];
-    var rowIndex=param["rowIndex"];
-    var title="Do you want to remove this "+this.selectedDataModel+" ?";
-    var self=this;
-    this.selectedRowIndex=rowIndex;
-    var userConfirmed=function(isConfirmed){
-      if(isConfirmed){
+     * @function removeLocation
+     * @description - To remove the selected location.
+     */
+  removeLocation: function(param) {
+    var eventObject = param["rowItem"];
+    var rowIndex = param["rowIndex"];
+    var title = "Do you want to remove this " + this.selectedDataModel + " ?";
+    var self = this;
+    this.selectedRowIndex = rowIndex;
+    var userConfirmed = function(isConfirmed) {
+      if (isConfirmed) {
         // var id=eventObject.id;
         //id=id.split("flxRemove")[1];
         //var parent=eventObject.parent;
-        var dataObject={};
-        if(self.selectedDataModel==="Department"){
-          dataObject["Department_id"]=eventObject["lblId"];
-        }else if(self.selectedDataModel==="Designation"){
-          dataObject["Designation_id"]=eventObject["lblId"];
-        }else if(self.selectedDataModel==="Location"){
-          dataObject["Location_id"]=eventObject["lblId"];
+        var dataObject = {};
+        if (self.selectedDataModel === "Department") {
+          dataObject["Department_id"] = eventObject["lblId"];
+        } else if (self.selectedDataModel === "Designation") {
+          dataObject["Designation_id"] = eventObject["lblId"];
+        } else if (self.selectedDataModel === "Location") {
+          dataObject["Location_id"] = eventObject["lblId"];
         }
-        self.removeMasterItem(self.selectedDataModel,dataObject,parent,self.removeCommonItemSuccess,self.removeCommonItemFailure);
+        self.removeMasterItem(self.selectedDataModel, dataObject, parent, self.removeCommonItemSuccess, self.removeCommonItemFailure);
       }
     };
-    getUserRemoveConfirmation(title,userConfirmed);
+    getUserRemoveConfirmation(title, userConfirmed);
   },
 
   /**
-	 * @function removeCommonItemSuccess
-	 * @description - This function is the success callback of removeMasterItem
+     * @function removeCommonItemSuccess
+     * @description - This function is the success callback of removeMasterItem
      * @param {JSON } - success response from the back end
-	 **/
-  removeCommonItemSuccess:function(rootFlex,result){
+     **/
+
+  removeCommonItemSuccess: function(rootFlex, result) {
     this.view.flxSCCommon.remove(rootFlex);
     this.view.forceLayout();
-    if(this.selectedDataModel==="Location"){
-      if(this.selectedRowIndex!==null){
+    if (this.selectedDataModel === "Location") {
+      if (this.selectedRowIndex !== null) {
         this.view.segLocationItems.removeAt(this.selectedRowIndex);
       }
     }
@@ -1125,27 +1136,26 @@ define({
   },
 
   /**
-	 * @function removeCommonItemFailure
-	 * @description - This function is the failure callback of removeMasterItem
+     * @function removeCommonItemFailure
+     * @description - This function is the failure callback of removeMasterItem
      * @param {JSON} - success response from the back end
-	 **/
-  removeCommonItemFailure:function(result){
+     **/
+  removeCommonItemFailure: function(result) {
     dismissLoadingScreen();
     alert(JSON.stringify(result));
   },
 
   /**
-	 * @function removeMasterItem
-	 * @description - This function is the failure callback of login
-     * this function will call enable error label in UI
-     * @param {JSON - error} - error response from the back end
-	 **/
-  removeMasterItem:function(dataModel,data,rootFlex,successCB,failureCB){
-    if(dataModel&&data&&rootFlex&&successCB&&failureCB){
+     * @function removeMasterItem
+     * @description - This function removes the item form the backend.
+     **/
 
-      try{
-        var objectInstance=getObjectInstance();
-        if(objectInstance!==null){
+  removeMasterItem: function(dataModel, data, rootFlex, successCB, failureCB) {
+    if (dataModel && data && rootFlex && successCB && failureCB) {
+
+      try {
+        var objectInstance = getObjectInstance();
+        if (objectInstance !== null) {
           var dataObject = new kony.sdk.dto.DataObject(dataModel);
           dataObject.setRecord(data);
           var options = {
@@ -1155,7 +1165,7 @@ define({
           };
           if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
             showLoadingScreen(this.view);
-            objectInstance.deleteRecord(options,successCB.bind(this,rootFlex), failureCB.bind(this));
+            objectInstance.deleteRecord(options, successCB.bind(this, rootFlex), failureCB.bind(this));
           } else {
             dismissLoadingScreen();
             this.view.alertmsg.setTitle("User Message");
@@ -1166,11 +1176,11 @@ define({
 
           }
         }
-      }catch(excp){
+      } catch (excp) {
         dismissLoadingScreen();
-        kony.print("Exception occured in getDepartment: "+JSON.stringify(excp) );
+        kony.print("Exception occured in getDepartment: " + JSON.stringify(excp));
       }
-    }else{
+    } else {
       this.view.alertmsg.setTitle("User Message");
       this.view.alertmsg.setMessage("Improper data received");
       this.view.flxAlertContainer2.setVisibility(true);
@@ -1180,44 +1190,48 @@ define({
   },
 
   /**
-	 * @function removeAddedItem
-	 * @description - This function removes the added item from the list.
-	 **/
+     * @function removeAddedItem
+     * @description - This function removes the added item from the list.
+     **/
 
-  removeAddedItem:function(){
+  removeAddedItem: function() {
     this.view.flxAddCommonMasterItem0.setVisibility(false);
   },
 
   /**
-	 * @function hideALertComponentCallBack
-	 * @description - Callback function for "onAlertFlexClick" method of a Alert component.
-	 **/
-  hideALertComponentCallBack:function(){
+     * @function hideALertComponentCallBack
+     * @description - Callback function for "onAlertFlexClick" method of a Alert component.
+     **/
+  hideALertComponentCallBack: function() {
     this.view.flxAlertContainer2.setVisibility(false);
   },
 
-  animateLeftMenu:function(){
+  /**
+     * @function animateLeftMenu
+     * @description - To slide the menu.
+     **/
 
-    var self=this;
+  animateLeftMenu: function() {
+
+    var self = this;
     var animDefinition;
-    if(this.status=="open"){
+    if (this.status == "open") {
       this.view.flexGreyBg.setVisibility(false);
       animDefinition = {
         100: {
-          "left":"-260dp"
+          "left": "-260dp"
         }
       };
-    }else{
-      self.view.flxMenuContainer.width="100%";
+    } else {
+      self.view.flxMenuContainer.width = "100%";
       this.view.flexGreyBg.setVisibility(true);
-      //this.view.flxMenuContainer.setVisibility(true);
       animDefinition = {
         100: {
-          "left":"0dp",
+          "left": "0dp",
         }
       };
     }
-    animDef = kony.ui.createAnimation(animDefinition);
+    var animDef = kony.ui.createAnimation(animDefinition);
     var config = {
       "duration": 0.2,
       "iterationCount": 1,
@@ -1225,54 +1239,52 @@ define({
       "fillMode": kony.anim.FILL_MODE_FORWARDS
     };
     this.view.leftmenu.animate(animDef, config, {
-      "animationEnd": function () {
+      "animationEnd": function() {
         kony.print("ENTERED ANIMATION CALLBACK");
-        if (self.status == "open"){
+        if (self.status == "open") {
           kony.print("status is now close");
           self.status = "close";
-          self.view.empHeader1.imgHamburger.src="hamburger_menu.png";
-          self.view.flxMenuContainer.width="0%";
-        //  self.view.flxMenuContainer.setVisibility(false);
-        }
-        else {
+          self.view.empHeader1.imgHamburger.src = "hamburger_menu.png";
+          self.view.flxMenuContainer.width = "0%";
+        } else {
           self.status = "open";
           kony.print("status is now open");
-          self.view.empHeader1.imgHamburger.src="hamburger_menu_on_tap.png";
+          self.view.empHeader1.imgHamburger.src = "hamburger_menu_on_tap.png";
         }
         self.view.forceLayout();
       }
-    }); /*self.onAnimationComplete()*/
+    });
   },
-  animateLeftMenu2:function(){
-    if(this.view.empHeader1.flxHamburger.src=="hamburger_menu.png"){
-      this.view.empHeader1.flxHamburger.src="hamburger menu_on_tap.png"
-    }else{
-      this.view.empHeader1.flxHamburger.src="hamburger_menu.png"
+  animateLeftMenu2: function() {
+    if (this.view.empHeader1.flxHamburger.src == "hamburger_menu.png") {
+      this.view.empHeader1.flxHamburger.src = "hamburger menu_on_tap.png"
+    } else {
+      this.view.empHeader1.flxHamburger.src = "hamburger_menu.png"
     }
-    var self=this;
+    var self = this;
     var animDefinition;
-    if(status=="open"){
+    if (status == "open") {
 
       animDefinition = {
 
         100: {
 
-          "left":"-260dp"
+          "left": "-260dp"
         }
       };
-      status="close";
+      status = "close";
 
-    }else{
+    } else {
 
       animDefinition = {
 
         100: {
 
-          "left":"0dp",
+          "left": "0dp",
 
         }
       };
-      status="open";
+      status = "open";
     }
 
 
@@ -1285,6 +1297,6 @@ define({
       "delay": 0.1,
       "fillMode": kony.anim.FILL_MODE_FORWARDS
     };
-    this.view.leftmenu.animate(animDef, config, null); /*self.onAnimationComplete()*/
+    this.view.leftmenu.animate(animDef, config, null);
   },
 });
